@@ -1,0 +1,126 @@
+\section{Dynamic Systems, Variables, Signals}
+A \textbf{Dynamic System}, roughly speaking, is a collection of interacting object which evolve over the time. Some examples could be: vehicles, mechanical systems, spacecrafts etc.\\
+The \textit{time evolution} of these systems can be described by quantities called \textbf{variables}. The functions which describe the evolution over the time of such quantities play an important role and they are called \textbf{signals}.\\
+Among all variables there are some of them which are particularly important such as: 
+\begin{itemize}
+\setlength\itemsep{0em}
+    \item \textbf{Input} $u(t)$: variables that influence the time evolution of the system, the so called causes. We can distinguish two types of input: 
+    \begin{enumerate}
+        \item \textbf{Command input}: a human user can choose it;
+        \item \textbf{Disturbance}: as their presence is not under the control of a human, they can't be chosen.
+    \end{enumerate}
+    \item \textbf{Causes} $y(t)$: measured variables;
+\end{itemize}
+
+\tikzstyle{block} = [draw, fill=white, rectangle, minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+%-----------------diagramma a blocchi d'esempio--------------------------
+\begin{comment}
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=input] {};
+    \node [sum, right of=input] (sum) {};
+    \node [block, right of=sum] (controller) {Controller};
+    \node [block, right of=controller, pin={[pinstyle]above:D},
+            node distance=3cm] (system) {System};
+
+    \draw [->] (controller) -- node[name=u] {$u$} (system);
+    \node [output, right of=system] (output) {};
+    \node [block, below of=u] (measurements) {Measurements};
+
+    \draw [draw,->] (input) -- node {$r$} (sum);
+    \draw [->] (sum) -- node {$e$} (controller);
+    \draw [->] (system) -- node [name=y] {$y$}(output);
+    \draw [->] (y) |- (measurements);
+    \draw [->] (measurements) -| node[pos=0.99] {$-$} 
+        node [near end] {$y_m$} (sum);
+\end{tikzpicture}
+\end{comment}
+
+\begin{figure}
+    \centering
+
+    \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+        \node[input, name=input] {}; 
+        \node[block, right of=input] (system) {System};
+        \node[output, right  of=system, name=output]{}; 
+
+        \draw[->](system) -- node[name=u]{$u(t)$}(input);
+        \draw[->] (system) -- node[name=y]{$y(t)$}(output);
+    \end{tikzpicture}
+
+    
+    \caption{Rappresentazione a blocchi di un sistema dinamico}
+    \label{fig:enter-label}
+\end{figure}
+
+%-------------------------------------------------------------
+\section{General considerations}
+In the area of automatic control and dynamic systems, is important to distinguish between:
+\begin{itemize}
+    \item \textbf{Physical system} (which we call the \textbf{plant});
+    \item The \textbf{model}: can be defined as a mathematical description of the variables.
+\end{itemize}
+A model is important for several reasons: to make a prediction, filtering, analyze a system, control it... Despite these important aspects, we ought to remember that \textit{models represent an approximation of the real system}. For this reason we have to deal with uncertainty of two types: 
+\begin{enumerate}
+\setlength\itemsep{0em}
+    \item \textbf{Parametric}: caused by approximation of the parameters; 
+    \item \textbf{Dynamic}: caused by the fact of overall some details in the description of the model which rarely is exactly known and so easily descripted. 
+\end{enumerate}
+
+To deal efficiently with \textit{uncertainty} we need \textbf{robust} techniques for modeling and control such types of systems.
+
+%----------------------------------------------------------
+\section {State equations}
+A \textbf{dynamic system} can be always described by a \textbf{set of first order differential equations}:
+
+    \begin{align}    
+        &\dot{x}=f[x(t), u(t), t]\\
+        &y(t)=h[x(t), u(t), t]
+    \end{align}
+
+where: 
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item $x(t)\in\mathbb{R}^{n_x}$ is the \textbf{state}; 
+    \item $u(t) \in\mathbb{R}^{n_u}$ is the \textbf{input}; 
+    \item $y(t) \in\mathbb{R}^{n_y}$ is the \textbf{output}; 
+    \item $n_x$ is the \textbf{order of the system}, is important because it tells us how many variables we need to describe the system.
+\end{itemize}
+
+This description is standard and sufficiently \textbf{general} to represent any dynamical system. Moreover it is used by many \textit{control design method}.
+
+\subsubsection*{Interpretation of the state equation}
+Since the state equation $$\dot{x}=f[x(t),u(t),t]$$ is \textbf{dynamic} and it can be written in local form as $$x(t+dt)=x(t)+f[x,u,t]dt$$ it is clear that locally it can have the following meaning: the state in a time $t+dt$ is equal to the current state $x(t)$ to which we add a variation $fdt$.\\
+Differently the \textbf{output equation} is \textbf{static} in the sense that it represents a relation between variables at the same time $t$.\\
+In order to concluding this discussion we say that in general the functions $f$ and $g$ are \textit{vector field}.
+
+\section{Classifications of dynamical systems}
+According to the characteristic we observe of a dynamic system there could be several classifications. We can mention the most important: 
+\begin{itemize}
+    \item \textbf{Non Linear systems}: here the functions $f(x,u,t)$ and $h(x,u,t)$ are not linear, the great majority of the systems in nature \textbf{are non linear!}
+    \item \textbf{Linear systems}: here we can write the equations previosly seen in the form: 
+    \begin{align*}
+        &\dot{x}(t) =A(t)x(t)+B(t)u(t)\\
+        &y(t)=C(t)x(t)+D(t)u(t)
+    \end{align*}
+    here \textit{f, h} are linear while the matrices $A(t), B(t), C(t), D(t)$ are possibly time varying; if they are constant we identify a particular (very important) case which is the Linear Time Invariant system (\textbf{LTI}); 
+    \item \textbf{Time varying (Time Invariant) systems} here we have: 
+    \begin{align*}
+        \frac{\partial f}{\partial t}\ne0     \quad   &\frac{\partial g}{\partial t}\ne 0\\
+        (\frac{\partial f}{\partial t}= 0     \quad   &\frac{\partial g}{\partial t}= 0)
+    \end{align*}
+    The functions $f, h$ (do not) explicitly depend on the time; 
+    \item  \textbf{Continuous time/Discrete Time} in the former case we have that the variable $t$ is a real positive number, that is $t\in\mathbb{R}^+$, in the latter case we have that the variable $t$ (also indicated with $k$) is a natural number, that is $t\in \mathbb{N}$;
+    \item The last classification is based on the \textbf{number of inputs and outputs} ($n_y, n_u$). Specifically we have:
+    \begin{enumerate}
+        \item \textbf{SISO} (Single input, Single output) $\rightarrow n_u=1, n_y=1$
+        \item \textbf{MIMO} (Multiple input, Multiple output) $\rightarrow n_u>1, n_y>1$
+        \item \textbf{SIMO} (Single input, Multiple Output)$\rightarrow n_u=1, n_y>1$ 
+        \item \textbf{MISO} (Multiple input, single Output)$\rightarrow n_u>1, n_y=1$ 
+    \end{enumerate}
+    
+\end{itemize}

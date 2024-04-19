@@ -1,0 +1,77 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{glossaries}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{tikz}
+\tikzstyle{mybox} = [draw=black, thin, rectangle, rounded corners, inner ysep=5pt, inner xsep=5pt, fill=blue!15]
+\newtheorem{theorem}{Teorema}
+\usepackage[a4paper, top=2cm , bottom=2cm , right=2cm , left=2cm ]{geometry}
+
+\title{
+    {\color{red}
+    \textbf{  \Huge{  NON LINEAR CONTROL AND\\ 
+    AEROSPACE APPLICATIONS } }\\}
+    \textit{Lecture notes}
+    \linespread{2}
+}
+\author{Carlo Migliaccio}
+\date{AA 2023/2024}
+
+\begin{document}
+
+%----------------------descrizione blocchi--------------------
+
+
+\maketitle
+\tableofcontents
+
+\part{Non linear modeling and control}
+\chapter{Introduction}  
+\input{NonLinearControl/Ch1_Intro}
+
+\chapter{Stability concepts}
+\input{NonLinearControl/Ch2_Stability}
+
+\chapter{Behaviour of Non Linear systems}
+\input{NonLinearControl/Ch3_NLBehaviour}
+
+\chapter{Lyapunov methods for non linear systems}  
+\input{NonLinearControl/Ch4_LyapunovStability}
+
+\chapter{Introduction to Non Linear Control}
+\input{NonLinearControl/Ch5_IntroNLC}
+
+\chapter{Method(1): Feedback linearization}
+\input{NonLinearControl/Ch6_FL}
+
+\chapter{Method(2): Sliding mode control}
+\input{NonLinearControl/Ch7_SMC}
+
+\chapter{Method(4): Non linear Model predictive control (NMPC)}
+\input{NonLinearControl/Ch8_NonlinearMPC}
+
+\chapter{(Extended) Kalman Filter (EKF)}
+
+
+\part{Aerospace applications}
+\chapter{Math tools for describing Rotations}
+\chapter{Attitude kinematics and dynamics}
+\chapter{Attitude control}
+\chapter{Orbital dynamics}
+\chapter{Orbital control}
+
+\end{document}
+
+%nel main prima di \begin{document}
+
+
+
+
