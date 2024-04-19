@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1713560471.34412 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1713560475.12038 0
+["pdflatex"] 1713561090.37979 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1713561093.86207 0
   "NonLinearControl/Ch1_Intro.tex" 1713553012 7224 fc7c1b6211eeb6cd2beb5fd5faad8929 ""
   "NonLinearControl/Ch2_Stability.tex" 1713553012 9070 72b7c482cecf23f8d16dbbe7eb283d72 ""
   "NonLinearControl/Ch3_NLBehaviour.tex" 1713553012 14050 eec2261f215976cd810785443adbccb5 ""
@@ -40,7 +40,7 @@
   "NonLinearControl/images/saddle.png" 1713553014 9830 2a688d340dfffccd8f48140cace1943e ""
   "NonLinearControl/images/sigmoids.png" 1713553014 49646 580c5040b6c4e967f0df8a326f5987c0 ""
   "NonLinearControl/images/slk_model.png" 1713553014 39389 a731d067480ca466872daeac9c5cf8ce ""
-  "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" 1713553012 1878 2b90dc02bb68d958a669ef4f68bccb5a ""
+  "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" 1713561089 1877 a56f494abc0dad1b252e73bdb1b256af ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1709974823 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1709974823 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1709976195 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -260,9 +260,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1709981979 5513072 c253eaa6343e824d2661325481d57b70 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1709982122 8221404 96a78d3294408dad61821d0b84b8bd19 ""
   "c:/texlive/2023/texmf.cnf" 1709981959 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1713560474 17677 6297c75b12d68214baff61d274107a27 "pdflatex"
-  "main.tex" 1713553012 1878 2b90dc02bb68d958a669ef4f68bccb5a ""
-  "main.toc" 1713560474 6553 fdd89d2c0be19512afcea56605bc02a5 "pdflatex"
+  "main.aux" 1713561093 17677 6297c75b12d68214baff61d274107a27 "pdflatex"
+  "main.tex" 1713561089 1877 a56f494abc0dad1b252e73bdb1b256af ""
+  "main.toc" 1713561093 6553 fdd89d2c0be19512afcea56605bc02a5 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
