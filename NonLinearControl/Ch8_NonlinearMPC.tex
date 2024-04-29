@@ -147,6 +147,9 @@ where $p$ is the minimum. We can immediately understand that when an optimizatio
 Surely a nice class of optimization problems is the \textbf{convex optimization} class.
 
 {\color{blue} \subsubsection{Minimization}}
+\noindent
+In some simple cases it is possible to find an analytical solution to an optimization problems, on the other hand in the great majority of the real optimization problems it is not possible to find in a simple way an analytical solution.\\
+In these cases, otherwise, a \textbf{numerical solution} can be found by using an iterative algorithm which starts at a certain point $x^O$, and based on the \textbf{gradient function}, other points are visited. There are some functions which have "nice properties", the \textbf{convex functions} their local minimum are global mimimum. It is remarkable that the \textit{level curves} of a convex function define \textbf{convex sets}.\\
 
 \section{Introduction to NMPC}
 \textbf{Nonlinear Model Predictive Control (NMPC)} is a general control methods which differently than the others that has been treated, provide us with a way for taking into account both the aspects related to: 
@@ -279,9 +282,9 @@ The \textbf{plant} is in the form (\ref{eq: MIMO_system}), the block \textbf{NMP
 
 \begin{figure}[h]
     \centering
-    \includegraphics{NonLinearControl/images/NMPC_CtrlScheme.png}
+    \includegraphics[scale=0.7]{NonLinearControl/images/NMPC_CtrlScheme.png}
     \caption{Control Scheme for NMPC}
-    \label{fig:enter-label}
+    \label{fig:NMPC_ctrl}
 \end{figure}
 
 \section{NMPC design}
@@ -324,4 +327,45 @@ The weight matrices can be tuned by \textbf{trial/error procedure} considering t
     \item Increasing $R_{ii} \Leftarrow$ decreasing of the energy of $u_i \Leftarrow$ reducing \textbf{command effort} and \textbf{energy consumption}. 
 \end{itemize}
 
-\section{Discussion: pros and cons}
+\section{Discussion}
+Through our discussion we have mentioned yet, which are the advantages and disadvantages of such type of approach. But it is not bad repeat them: 
+\begin{itemize}
+    \item[+] NMPC is a general and flexible methodology which can face complex MIMO systems; 
+    \item[+] The formulation of the problem is intuitive since it is based on optimality concepts; 
+    \item[+] The classical trade-off between input effort and performances is treated in a systematic way through the weighted norms; 
+    \item[-] High computational cost due to the \textbf{online resolution} of an optimization algorithm; 
+    \item[-] In Nonlinear MPC, often the optimization problem is not convex $\Longrightarrow$ local minima may be found; 
+    \item[-] Like all methods, if the internal dynamics is unstable we cannot manage the control problem, but this time the problem is in the mathematical model.    
+\end{itemize}
+
+Moreover, it is interesting focusing the attention on the differences between NMPC and MPC, in terms of Convexity, Nonlinear plant control problem, and Non-convex constraints.
+
+\subsubsection{Convexity}
+\begin{itemize}
+    \itemsep 0em
+    \item[$\square$] MPC $\rightarrow$ if the contraints are convex, finding a global  minimum is guaranteed; 
+    \item[$\square$] NMPC $\rightarrow$ only local optima can be found.
+\end{itemize}
+
+\subsubsection{Nonlinear plant}
+\begin{itemize}
+    \itemsep 0em
+    \item[$\square$] MPC $\rightarrow$ requires the linearization of the dynamics on a given set of working point, this is even more complicated when one have a tracking problem.
+    \item[$\square$] NMPC $\rightarrow$ can be applied directly on the nonlinear plant without any sort of linearization.
+\end{itemize}
+
+\subsubsection{Non-Convex contraints}
+\begin{itemize}
+    \itemsep 0em
+    \item[$\square$] MPC $\rightarrow$ it is required the convexification of the contraints;
+    \item [$\square$] NMPC $\rightarrow$ the inequality can be expressed simply by using inequalities.
+\end{itemize}
+
+\subsection*{What inside the NMPC block?}
+In the Figure (\ref{fig:NMPC_ctrl}) inside the \textbf{NMPC block}, there is an optimization algorithm that at each time $t_k$ solve (online) the problem related to the minimization of the functional (\ref{eq:opt_alg}). In \texttt{MATLAB} there are some functions can be used to this aim: 
+\begin{itemize}
+    \itemsep0em
+    \item \texttt{fminunc()}, whose aim is finding the minimum of a multivariable function with no constraints; there are two possible algorithms you can choose: \textbf{Quasi-Newton method} and \textbf{Trust region method}. 
+    
+    \item \texttt{fmincon()}, whose aim is finding the minimum of \textbf{constrained nonlinear multivariate function}; here there more possible choices like \textbf{SQP} and some \textbf{interior point methods}.
+\end{itemize}

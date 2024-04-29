@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1713561809.84569 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1713561813.42087 0
+["pdflatex"] 1714392481.06902 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1714392486.30833 0
+  "AerospaceApplications/IntroAerospace.tex" 1714392474 136 19a1abce1a66a3c0e0fc0f8cbfb7e219 ""
   "NonLinearControl/Ch1_Intro.tex" 1713553012 7224 fc7c1b6211eeb6cd2beb5fd5faad8929 ""
   "NonLinearControl/Ch2_Stability.tex" 1713553012 9070 72b7c482cecf23f8d16dbbe7eb283d72 ""
   "NonLinearControl/Ch3_NLBehaviour.tex" 1713553012 14050 eec2261f215976cd810785443adbccb5 ""
@@ -7,7 +8,7 @@
   "NonLinearControl/Ch5_IntroNLC.tex" 1713553012 6653 c2d8071ea17156e0a44d5df85409fcea ""
   "NonLinearControl/Ch6_FL.tex" 1713553012 13321 72cd734b1257365498d383ea90642456 ""
   "NonLinearControl/Ch7_SMC.tex" 1713553012 13003 4b6364f332b29a28e2e20b79e1736528 ""
-  "NonLinearControl/Ch8_NonlinearMPC.tex" 1713553012 18703 59e48e3db3d9421b92ac4add749da9ae ""
+  "NonLinearControl/Ch8_NonlinearMPC.tex" 1714204941 22204 a71a50f959d5302b0f79dd07506ace64 ""
   "NonLinearControl/images/AsStable.png" 1713553012 53632 6d40389f123a9e128d91d3a6ce0e0325 ""
   "NonLinearControl/images/Chattering.png" 1713553014 9964 796d769b4e388dee30fc434f5c4cf5f8 ""
   "NonLinearControl/images/ControlScheme.png" 1713553014 8767 74f894eab754ad49dc96b9c2bab56e04 ""
@@ -40,7 +41,7 @@
   "NonLinearControl/images/saddle.png" 1713553014 9830 2a688d340dfffccd8f48140cace1943e ""
   "NonLinearControl/images/sigmoids.png" 1713553014 49646 580c5040b6c4e967f0df8a326f5987c0 ""
   "NonLinearControl/images/slk_model.png" 1713553014 39389 a731d067480ca466872daeac9c5cf8ce ""
-  "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" 1713561808 1877 a56f494abc0dad1b252e73bdb1b256af ""
+  "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" 1714392425 1926 f4758d03ac71fe655f876140d1742c93 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1709974823 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1709974823 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1709976195 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -100,6 +101,7 @@
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1709973702 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1709973702 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1709973702 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1709973702 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1709973702 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1709974823 140176 d0f50dba675c56d445f84a32c1f93a79 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1709974823 135942 aecb5af344df420d6ec421db27dedf62 ""
@@ -260,9 +262,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1709981979 5513072 c253eaa6343e824d2661325481d57b70 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1709982122 8221404 96a78d3294408dad61821d0b84b8bd19 ""
   "c:/texlive/2023/texmf.cnf" 1709981959 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1713561813 17677 6297c75b12d68214baff61d274107a27 "pdflatex"
-  "main.tex" 1713561808 1877 a56f494abc0dad1b252e73bdb1b256af ""
-  "main.toc" 1713561813 6553 fdd89d2c0be19512afcea56605bc02a5 "pdflatex"
+  "main.aux" 1714392485 18397 f56ce94639d49315be96aa9f0ec69485 "pdflatex"
+  "main.tex" 1714392425 1926 f4758d03ac71fe655f876140d1742c93 ""
+  "main.toc" 1714392485 6988 d548636a40d952e9105b7b67721d420a "pdflatex"
   (generated)
   "main.aux"
   "main.log"

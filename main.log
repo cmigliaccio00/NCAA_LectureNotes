@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  19 APR 2024 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  29 APR 2024 14:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -550,9 +550,6 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box92
 ) (./main.aux
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
@@ -1200,8 +1197,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[44] [45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+[44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
+
+ []
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
 
  []
 
@@ -1209,59 +1211,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--188
 <NonLinearControl/images/NMPC_graph.png, id=241, 587.796pt x 539.616pt>
 File: NonLinearControl/images/NMPC_graph.png Graphic file (type png)
 <use NonLinearControl/images/NMPC_graph.png>
-Package pdftex.def Info: NonLinearControl/images/NMPC_graph.png  used on input line 225.
+Package pdftex.def Info: NonLinearControl/images/NMPC_graph.png  used on input line 228.
 (pdftex.def)             Requested size: 352.68031pt x 323.7721pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 [48 <./NonLinearControl/images/NMPC_graph.png>]
-<NonLinearControl/images/NMPC_CtrlScheme.png, id=248, 506.49225pt x 186.6975pt>
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
+
+ []
+
+<NonLinearControl/images/NMPC_CtrlScheme.png, id=247, 506.49225pt x 186.6975pt>
 File: NonLinearControl/images/NMPC_CtrlScheme.png Graphic file (type png)
 <use NonLinearControl/images/NMPC_CtrlScheme.png>
-Package pdftex.def Info: NonLinearControl/images/NMPC_CtrlScheme.png  used on input line 282.
-(pdftex.def)             Requested size: 506.49101pt x 186.69704pt.
-
-Overfull \hbox (22.79414pt too wide) in paragraph at lines 282--283
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Package pdftex.def Info: NonLinearControl/images/NMPC_CtrlScheme.png  used on input line 285.
+(pdftex.def)             Requested size: 354.54216pt x 130.68735pt.
+[49 <./NonLinearControl/images/NMPC_CtrlScheme.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
-[49 <./NonLinearControl/images/NMPC_CtrlScheme.png>]) [50]
+[50]) [51]
 Chapter 9.
-[51
+[52
 
-] [52
+] [53
 
 ]
 Chapter 10.
-[53
+(./AerospaceApplications/IntroAerospace.tex) [54
 
 ]
 Chapter 11.
-[54
-
-]
-Chapter 12.
 [55
 
 ]
-Chapter 13.
+Chapter 12.
 [56
 
 ]
-Chapter 14.
+Chapter 13.
 [57
+
+]
+Chapter 14.
+[58
 
 ] (./main.aux)
  ***********
@@ -1274,18 +1270,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22380 strings out of 474116
- 447591 string characters out of 5747718
+ 22388 strings out of 474116
+ 447869 string characters out of 5747718
  1947190 words of memory out of 5000000
- 44294 multiletter control sequences out of 15000+600000
+ 44298 multiletter control sequences out of 15000+600000
  582054 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,21n,93p,2496b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (58 pages, 1661304 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (59 pages, 1675661 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
+ 411 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

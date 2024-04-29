@@ -77,14 +77,21 @@
 \contentsline {section}{\numberline {8.4}Second step: Optimization}{47}{}%
 \contentsline {section}{\numberline {8.5}Reciding Horizon}{49}{}%
 \contentsline {section}{\numberline {8.6}Closed-loop scheme}{49}{}%
-\contentsline {section}{\numberline {8.7}NMPC design}{49}{}%
-\contentsline {subsection}{\numberline {8.7.1}Choice of the parameters}{49}{}%
+\contentsline {section}{\numberline {8.7}NMPC design}{50}{}%
+\contentsline {subsection}{\numberline {8.7.1}Choice of the parameters}{50}{}%
 \contentsline {subsection}{\numberline {8.7.2}Choice of the weight matrices}{50}{}%
-\contentsline {section}{\numberline {8.8}Discussion: pros and cons}{50}{}%
-\contentsline {chapter}{\numberline {9}(Extended) Kalman Filter (EKF)}{51}{}%
-\contentsline {part}{II\hspace {1em}Aerospace applications}{52}{}%
-\contentsline {chapter}{\numberline {10}Math tools for describing Rotations}{53}{}%
-\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{54}{}%
-\contentsline {chapter}{\numberline {12}Attitude control}{55}{}%
-\contentsline {chapter}{\numberline {13}Orbital dynamics}{56}{}%
-\contentsline {chapter}{\numberline {14}Orbital control}{57}{}%
+\contentsline {section}{\numberline {8.8}Discussion}{50}{}%
+\contentsline {subsubsection}{Convexity}{51}{}%
+\contentsline {subsubsection}{Nonlinear plant}{51}{}%
+\contentsline {subsubsection}{Non-Convex contraints}{51}{}%
+\contentsline {chapter}{\numberline {9}(Extended) Kalman Filter (EKF)}{52}{}%
+\contentsline {part}{II\hspace {1em}Aerospace applications}{53}{}%
+\contentsline {chapter}{\numberline {10}Math tools for describing Rotations}{54}{}%
+\contentsline {section}{\numberline {10.1}Direction cosine matrices}{54}{}%
+\contentsline {section}{\numberline {10.2}Euler angles}{54}{}%
+\contentsline {section}{\numberline {10.3}Rotation matrices general properties}{54}{}%
+\contentsline {section}{\numberline {10.4}Quaternions}{54}{}%
+\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{55}{}%
+\contentsline {chapter}{\numberline {12}Attitude control}{56}{}%
+\contentsline {chapter}{\numberline {13}Orbital dynamics}{57}{}%
+\contentsline {chapter}{\numberline {14}Orbital control}{58}{}%
