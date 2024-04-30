@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1714461629.8023 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1714461635.16184 0
+["pdflatex"] 1714494984.15714 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1714494990.02201 0
   "AerospaceApplications/Ch10_IntroAerospace.tex" 1714403351 1837 b4b19511486572ab9b53a88b7cfd66aa ""
-  "AerospaceApplications/Ch11_AttitudeDynamics.tex" 1714461628 16108 7248121323249aa0b125af06abf61e59 ""
+  "AerospaceApplications/Ch11_AttitudeDynamics.tex" 1714494975 16149 30de986f60ffcf23f8046a06719b69e6 ""
   "AerospaceApplications/images/RFs.png" 1714408804 32052 6826074e3d0073384d465acc0507f307 ""
   "AerospaceApplications/images/coord_transf.png" 1714415557 28291 d605a3f45cc80572af5defa6860621af ""
   "AerospaceApplications/images/gimbal_lock.png" 1714423653 52870 588fc11043a82815a8b35e5a2ed0f90b ""
@@ -286,9 +286,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1709981979 5513072 c253eaa6343e824d2661325481d57b70 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1709982122 8221404 96a78d3294408dad61821d0b84b8bd19 ""
   "c:/texlive/2023/texmf.cnf" 1709981959 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1714461634 20061 d3b49624439d5bfb6d9a9047a25e716f "pdflatex"
+  "main.aux" 1714494989 20182 d6f773d9af62aaae4edd17f519e23ca4 "pdflatex"
   "main.tex" 1714416884 2029 7ef5f69261bb97b231cbe9c388b9a0c8 ""
-  "main.toc" 1714461634 7563 eead2cf0a0d522e85cd0bf805c9ff8da "pdflatex"
+  "main.toc" 1714494989 7643 5487be4cbf2fe15b3fe1eb9d6d168979 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
