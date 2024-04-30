@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  29 APR 2024 14:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  30 APR 2024 09:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -253,7 +253,16 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (c:/texlive/2023/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count303
@@ -640,20 +649,20 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count337
@@ -709,11 +718,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1241,23 +1250,117 @@ Chapter 9.
 
 ]
 Chapter 10.
-(./AerospaceApplications/IntroAerospace.tex) [54
+(./AerospaceApplications/Ch10_IntroAerospace.tex
+<AerospaceApplications/images/satellite_img.png, id=269, 452.28975pt x 399.29175pt>
+File: AerospaceApplications/images/satellite_img.png Graphic file (type png)
+<use AerospaceApplications/images/satellite_img.png>
+Package pdftex.def Info: AerospaceApplications/images/satellite_img.png  used on input line 5.
+(pdftex.def)             Requested size: 316.60066pt x 279.50232pt.
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+[54
+
+ <./AerospaceApplications/images/satellite_img.png>]) [55]
 Chapter 11.
-[55
+(./AerospaceApplications/Ch11_AttitudeDynamics.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
-]
-Chapter 12.
+ []
+
+<AerospaceApplications/images/RFs.png, id=278, 370.986pt x 308.352pt>
+File: AerospaceApplications/images/RFs.png Graphic file (type png)
+<use AerospaceApplications/images/RFs.png>
+Package pdftex.def Info: AerospaceApplications/images/RFs.png  used on input line 45.
+(pdftex.def)             Requested size: 296.78918pt x 246.68193pt.
 [56
+
+] [57 <./AerospaceApplications/images/RFs.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+
+ []
+
+<AerospaceApplications/images/coord_transf.png, id=287, 323.40825pt x 248.127pt>
+File: AerospaceApplications/images/coord_transf.png Graphic file (type png)
+<use AerospaceApplications/images/coord_transf.png>
+Package pdftex.def Info: AerospaceApplications/images/coord_transf.png  used on input line 152.
+(pdftex.def)             Requested size: 194.04643pt x 148.87733pt.
+<AerospaceApplications/images/rotation_transf.png, id=288, 254.1495pt x 199.947pt>
+File: AerospaceApplications/images/rotation_transf.png Graphic file (type png)
+<use AerospaceApplications/images/rotation_transf.png>
+Package pdftex.def Info: AerospaceApplications/images/rotation_transf.png  used on input line 172.
+(pdftex.def)             Requested size: 254.14888pt x 199.9465pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[58 <./AerospaceApplications/images/coord_transf.png>]
+<AerospaceApplications/images/square_rot.png, id=293, 269.20575pt x 251.7405pt>
+File: AerospaceApplications/images/square_rot.png Graphic file (type png)
+<use AerospaceApplications/images/square_rot.png>
+Package pdftex.def Info: AerospaceApplications/images/square_rot.png  used on input line 186.
+(pdftex.def)             Requested size: 269.20508pt x 251.73987pt.
+ [59 <./AerospaceApplications/images/rotation_transf.png> <./AerospaceApplications/images/square_rot.png>]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 226.
+
+
+Overfull \hbox (2.06187pt too wide) detected at line 239
+[]
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 243.
+
+
+Overfull \hbox (18.09985pt too wide) detected at line 250
+[]
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 255.
+
+
+Overfull \hbox (14.60526pt too wide) detected at line 262
+[]
+ []
+
+[60]
+<AerospaceApplications/images/gimbal_lock.png, id=304, 177.66376pt x 205.9695pt>
+File: AerospaceApplications/images/gimbal_lock.png Graphic file (type png)
+<use AerospaceApplications/images/gimbal_lock.png>
+Package pdftex.def Info: AerospaceApplications/images/gimbal_lock.png  used on input line 296.
+(pdftex.def)             Requested size: 230.96284pt x 267.7603pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--324
+
+ []
+
+[61]) [62 <./AerospaceApplications/images/gimbal_lock.png>]
+Chapter 12.
+[63
 
 ]
 Chapter 13.
-[57
+[64
 
 ]
 Chapter 14.
-[58
+[65
+
+]
+Chapter 15.
+[66
 
 ] (./main.aux)
  ***********
@@ -1270,18 +1373,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22388 strings out of 474116
- 447869 string characters out of 5747718
- 1947190 words of memory out of 5000000
- 44298 multiletter control sequences out of 15000+600000
- 582054 words of font info for 90 fonts, out of 8000000 for 9000
+ 22534 strings out of 474116
+ 451900 string characters out of 5747718
+ 1946190 words of memory out of 5000000
+ 44421 multiletter control sequences out of 15000+600000
+ 591568 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,21n,93p,2496b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (59 pages, 1675661 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (67 pages, 2781488 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 469 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

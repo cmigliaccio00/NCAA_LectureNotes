@@ -86,12 +86,20 @@
 \contentsline {subsubsection}{Non-Convex contraints}{51}{}%
 \contentsline {chapter}{\numberline {9}(Extended) Kalman Filter (EKF)}{52}{}%
 \contentsline {part}{II\hspace {1em}Aerospace applications}{53}{}%
-\contentsline {chapter}{\numberline {10}Math tools for describing Rotations}{54}{}%
-\contentsline {section}{\numberline {10.1}Direction cosine matrices}{54}{}%
-\contentsline {section}{\numberline {10.2}Euler angles}{54}{}%
-\contentsline {section}{\numberline {10.3}Rotation matrices general properties}{54}{}%
-\contentsline {section}{\numberline {10.4}Quaternions}{54}{}%
-\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{55}{}%
-\contentsline {chapter}{\numberline {12}Attitude control}{56}{}%
-\contentsline {chapter}{\numberline {13}Orbital dynamics}{57}{}%
-\contentsline {chapter}{\numberline {14}Orbital control}{58}{}%
+\contentsline {chapter}{\numberline {10}Introduction}{54}{}%
+\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{56}{}%
+\contentsline {section}{\numberline {11.1}Rotations}{56}{}%
+\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{56}{}%
+\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{57}{}%
+\contentsline {subsection}{\numberline {11.1.3}Euler angles}{60}{}%
+\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{123}$}{60}{}%
+\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{321}$}{60}{}%
+\contentsline {subsubsection}{Proper Euler $\mathbf {T}_{313}$}{60}{}%
+\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{60}{}%
+\contentsline {subsubsection}{Singularities, Gimbal lock}{61}{}%
+\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{61}{}%
+\contentsline {subsection}{\numberline {11.1.6}Quaternions}{62}{}%
+\contentsline {chapter}{\numberline {12}Attitude kinematics and dynamics}{63}{}%
+\contentsline {chapter}{\numberline {13}Attitude control}{64}{}%
+\contentsline {chapter}{\numberline {14}Orbital dynamics}{65}{}%
+\contentsline {chapter}{\numberline {15}Orbital control}{66}{}%
