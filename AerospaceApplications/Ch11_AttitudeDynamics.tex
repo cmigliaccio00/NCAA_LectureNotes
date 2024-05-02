@@ -328,15 +328,215 @@ From this theorem, follows that \textit{any rotation} can be described by using 
     \item[\ding{70}] An angle $\beta$ (1 variable)
     \item[\ding{70}] A rotation axis $\mathbf{u}$ (3 variables)
 \end{itemize}
+{
 \huge{
 \begin{equation*}
     \mathbf{T} \equiv \mathbf{T}(\beta, \mathbf{u})
 \end{equation*}}
-
-
-
-
+}
 
 \subsection{Quaternions}
+\textbf{Quaternions} are mathematical object introduced by Hamilton. They are: (i) an extension of the concept of \textit{Complex numbers}, (ii) are useful and more robust tool to describe \textbf{rotations}. \\
+\textbf{Complex numbers} are element of a 2D-vector space whose basis is $\{1,\mathbf{i}\}$. Each element can be expressed as a linear combination of these two elements.\\
+In an equivalent way we can state that:\\
 
-\subsection{Change of representation}
+\hspace*{-5mm}
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}     %Larghezza del box
+        {
+            \large{
+                \textbf{DEFINITION (QUATERNIONS)}\\
+                The quaternions are element of a 4D-dimensional vector space whose basis is $\{1, \mathbf{i, j, k}\}$, where is defined a particular \textbf{product} indicated with $\otimes$. The following properties hold:
+                \begin{equation*}
+                    \begin{aligned}
+                        &\mathbf{i}^2=\mathbf{j}^2=\mathbf{k}^2=\mathbf{i\otimes j \otimes k}=-1\\
+                        &\mathbf{i}\otimes\mathbf{j}=-\mathbf{j}\otimes\mathbf{i}=\mathbf{k}\\
+                        &\mathbf{j}\otimes\mathbf{k}=-\mathbf{k}\otimes\mathbf{j}=\mathbf{i}\\
+                        &\mathbf{k}\otimes\mathbf{i}=-\mathbf{i}\otimes\mathbf{k}=\mathbf{j}
+                    \end{aligned}
+                \end{equation*}
+            }
+        }
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+\noindent
+As we introduced a new mathematical object we have to define a set of properties and some notation.
+
+{\color{red} \subsubsection*{Notation}}
+
+One can indicate a quaternion using one of the following notations:
+{\large{
+    \begin{align*}
+        \mathfrak{q} \quad &= \quad q_0+q_1\mathbf{i}+q_1\mathbf{j}+q_2\mathbf{k}=\\
+                     &= \quad q_0+\mathbf{q}=\\
+                     &=\quad (q_0, q_1, q_2, q_3)=\\
+                     &=\quad  (q_0, \mathbf{q})=\begin{bmatrix}
+                        \ q_0 \ \\\ \mathbf{q} \
+                     \end{bmatrix}
+    \end{align*}
+}}
+
+\begin{itemize}
+    \itemsep0em
+    \item $q_0$ is the \textit{real part}
+    \item $\mathbf{q}$ is the so-called \textit{vector part}
+    \item if $q_0=0$, the resulting quaternion $\mathfrak{q}=(0,\mathbf{q})$ is said to be \textit{pure}
+\end{itemize}
+
+{\color{red} \subsubsection*{Null element}}
+\noindent
+The \textbf{null element} of the quaternion vector space is
+{\Large{
+    \begin{equation*}
+        \mathfrak{O} = (0, \mathbf{0})
+    \end{equation*}
+}
+}
+
+{\color{red} \subsubsection*{Complex conjugate}}
+\noindent
+The \textbf{complex conjugate} $\mathfrak{q}^*$ of a quaternion $\mathfrak{q}=q_0+\mathbf{q}$ is
+{\Large{
+    \begin{align*}
+        \mathfrak{q}^*=q_0-q=\begin{bmatrix}
+            q_0\\-\mathbf{q}
+        \end{bmatrix}=(q_0, -\mathbf{q})
+    \end{align*}
+}} 
+
+{\color{red} \subsubsection*{Norm}}
+\noindent
+We simply define the \textbf{quaternion norm} as
+{\Large{
+    \begin{equation*}
+        \vert \mathfrak{q} \vert = \Vert \mathfrak{q} \Vert = \vert \mathfrak{q}^* \vert=\sqrt(q \cdots q^* )=
+        \sum_{i=0}^3 {q_i}^2
+    \end{equation*}
+}}
+
+{\color{red} \subsubsection*{Reciprocal element}}
+\noindent
+Given a quaternion $\mathfrak{q}$, the reciprocal element $\mathfrak{q}^-1$ is
+{\Large{
+    \begin{equation*}
+        \mathfrak{q}^{-1}=\frac{\mathfrak{q}^*}{\Vert \mathfrak{q} \Vert}
+    \end{equation*}
+}} 
+
+{\color{red} \subsubsection*{Sum}}
+\noindent
+The \textbf{sum} of two quaternions $\mathfrak{q}$ and  $\mathfrak{p}$ is
+{\Large{
+    \begin{equation*}
+        \mathfrak{q}+\mathfrak{p}=q_0+p_0+\mathbf{q}+\mathbf{p}
+    \end{equation*}
+}}
+
+{\color{red} \subsubsection*{Dot product}}
+\noindent
+The \textbf{dot product} of two quaternions $\mathfrak{q}$ and $\mathfrak{p}$ is
+{\Large{
+    \begin{equation*}
+        \mathfrak{q} \cdot \mathfrak{p} = 
+        \sum_{i=0}^3 {q_i p_i}
+    \end{equation*}
+}}
+ 
+{\color{red} \subsubsection*{Quaternion product (Hamilton product)}}
+\noindent
+Given two quaternions $\mathfrak{q} \ \text{and} \ \mathfrak{p}$ we define the \textbf{Hamilton product} as:
+{\Large{
+    \begin{align*}
+        \mathfrak{q} \otimes \mathfrak{p} &= 
+        (q_0+\mathbf{q}) \otimes (p_0+\mathbf{p}) = (...)\\
+        &= (q_0p_0-\mathbf{q}\cdot\mathbf{p})+(q_0\mathbf{p}+p_0\mathbf{q}+\mathbf{q}\times\mathbf{p})
+    \end{align*}
+}}
+Where $\mathbf{q}\times\mathbf{p}$ is the cross product
+\begin{equation*}
+    \mathbf{q}\times\mathbf{p}=
+    \begin{bmatrix}
+        \ q_2p_3-q_3p_2 \ \\
+        \ q_3p_1-q_1p_3 \ \\
+        \ q_1p_2-q_2p_1 \
+    \end{bmatrix}
+\end{equation*}
+Also the quaternion vector space has an \textbf{identity element} equal to
+{\Large{
+    \begin{equation*}
+        \mathfrak{I} = (1, \mathbf{0})
+    \end{equation*}
+}}
+
+\subsection{Describe rotations through quaternions}
+Through this subsection we will entry into details of why quaternions can be useful to describe rotations. At first, we have to say that given a vector $\mathbf{r}$ with component $x,y, z$, its 4D extension is $(0, \mathbf{r})$. We have seen thanks to the \textbf{angle-axis} representation that a rotation of the vector $\mathbf{r}$ of an angle $\beta$ and rotation axis $\mathbf{u}$ is $\mathbf{p}=\mathbf{T}(\beta, \mathbf{u})\mathbf{r}$. \\
+For given $\beta$ and $\mathbf{u}$, the associated unit quaternion is defined as
+{\large{
+    \begin{equation*}
+        \mathfrak{q} \doteq 
+        \bigg( 
+            \cos\frac{\beta}{2}, \
+            \mathbf{u} \sin\frac{\beta}{2} \
+        \bigg)=
+        \bigg( 
+            \cos\frac{\beta}{2}, \
+            u_1 \sin\frac{\beta}{2}, \
+            u_2 \sin\frac{\beta}{2},\
+            u_3 \sin\frac{\beta}{2} \
+        \bigg)
+    \end{equation*}
+}}
+\noindent
+The \textit{components} of this vector are called \textbf{Euler parameters}.\\
+
+\hspace*{-5mm}
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}     %Larghezza del box
+        \Large{
+            \textbf{Theorem}
+            The \textit{rotated vector} $\mathbf{r}$ can be defined as 
+            \begin{equation*}
+                (0,p) = \mathfrak{q} \otimes (0, \mathbf{r}) \otimes \mathfrak{q}^*
+            \end{equation*}
+        }
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+\noindent
+From the moment that we can associate each \textit{angle-axis} representation to a specific quaternion, we can retrieve the quaternions of the \textit{elementary rotation matrices} as follows:
+{\Large{
+    \begin{align*}
+        &\mathbf{T}_1(\phi) \longleftrightarrow
+        \mathfrak{q}_1 = \bigg(\cos \frac{\phi}{2}, \sin \frac{\phi}{2}, 0, 0 \bigg)\\
+        &\mathbf{T}_2(\theta) \longleftrightarrow 
+        \mathfrak{q}_2=\bigg(\cos \frac{\theta}{2}, 0, \cos \frac{\theta}{2}, 0 \bigg)\\
+        &\mathbf{T}_3(\psi) \longleftrightarrow 
+        \mathfrak{q}_3=\bigg(\cos \frac{\psi}{2}, 0, 0, \cos\frac{\psi}{2} \bigg)
+    \end{align*}
+}}
+At this point we can note that any rotation can be expressed in the form an Hamilton product between the \textbf{quaternions}, that is 
+{\Large{
+    \begin{equation*}
+        \mathfrak{q} = 
+        \mathfrak{q}_1 \otimes
+        \mathfrak{q}_2 \otimes
+        \dots \otimes
+        \mathfrak{q}_n
+    \end{equation*}
+}}
+The \textbf{inverse rotation} is
+{\Large{
+    \begin{equation*}
+        \mathfrak{q}^{-1} = \mathfrak{q}^*
+    \end{equation*}
+}}
+
+\section{Attitude kinematics}
+
+\section{Attitude dynamics}
+

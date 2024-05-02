@@ -99,8 +99,10 @@
 \contentsline {subsubsection}{Singularities, Gimbal lock}{61}{}%
 \contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{61}{}%
 \contentsline {subsection}{\numberline {11.1.6}Quaternions}{62}{}%
-\contentsline {subsection}{\numberline {11.1.7}Change of representation}{62}{}%
-\contentsline {chapter}{\numberline {12}Attitude kinematics and dynamics}{63}{}%
-\contentsline {chapter}{\numberline {13}Attitude control}{64}{}%
-\contentsline {chapter}{\numberline {14}Orbital dynamics}{65}{}%
-\contentsline {chapter}{\numberline {15}Orbital control}{66}{}%
+\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{64}{}%
+\contentsline {section}{\numberline {11.2}Attitude kinematics}{65}{}%
+\contentsline {section}{\numberline {11.3}Attitude dynamics}{65}{}%
+\contentsline {chapter}{\numberline {12}Attitude kinematics and dynamics}{66}{}%
+\contentsline {chapter}{\numberline {13}Attitude control}{67}{}%
+\contentsline {chapter}{\numberline {14}Orbital dynamics}{68}{}%
+\contentsline {chapter}{\numberline {15}Orbital control}{69}{}%
