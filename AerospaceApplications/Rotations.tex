@@ -1,7 +1,232 @@
-\section{Direction cosine matrices (DCM)}
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{glossaries}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{eufrak}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{tikz}
+\tikzstyle{mybox} = [draw=black, thin, rectangle, rounded corners, inner ysep=5pt, inner xsep=5pt, fill=blue!15]
+\newtheorem{theorem}{Teorema}
+\usepackage[a4paper, top=1cm , bottom=1.5cm , right=1cm , left=1cm ]{geometry}
 
-\section{Euler angles}
+\title{
+    \vspace{-1.5cm}
+    \textbf{Math tools for ROTATIONS (Formulary)}
+    \vspace{-0.3cm}
+    }
+\author{
+    \textsf{\textbf{Carlo MIGLIACCIO (S332937)}}}
+\date{}
 
-\section{Rotation matrices general properties}
+\begin{document}
+\maketitle
 
-\section{Quaternions}
+\vspace{-1.5cm}
+\section*{Direction Cosine Matrices (DCM)}
+{\small{
+
+\textbf{Position of a particle}  \quad
+ $ \begin{aligned}
+        &\mathbf{R} = X\mathbf{I} + Y \mathbf{J} + Z \mathbf{K}
+        &\text{Position of the particle in F1}\\
+        &\mathbf{r} = x \mathbf{i} + y \mathbf{j} + z \mathbf{k}
+        &\text{Position of the particle in F2}\\
+        &\mathbf{R_O}=X_O \mathbf{I} + Y_O \mathbf{J} + Z_O \mathbf{K}
+        &\text{Position in F1 of the O of F2}
+    \end{aligned}$
+
+  \noindent
+\textbf{F1 vs F2} \quad
+    $\begin{bmatrix}
+        X\\Y\\Z
+    \end{bmatrix} = 
+    \begin{bmatrix}
+        X_O\\Y_O\\Z_O
+    \end{bmatrix}+
+    \begin{bmatrix}
+        \mathbf{I \cdot i}&\mathbf{I \cdot j}&\mathbf{I \cdot k}\\
+        \mathbf{J \cdot i}&\mathbf{J \cdot j}&\mathbf{J \cdot k}\\
+        \mathbf{K \cdot i}&\mathbf{K \cdot j}&\mathbf{K \cdot  k }
+    \end{bmatrix}
+    \begin{bmatrix}
+        x\\y\\z
+    \end{bmatrix}, \mathbf{T} \doteq \begin{bmatrix}
+        \mathbf{I \cdot i}&\mathbf{I \cdot j}&\mathbf{I \cdot k}\\
+        \mathbf{J \cdot i}&\mathbf{J \cdot j}&\mathbf{J \cdot k}\\
+        \mathbf{K \cdot i}&\mathbf{K \cdot j}&\mathbf{K \cdot  k }
+    \end{bmatrix}$
+
+    \noindent
+    \textbf{Interpretations of DCM}
+    $\begin{bmatrix}
+        \ X \ \\ \ Y \ \\\ Z \
+    \end{bmatrix} = 
+    \mathbf{T} 
+    \begin{bmatrix}
+       \ x \ \\ \ y \ \\ \ z \
+    \end{bmatrix} \textsf{can be seen as: }
+    \begin{cases}
+        \text{Coordinate transformation} & \textsf{F2}\to\textsf{F1}\\
+        \text{Rotation} & \textsf{F1}\to\textsf{F2}
+    \end{cases} 
+    $
+}}
+
+    \vspace{-0.5cm}
+\section*{Euler angles}
+{\small{
+
+
+
+\textbf{Elementary 3D-rotation matrices} 
+$
+\begin{aligned}
+    &\mathbf{T}_1(\phi) = 
+    \begin{bmatrix}
+        1&0&0\\
+        0&\cos\phi&-\sin\phi\\
+        0&\sin\phi&cos\phi
+    \end{bmatrix} & \text{Rotation about $X$ (or x) of $\phi$ }\\
+    &\mathbf{T}_2(\theta) = 
+    \begin{bmatrix}
+        \cos\theta&0&\sin\theta\\
+        0&1&0\\
+        -\sin\theta&0&\cos\theta
+    \end{bmatrix}  & \text{Rotation about $Y$ (or y) of $\theta$ } \\
+    &\mathbf{T}_3(\psi) = \begin{bmatrix}
+        \cos\psi&-\sin\psi&0\\
+        sin\psi&cos\psi&0\\
+        0&0&1
+    \end{bmatrix}
+    & \text{Rotation about $Z$ (or z) of $\psi$ }\\
+\end{aligned}
+$
+
+\noindent
+\textbf{Rotations as product of the matrices $\mathbf{T}_\diamond$}
+\begin{itemize}
+    \itemsep0em
+    \item[\ding{70}] \textbf{6 Tait-Bryan rotations} the most used are 123 and 321
+    \item[\ding{70}] \textbf{6 proper Euler rotations} the most common is 313
+\end{itemize}
+
+}}
+
+\vspace{-0.5cm}
+\section*{Angle-axis representation $\mathbf{T} \equiv \mathbf{T}(\beta, \mathbf{u})$}
+{
+    \small{
+\textbf{\underline{Theorem (angle-axis representation)}}
+            \begin{itemize}
+                \itemsep0em
+                \item[(i)] Any rotation of a rigid body where a point is fixed is \textbf{equivalent} to a rotation in which the rotation axis passes through the fixed point; 
+                \item[(ii)] The rotation axis is the \textbf{eigenvector} $\mathbf{u}$ corresponding to the eigenvalues 1 of the rotation matrix. 
+                \vspace{0.2cm}
+            \end{itemize} 
+}
+}
+
+\vspace{-1cm}
+\section*{\color{black}{Quaternions}}
+{\small{
+
+
+
+\textbf{Basis} \ $\{1, \mathbf{i, j, k}\}$\\
+{
+\centering
+\textbf{Properties} \ 
+$\begin{aligned}
+    &\mathbf{i}^2=\mathbf{j}^2=\mathbf{k}^2=\mathbf{i\otimes j \otimes k}=-1\\
+    &\mathbf{i}\otimes\mathbf{j}=-\mathbf{j}\otimes\mathbf{i}=\mathbf{k}\\
+    &\mathbf{j}\otimes\mathbf{k}=-\mathbf{k}\otimes\mathbf{j}=\mathbf{i}\\
+    &\mathbf{k}\otimes\mathbf{i}=-\mathbf{i}\otimes\mathbf{k}=\mathbf{j}
+\end{aligned}$
+\textbf{Notations} \ 
+$\begin{aligned}
+    \mathfrak{q} \quad &= \quad q_0+q_1\mathbf{i}+q_1\mathbf{j}+q_2\mathbf{k}=\\
+                 &= \quad q_0+\mathbf{q}=\\
+                 &=\quad (q_0, q_1, q_2, q_3)=\\
+                 &=\quad  (q_0, \mathbf{q})=\begin{bmatrix}
+                    \ q_0 \ \\\ \mathbf{q} \
+                 \end{bmatrix}
+\end{aligned}$
+}\\
+\textbf{Null element}\ $\mathfrak{O} = (0, \mathbf{0})$ \quad
+\textbf{Complex conjugate} $\mathfrak{q}^*=q_0-q=\begin{bmatrix}
+    q_0\\-\mathbf{q}
+\end{bmatrix}=(q_0, -\mathbf{q})$
+\textbf{Identity} \quad
+$ \mathfrak{I} = (1, \mathbf{0})$\\
+\noindent\\
+\textbf{Quaternion norm}
+$\vert \mathfrak{q} \vert = \Vert \mathfrak{q} \Vert = \vert \mathfrak{q}^* \vert=\sqrt(q \cdots q^* )=
+\sum_{i=0}^3 {q_i}^2$ \quad
+\textbf{Reciprocal quaternion}
+$ \mathfrak{q}^{-1}=\frac{\mathfrak{q}^*}{\Vert \mathfrak{q} \Vert}$\\
+
+\noindent
+\textbf{Sum}
+$ \mathfrak{q}+\mathfrak{p}=q_0+p_0+\mathbf{q}+\mathbf{p}$
+\quad \quad
+\textbf{Dot product}
+$\mathfrak{q} \cdot \mathfrak{p} = 
+\sum_{i=0}^3 {q_i p_i}$\\
+
+\noindent
+\textbf{Hamilton product}
+$\begin{aligned}
+    \mathfrak{q} \otimes \mathfrak{p} = 
+    (q_0+\mathbf{q}) \otimes (p_0+\mathbf{p}) = (...)
+    = (q_0p_0-\mathbf{q}\cdot\mathbf{p})+(q_0\mathbf{p}+p_0\mathbf{q}+\mathbf{q}\times\mathbf{p})
+\end{aligned}$\\
+
+\noindent
+\textbf{Quaternion associated with rotations}
+$\mathfrak{q} \doteq 
+\bigg( 
+    \cos\frac{\beta}{2}, \
+    \mathbf{u} \sin\frac{\beta}{2} \
+\bigg)=
+\bigg( 
+    \cos\frac{\beta}{2}, \
+    u_1 \sin\frac{\beta}{2}, \
+    u_2 \sin\frac{\beta}{2},\
+    u_3 \sin\frac{\beta}{2} \
+\bigg)$\\
+\noindent
+\textbf{Theorem } $ (0,p) = \mathfrak{q} \otimes (0, \mathbf{r}) \otimes \mathfrak{q}^*$\\
+\noindent
+\textbf{Elementary transformations}
+$
+\begin{aligned}
+    &\mathbf{T}_1(\phi) \longleftrightarrow
+    \mathfrak{q}_1 = \bigg(\cos \frac{\phi}{2}, \sin \frac{\phi}{2}, 0, 0 \bigg)\\
+    &\mathbf{T}_2(\theta) \longleftrightarrow 
+    \mathfrak{q}_2=\bigg(\cos \frac{\theta}{2}, 0, \sin \frac{\theta}{2}, 0 \bigg)\\
+    &\mathbf{T}_3(\psi) \longleftrightarrow 
+    \mathfrak{q}_3=\bigg(\cos \frac{\psi}{2}, 0, 0, \sin\frac{\psi}{2} \bigg)
+\end{aligned}
+$\\
+\textbf{Any rotation can be expressed as: }
+$ \mathfrak{q} = 
+\mathfrak{q}_1 \otimes
+\mathfrak{q}_2 \otimes
+\dots \otimes
+\mathfrak{q}_n$ \\
+
+\noindent
+\textbf{Inverse rotation} 
+$ \mathfrak{q}^{-1} = \mathfrak{q}^*$
+
+}}
+
+\end{document}

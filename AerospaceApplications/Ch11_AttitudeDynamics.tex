@@ -514,9 +514,9 @@ From the moment that we can associate each \textit{angle-axis} representation to
         &\mathbf{T}_1(\phi) \longleftrightarrow
         \mathfrak{q}_1 = \bigg(\cos \frac{\phi}{2}, \sin \frac{\phi}{2}, 0, 0 \bigg)\\
         &\mathbf{T}_2(\theta) \longleftrightarrow 
-        \mathfrak{q}_2=\bigg(\cos \frac{\theta}{2}, 0, \cos \frac{\theta}{2}, 0 \bigg)\\
+        \mathfrak{q}_2=\bigg(\cos \frac{\theta}{2}, 0, \sin \frac{\theta}{2}, 0 \bigg)\\
         &\mathbf{T}_3(\psi) \longleftrightarrow 
-        \mathfrak{q}_3=\bigg(\cos \frac{\psi}{2}, 0, 0, \cos\frac{\psi}{2} \bigg)
+        \mathfrak{q}_3=\bigg(\cos \frac{\psi}{2}, 0, 0, \sin\frac{\psi}{2} \bigg)
     \end{align*}
 }}
 At this point we can note that any rotation can be expressed in the form an Hamilton product between the \textbf{quaternions}, that is 
@@ -537,6 +537,342 @@ The \textbf{inverse rotation} is
 }}
 
 \section{Attitude kinematics}
+The objective of this paragraph is to derive the \textbf{kinematic equations} for a generic \textit{rigid body} in rotational motion, these equations are crucially important for the \textbf{spacecraft attitude control}.\\
+In general, the dynamic and kinematic equations can be seen as a \textbf{series of two nonlinear systems}.
+
+\begin{figure}[h]
+    \centering 
+    \includegraphics[scale=0.7]{AerospaceApplications/images/kin_dyn_series.png}
+\end{figure}
+
+In this figure:
+\begin{itemize}
+    \itemsep0em
+    \item The \textbf{dynamic equations} block has got as input an external torque $\mathbf{M}$ and as output the angular velocity vector $\boldsymbol{\omega}$.
+    \item The \textbf{kinematic equations} block has got as input the output of dynamic block, then the angular velocity  $\boldsymbol{\omega}$, as output one between the \textbf{Euler angles} $(\phi, \theta, \psi)$ and the rotation \textbf{quaternion} $\mathfrak{q}$.
+\end{itemize}
+
+Then, the overall system has: input $\mathbf{M}(t)$ and ouput $(\phi, \theta, \psi)$ or $\mathfrak{q}$ which represents the output to control. For instance the rotation is crucial in order to obtain a certain orientation of the spacecraft toward a certain direction. 
+
+The classical setting in this case is considering that the rigid body is rotating with respect to some \textbf{observer reference frame} \textsf{OF}, with an \textit{angular velocity} $\boldsymbol{\omega}=\omega_1\mathbf{b}_1 + \omega_2\mathbf{b}_2+\omega_3\mathbf{b}_3$ in which:
+\begin{itemize}
+    \itemsep0em
+    \item $\omega=\vert \boldsymbol{\omega} \vert$ is the speed of rotation; 
+    \item The unit vector $\frac{\boldsymbol{\omega}}{\vert \boldsymbol{\omega} \vert}$ is the \textit{rotation axis}.
+\end{itemize}
+
+We can individuate two \textit{reference frames}: the \textbf{observer frame} (\textsf{OF}) and the \textbf{body frame} (\textsf{BF}), when we introduce some reference frames we must give some information like: where is the origin? Which are the unit vectors? And the axis? In our case we have:
+\begin{enumerate}
+    \item \textbf{Observer frame}(\textsf{OF}) $\begin{cases}
+        \text{origin: somewhere}\\
+        \text{unit vectors}: \{\mathbf{i}_1 
+        \mathbf{i}_2, \mathbf{i}_3\}\\
+        \text{axis:} X, Y, Z 
+    \end{cases}$
+    \item \textbf{Body frame}(\textsf{BF}) $\begin{cases}
+        \text{origin: CoM of Rigid body }\to \text{rotates with the body}\\
+        \text{unit vectors: } \{\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3\}\\
+        \text{axis}: x, y, z
+    \end{cases}$
+\end{enumerate} 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{AerospaceApplications/images/OF_BF.png}
+    \caption{ \textsf{Observer and Body frames for a generic rigid body}} 
+\end{figure}
+
+From the moment that the rotation from \textsf{OF} to \textsf{BF} can be described by using either the Euler angles or the quaternions, we can derive some kinematic equations for both type of representation. Before doing this, it is important to give the definition of what is the \textbf{derivative of a vector}.
+
+\subsection{Vector derivative}
+Any physical vector can be expressed in the form
+{\large{
+    \begin{equation}
+        \mathbf{r} = x \mathbf{b}_1 +
+                     y \mathbf{b}_2 +
+                     z \mathbf{b}_3
+    \end{equation}
+}}
+If one makes the \textbf{derivative} of such vector applying the basic rules from the differential calcus, it will be obtained
+{\large{
+    \begin{align}
+        \dot{\mathbf{r}} = \dot{x} \mathbf{b}_1 +
+                           \dot{y} \mathbf{b}_2 +
+                           \dot{z} \mathbf{b}_3 +
+                           x \dot{\mathbf{b}}_1 +
+                           y \dot{\mathbf{b}}_2 + 
+                           z \dot{\mathbf{b}}_3
+    \end{align}
+}}
+Between two different time instants, the difference vector is
+\begin{equation}
+    \delta{\mathbf{b}}_i = \delta\boldsymbol{\theta} \times \mathbf{b}_i 
+\end{equation}
+but if the vector $\mathbf{r}$ is rotating with an angular velocity $\boldsymbol{\omega}$, then the angle $\delta\boldsymbol{\theta}$ is equal to $\delta\mathbf{\theta} \doteq \boldsymbol{\omega}\delta t$. When $\delta t\to 0$, the vectors before and after the infinitesimal rotation are very similar, then the vector $\delta\mathbf{b}_i$ becomes $\delta\mathbf{b}_i=\boldsymbol{\omega}\times \mathbf{b}_i$. Putting all together we have:
+{\large{
+    \begin{equation}
+        \dot{\mathbf{r}} = \dot{\mathbf{r}}_B + \boldsymbol{\omega} \times \mathbf{r}
+    \end{equation}
+}}
+Where $\dot{\mathbf{r}}_B=\dot{x} \mathbf{b}_1 +
+\dot{y} \mathbf{b}_2 +
+\dot{z} \mathbf{b}_3$ is the derivative of $\mathbf{r}$ in the \textbf{body frame}, while $\dot{\mathbf{r}}$ is the derivative of $\mathbf{r}$ in the \textbf{observer frame}.
+
+\subsection{Euler angles kinematic}
+We want to retrieve a relation between the input $\mathbf{\omega}(t)$ and the \textbf{Euler angles} $(\phi, \theta, \psi)$. Unfortunately, for the rotations it is not so easy as in the case of \textit{traslational motion}, moreover the relation between the Euler angles derivatives and the components of the angular velocity is NOT the identity matrix. We will provide the kinematic equations for the most used \textit{Tait-Bryan} rotations and for the \textit{Proper Euler angle} rotation. [The derivation of such formulas is not trivial at all].\\
+It is interesting to note that, in the case we use this type of representation we have some \textbf{singularities} in the equations due to the \textit{gimbal-lock} phenomenon. On the other hand, by using a non-minimal representation, rotations described through the quaternions is free from this problem.
+
+\subsubsection{Tait-Bryan 321}
+It can be demonstrated that
+\begin{equation}
+        \begin{bmatrix}
+            \omega_1\\
+            \omega_2\\
+            \omega_3
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            1&0&-\sin\theta\\
+            0&\cos\phi&\sin\phi\cos\theta\\
+            0&-\sin\theta&\cos\phi\cos\theta
+        \end{bmatrix}
+        \begin{bmatrix}
+            \dot{\phi}\\
+            \dot{\theta}\\
+            \dot{\psi}
+        \end{bmatrix}
+\end{equation}
+We can invert the matrix and we can obtain the \textit{Tait-Bryan 321 kinematic equation}:
+\begin{equation}
+    \begin{bmatrix}
+        \dot{\phi}\\
+        \dot{\theta}\\
+        \dot{\psi}
+    \end{bmatrix}=\frac{1}{\cos\theta}\begin{bmatrix}
+        \cos\theta&\sin\phi\sin\theta&\cos\phi\sin\theta\\
+        0&\cos\phi\cos\theta&-\sin\phi\cos\theta\\
+        0&\sin\phi&\cos\phi
+    \end{bmatrix}\begin{bmatrix}
+        \omega_1\\
+        \omega_2\\
+        \omega_3
+    \end{bmatrix}
+\end{equation}
+When $\cos\theta=0$ the gimbal-lock occurs, then we have a singularity in the kinematic equations.
+
+\subsubsection{Tait-Bryan 123}
+It can be demonstrated that
+\begin{equation}
+        \begin{bmatrix}
+            \omega_1\\
+            \omega_2\\
+            \omega_3
+        \end{bmatrix} = 
+        \begin{bmatrix}
+           \cos\theta\cos\psi&\sin\psi&0\\
+           -\cos\theta\sin\psi&\cos\psi&0\\
+           \sin\theta&0&1
+        \end{bmatrix}
+        \begin{bmatrix}
+            \dot{\phi}\\
+            \dot{\theta}\\
+            \dot{\psi}
+        \end{bmatrix}
+\end{equation}
+We can invert the matrix and we can obtain the \textit{Tait-Bryan 123 kinematic equation}:
+\begin{equation}
+    \begin{bmatrix}
+        \dot{\phi}\\
+        \dot{\theta}\\
+        \dot{\psi}
+    \end{bmatrix}=\frac{1}{\cos\theta}\begin{bmatrix}
+        \cos\psi&-\sin\psi&0\\
+        \cos\theta\sin\psi&\cos\theta\cos\psi&0\\
+        -\sin\theta\cos\psi&\sin\theta\sin\psi&\cos\theta
+    \end{bmatrix}\begin{bmatrix}
+        \omega_1\\
+        \omega_2\\
+        \omega_3
+    \end{bmatrix}
+\end{equation}
+When $\cos\theta=0$ the gimbal-lock occurs, then we have a singularity in the kinematic equations.
+
+
+
+\subsubsection{Proper-Euler 313}
+It can be demonstrated that
+\begin{equation}
+        \begin{bmatrix}
+            \omega_1\\
+            \omega_2\\
+            \omega_3
+        \end{bmatrix} = 
+        \begin{bmatrix}
+           \sin\theta\sin\psi&\cos\psi&0\\
+           \sin\theta\cos\psi&-\sin\psi&0\\
+           \cos\theta&0&1
+        \end{bmatrix}
+        \begin{bmatrix}
+            \dot{\phi}\\
+            \dot{\theta}\\
+            \dot{\psi}
+        \end{bmatrix}
+\end{equation}
+We can invert the matrix and we can obtain the \textit{Tait-Bryan 313 kinematic equation}:
+\begin{equation}
+    \begin{bmatrix}
+        \dot{\phi}\\
+        \dot{\theta}\\
+        \dot{\psi}
+    \end{bmatrix}=\frac{1}{\sin\theta}\begin{bmatrix}
+        \sin\psi&\cos\psi&0\\
+        \sin\theta\cos\psi&-\sin\theta\sin\psi&0\\
+        \cos\theta\sin\psi&-\cos\theta\cos\psi&\sin\theta
+    \end{bmatrix}\begin{bmatrix}
+        \omega_1\\
+        \omega_2\\
+        \omega_3
+    \end{bmatrix}
+\end{equation}
+When $\cos\theta=0$ the gimbal-lock occurs, then we have a singularity in the kinematic equations.
+
+\subsection{Quaternion kinematic}
+The \textbf{quaternion kinematic} can be written in different equivalent forms:
+\begin{align}
+    &\dot{\mathfrak{q}}=\frac{1}{2}\mathfrak{q}\otimes(0,\boldsymbol{\omega})\\
+    &\dot{\mathfrak(q)}=\frac{1}{2}\boldsymbol{\Omega}q\\
+    &\dot{\mathfrak{q}}=\frac{1}{2}\mathbf{Q}\boldsymbol{\omega}
+\end{align}
+where the matrices $\boldsymbol{\Omega}$ and $\mathbf{Q}$ are defined as follows
+\begin{equation*}
+    \boldsymbol{\Omega}\doteq\begin{bmatrix}
+        0&-\omega_1&-\omega_2&-\omega_3\\
+        \omega_1&0&\omega_3&-\omega_2\\
+        \omega_2&-\omega_3&0&\omega_1\\
+        \omega_3&\omega_2&-\omega_1&0
+    \end{bmatrix}, \quad 
+    \mathbf{Q}\doteq \begin{bmatrix}
+        -q_1&-q_2&-q3\\
+        q_0&-q_3&q_2\\
+        q_3&q_0&-q_1\\
+        -q_2&q_1&q_0
+    \end{bmatrix}
+\end{equation*} 
+
+\subsection{Discussion}
+Through these paragraphs we have found the \textbf{kinematic equations} in the general form
+{\large{
+    \begin{equation}
+        \dot{\mathbf{x}} = A(\mathbf{x})\boldsymbol{\omega}
+    \end{equation}
+}}
+where $\mathbf{x}=(\phi, \theta, \psi)$ or $\mathbf{x}=\mathfrak{q}$. This is a \textbf{state equation}, with state $\mathbf{x}$ and input $\boldsymbol{\omega}$. State equations allow us to predict the time evolution of a system given a certain initial condition $x_0$ and a given input $\boldsymbol{\omega}(t)$. The solution can be found sometimes analitically, otherwise numerical methods have to be exploited, but in this case a solution - even if approximately - can be always provided.
 
 \section{Attitude dynamics}
+In the previous chapter we analysed the equations for the kinematic part of rotations. In this chapter, instead we want to describe the \textbf{attitude dynamic equations} how mentioned they play a fundamental role for the atttitude control of spacecrafts.\\
+We use the same setting with two reference frames, the inertial frame (constant $v_O$) and the body frame, a generic particle $m_i$ of the rigid body has got the following properties:
+
+\begin{figure*}[h]
+    \centering 
+    \includegraphics[scale=0.5]{AerospaceApplications/images/IF_BF.png}    
+\end{figure*}
+
+\begin{align*}
+    &\mathbf{R}_i = X\mathbf{i}_1 +  Y \mathbf{i}_2 + Z \mathbf{i}_3 = \mathbf{R}_O+\mathbf{r}_i\\
+    &R_O= X_O\mathbf{i}_1 +  Y_O \mathbf{i}_2 + Z_O \mathbf{i}_3\\
+    &\dot{\mathbf{R}}_i = \dot{\mathbf{R}}_O + 
+    \dot{\mathbf{r}}_{iB}+\boldsymbol{\omega}\times\mathbf{r}_i\\
+    &\mathbf{r}_i=x\mathbf{b}_1+y\mathbf{b}_2+z\mathbf{b}_3\\
+    &\mathbf{r}_{iB}=\dot{x}\mathbf{b}_1+\dot{y}\mathbf{b}_2+\dot{z}\mathbf{b}_3\\
+    &\boldsymbol{\omega} = \omega_1\mathbf{b}_1+\omega_2\mathbf{b}_2+\omega_3{\mathbf{b}}_3
+\end{align*}
+
+\subsection{Angular momentum}
+Let us start introducing what is the \textbf{angular momentum} of a particle $m_i$. It is defined as 
+\begin{equation}
+    \mathbf{H}_i=r_i\times m\dot{\mathbf{R}}_i=
+    \mathbf{r}_i \times m_i \big( 
+        \dot{\mathbf{R}}_O + 
+        \dot{\mathbf{r}}_{iB}+\boldsymbol{\omega}\times\mathbf{r}_i
+    \big)
+\end{equation}
+Being a rigid body the position of the single particle $m_i$ does not change in time, so the term $\mathbf{r}_{iB}=0$, then it will be obtained
+\begin{align*}
+    \mathbf{H}_i \quad &= \quad \mathbf{r}_i \times m_i 
+        \bigg( \dot{\mathbf{R}}_O +\boldsymbol{\omega}\times\mathbf{r}_i\bigg)\\
+        &= \quad -\dot{\mathbf{R}}_O\times m_i\mathbf{r}_i+\mathbf{r}_i\times m_i(\boldsymbol{\omega}\times\mathbf{r}_i)
+\end{align*}
+If we extend the reasing for all the particles of the body we will obtain:
+\begin{align*}
+    \mathbf{H} \quad &= \quad 
+    -\sum_i \dot{\mathbf{R}}_O\times m_i\mathbf{r}_i+
+    \sum_i\mathbf{r}_i\times m_i(\boldsymbol{\omega}\times\mathbf{r}_i)\\
+    &=\quad -\dot{\mathbf{R}}_O\times \sum_i  m_i\mathbf{r}_i+
+    \sum_i\mathbf{r}_i\times m_i(\boldsymbol{\omega}\times\mathbf{r}_i)\\
+    &=\quad \sum_i\mathbf{r}_i\times m_i(\boldsymbol{\omega}\times\mathbf{r}_i)
+\end{align*}
+in which the term $\sum_i  m_i\mathbf{r}_i=\mathbf{0}$ by definition of Center of Mass (CoM). In a rigid body the particle are not discrete, the particles for which we can compute the angular momentum are \textit{infinitesimal}: $m_i\to dm$. We have substancially replace the summation with the integral obtaining at the end:
+\begin{equation}
+    \mathbf{H} = \int_B{\mathbf{r}\times (\boldsymbol{\omega}\times\mathbf{r})} \ dm
+\end{equation}
+
+\subsection{Inertia matrix (o tensor)}
+If we perform the products, we will obtain in body coordinates:
+\begin{equation}
+    \mathbf{H}=\begin{bmatrix}
+        J_{11}&J_{12}&J_{13}\\
+        J_{21}&J_{22}&J_{23}\\
+        J_{31}&J_{32}&J_{33}
+    \end{bmatrix}\begin{bmatrix}
+        \omega_1\\\omega_2\\\omega_3
+    \end{bmatrix}=\boldsymbol{J\omega}
+\end{equation}
+The matrix $\mathbf{J}$ is the \textbf{inertia matrix} or \textbf{inertia tensor} and it depends only on the properties of the body. The elements $J_{ij}$ are defined as follows:
+\begin{align*}
+    &\textsf{moments of inertia} \ \begin{cases}
+        J_{11}=\int_B (z^2+y^2) \ dm\\
+        J_{22}=\int_B (x^2+z^2) \ dm\\
+        J_{33}=\int_B (x^2+y^2) \ dm
+    \end{cases}\\
+    &\textsf{products of inertia} \ \begin{cases}
+        J_{12}=J_{21}=-\int_B xy \ dm\\
+        J_{13}=J_{31}=-\int_B xz \ dm\\
+        J_{23}=J_{32}=-\int_B yx \ dm
+    \end{cases}
+\end{align*}
+The inertia matrix $\mathbf{J}_o$ has real entries and it is symmetric, for the spectral theorem, a \textbf{diagonal matrix} $\mathbf{J}$ such that 
+$$\mathbf{J} = \mathbf{T}^T\mathbf{J}_o\mathbf{T}$$
+$J=\text{diag}(J_1, J_2, J_3)$ is a diagonal matrix whose entries are the eigenvalues of the non-symmetric matrix $\mathbf{J}_o$.
+The matrix $\mathbf{T}=[\mathbf{e}_1 \ \mathbf{e}_2 \ \mathbf{e}_3]$ is a rotation matrix and its columns are the eigenvector of $\mathbf{J}_o$.
+At this point we call:
+\begin{itemize}
+    \item \textbf{Principal moments of inertia} the eigenvalues of $\mathbf{J}_o$
+    \item \textbf{Principal axes of inertia} the eigenvectors $\mathbf{e}_i$ of $\mathbf{J}_o$
+\end{itemize}
+
+\subsection{Euler momentum equations}
+Let $\mathbf{M}=M_1\mathbf{b}_1+M_2\mathbf{b}_2+M_3\mathbf{b}_3$ an \textbf{input} momentum acting on the system. From the second law of dynamics for rigid body we have that
+{\large{
+    \begin{equation}
+        \dot{\mathbf{H}}=\mathbf{M}
+    \end{equation}
+}}\\
+The derivative $\dot{\mathbf{H}}$ is equal to
+\begin{equation*}
+    \dot{\mathbf{H}} = \dot{\mathbf{H}}_B + \boldsymbol{\omega} \times \mathbf{J}\boldsymbol{\omega} = 
+    \mathbf{J}\dot{\boldsymbol{\omega}} + \mathbf{\omega} \times \mathbf{J}\boldsymbol{\omega}=\mathbf{M}
+\end{equation*}
+Putting all together we obtain the \textbf{Euler moment equations}:
+{\Large{
+    \begin{equation}
+        \mathbf{J}\dot{\boldsymbol{\omega}} = 
+        \mathbf{M} - \boldsymbol{\omega}\times\boldsymbol{J\omega}
+    \end{equation}
+}}
+
+\section{Free rotational motion}
+
+\section{Principal axis of Inertia}
+
+
+
 

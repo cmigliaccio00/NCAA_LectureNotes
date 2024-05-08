@@ -101,8 +101,19 @@
 \contentsline {subsection}{\numberline {11.1.6}Quaternions}{62}{}%
 \contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{64}{}%
 \contentsline {section}{\numberline {11.2}Attitude kinematics}{65}{}%
-\contentsline {section}{\numberline {11.3}Attitude dynamics}{65}{}%
-\contentsline {chapter}{\numberline {12}Attitude kinematics and dynamics}{66}{}%
-\contentsline {chapter}{\numberline {13}Attitude control}{67}{}%
-\contentsline {chapter}{\numberline {14}Orbital dynamics}{68}{}%
-\contentsline {chapter}{\numberline {15}Orbital control}{69}{}%
+\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{66}{}%
+\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{67}{}%
+\contentsline {subsubsection}{Tait-Bryan 321}{67}{}%
+\contentsline {subsubsection}{Tait-Bryan 123}{67}{}%
+\contentsline {subsubsection}{Proper-Euler 313}{68}{}%
+\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{68}{}%
+\contentsline {subsection}{\numberline {11.2.4}Discussion}{68}{}%
+\contentsline {section}{\numberline {11.3}Attitude dynamics}{68}{}%
+\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{69}{}%
+\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{70}{}%
+\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{70}{}%
+\contentsline {section}{\numberline {11.4}Free rotational motion}{70}{}%
+\contentsline {section}{\numberline {11.5}Principal axis of Inertia}{70}{}%
+\contentsline {chapter}{\numberline {12}Attitude control}{71}{}%
+\contentsline {chapter}{\numberline {13}Orbital dynamics}{72}{}%
+\contentsline {chapter}{\numberline {14}Orbital control}{73}{}%
