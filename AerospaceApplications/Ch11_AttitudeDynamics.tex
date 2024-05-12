@@ -498,9 +498,9 @@ The \textit{components} of this vector are called \textbf{Euler parameters}.\\
     \begin{minipage}{.96\textwidth}     %Larghezza del box
         \Large{
             \textbf{Theorem}
-            The \textit{rotated vector} $\mathbf{r}$ can be defined as 
+            The \textit{rotated vector} $\mathbf{p}$ can be defined as 
             \begin{equation*}
-                (0,p) = \mathfrak{q} \otimes (0, \mathbf{r}) \otimes \mathfrak{q}^*
+                (0,\mathbf{p}) = \mathfrak{q} \otimes (0, \mathbf{r}) \otimes \mathfrak{q}^*
             \end{equation*}
         }
     \end{minipage}
@@ -863,16 +863,318 @@ The derivative $\dot{\mathbf{H}}$ is equal to
 \end{equation*}
 Putting all together we obtain the \textbf{Euler moment equations}:
 {\Large{
-    \begin{equation}
+    \begin{equation} \label{eq: Euler_eq}
         \mathbf{J}\dot{\boldsymbol{\omega}} = 
         \mathbf{M} - \boldsymbol{\omega}\times\boldsymbol{J\omega}
     \end{equation}
-}}
+}}\\
+
+\noindent
+In the case that the inertia matrix $\mathbf{J}$ is diagonal, the equation (\ref{eq: Euler_eq}) and performing the product, the equation becomes: 
+\begin{equation*}
+    \begin{aligned}
+        &J_1\dot{\omega_1}+(J_3-J_2)\omega_2\omega_3=M_1\\
+        &J_2\dot{\omega_2}+(J_1-J_3){\omega_1\omega_3}=M_2\\
+        &J_3\dot{\omega_3}+(J_2-J_1){\omega_1\omega_2}=M_3
+    \end{aligned}
+\end{equation*}
+In matrix form:
+\begin{equation}
+    \begin{bmatrix}
+        \dot{\omega_1}\\
+        \dot{\omega_2}\\
+        \dot{\omega_3}
+    \end{bmatrix} = \begin{bmatrix}
+        0&\sigma_1\omega_3&0\\
+        \sigma_2\omega_3&0&0\\
+        \sigma_3\omega_2&0&0
+    \end{bmatrix} \begin{bmatrix}
+        \omega_1\\\omega_2\\\omega_3
+    \end{bmatrix} + 
+    \begin{bmatrix}
+        M_1/J_1\\
+        M_2/J_2\\
+        M_3/J_3
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation*}
+    \sigma_1 = \frac{J_2-J_3}{J_1}, \
+    \sigma_2 = \frac{J_3-J_1}{J_2}, \ 
+    \sigma_3 = \frac{J_1-J_2}{J_3}
+\end{equation*}
 
 \section{Free rotational motion}
+When we want to control any dynamic system we have to analyse its features. For instance it is useful to study its behaviour when no input is applied $\to$ We want to analyse the free motion or free response of the system.
 
-\section{Principal axis of Inertia}
+The aim here is to describe the free rotational motion of a generic spacecraft, starting from the simpler case of a \textbf{symmetric body}, going to the more general case where no symmetry appears. 
+
+\begin{quotation}
+    \centering
+    \large
+    free motion $\iff$ $\mathbf{M}=\begin{bmatrix}
+        M_1\\M_2\\M_3
+    \end{bmatrix}=0$
+\end{quotation}
+    
+\subsection{Free motion of a symmetric body}
+In this case we will consider that $J_1=J_2 \ne J_3$, in this case the Euler equations becomes:
+\begin{equation*}
+    \begin{aligned}
+        &J_1\dot{\omega_1}+(J_3-J_2)\omega_2\omega_3=0\\
+        &J_2\dot{\omega_2}+(J_1-J_3){\omega_1\omega_3}=0\\
+        &J_3\dot{\omega_3}=0
+    \end{aligned}
+\end{equation*}
+From this we can observe a lot of things:
+\begin{itemize}
+    \item $\dot{\omega_3}=0 \iff \omega=$constant;
+    \item The angular velocity according to the $z$ axis is constant
+    \item The equations are linear this allows a complete analysis using the well known theoretical results.
+\end{itemize}
+We can algebraically manipulate the equations in order to analyse the system as follows:
+\begin{align}
+    &\dot{\omega_1} + \eta\omega_2=0 \label{eq: first_eq}\\
+    &\dot{\omega_2}-\eta\omega_1=0 \label{eq: second_eq}
+\end{align}
+
+Multiplying by $\omega_1$ the two equations we obtain
+\begin{align*}
+    &\omega_1\dot{\omega_1}+\omega_2\dot{\omega_2}=0 \iff
+    \omega_1\frac{d\omega_1}{dt}+\omega_2\frac{d\omega_2}{dt}=0 \iff \\
+    &\omega_1 \ d\omega_1+\omega_2 \ d\omega_2=0 \overset{\int}{\iff} \int {\omega_1 \ d\omega} + \int {\omega_2 \ d\omega_2}=const. \iff \\
+    &\omega_1^2+\omega_2^2=const.
+\end{align*}
+Since also $\omega_3$ is constant, we can state that 
+\begin{equation*}
+    \vert \boldsymbol{\omega} \vert = \sqrt{\omega_1^2+\omega_2^2+\omega_3^2} = \text{const.}
+\end{equation*}
+We know from this property that also the norm of the angular velocity is constant.\\
+Computing the derivatives of (\ref{eq: first_eq}) and using the (\ref{eq: second_eq}), the equation of an \textit{harmonic oscillator is obtained}:
+\begin{equation}
+    \ddot{\omega_1}+\eta^2\omega_1=0
+\end{equation}
+
+It is well-known that this system is marginally stable system (the natural modes associated with two complex conjugate poles with null real part) $\to\omega_1$ remains bounded. An analogue procedure can be done for $\omega_2$, differentiating the (\ref{eq: second_eq}) and using the (\ref{eq: first_eq}).
+
+\subsection{Free motion of an asymmetric body}
+Also here we assume that no torques are applied to the body, then $\mathbf{M}=0$, but all the principal moments of inertia are different each other, then $J_1\ne J_2 \ne J_3 \ne J_1$. We also suppose that $\omega_3$ is a constant $\omega_0$ to which is added a small \textit{perturbation} $\epsilon$, then $\omega_3=\omega_0+\epsilon$.\\
+When $\epsilon\to0$, the moment equations become:
+\begin{align*}
+    &J_1\dot{\omega_1}+(J_3-J_2)\omega_2\omega_0=0\\
+    &J_2\dot{\omega_2}+(J_1-J_3)\omega_1\omega_0=0\\
+    &J_3\dot{\epsilon}+(J_2-J_1)\omega_1\omega_2=0
+\end{align*}
+If we compute the derivative of the first and we use the second and defining a constant 
+$$
+\gamma\doteq\omega_0\sqrt{
+    \bigg(1-\frac{J_3}{J_1} \bigg)
+    \bigg(1-\frac{J_3}{J_2} \bigg)
+}
+$$, we obtain a similar equation than the previous case of simmetry:
+\begin{equation*}
+    \ddot{\omega_1}+\gamma^2\omega_1=0
+\end{equation*}
+Two situations can be arised:
+\begin{enumerate}
+    \item The constant $\gamma$ is a real number, then we have either $J_3>J_1,J_2$ ($J_3$ in this case is the \textbf{major axis} since has a moment of inertia which is greater than the others) or $J_3<J_1,J_2$ (in the same way $J_3$ in this case is the \textbf{minor axis}); the square of any real number is a positive number $\to$ in this case we will obtain an armonic oscillator which is \textbf{marginally stable};
+    \item The constant $\gamma$ is an imaginary number, this can occur when either $J_1>J_3>J_2$ or $J_2>J_3>J_1$; this indicates that $J_3$ is the \textbf{intermediate axis}. The squared imaginary number produces a negative number implying that the system is \textbf{unstable}.
+\end{enumerate}
+
+\begin{quotation}
+    \textsf{
+        \noindent
+        \textbf{Note that...} When we say either \textbf{stability} or \textbf{unstability}, in the first case we mean that if we start with $\omega_1$ near an axis, we will remain always in the neighbourhood of such axis, in the second case even if one remains close the axis, the angular velocity will diverge.
+        An analogue reasoning can be done for $\omega_2$.
+    }
+\end{quotation}
+
+In the reality a body is never perfectly rigid due to, for example, \textit{structural deflection}. The assumption that a body is \textbf{semirigid} is more realistic. One refers to a \textbf{semirigid body} when: (i) there are no moving parts, (ii) there is \textit{energy dissipation}.\\
+In this case the results about the stability change, and in particular:
+\begin{enumerate}
+    \item The motion about the \textbf{major principal axis} is \textit{asymptotically stable};
+    \item The motion about the minor and intermediate axis is \textit{unstable}.
+\end{enumerate} 
 
 
+\section{Dynamic-Kinematic equations}
+The \textbf{kinematic} and \textbf{dynamic} equations can be put together in order to obtain the equations for the overall system composed by the cascade of the two analysed in the previous chapters.\\
+
+\noindent
+In general we have that the \textbf{Dynamic-Kinematic state equation} is:
+{\Large{
+    \begin{equation}
+        \dot{x} = \mathbf{A(x)x+Bu}
+    \end{equation}
+}}
+In the next paragraphs the matrices for the equations of the most common rotation are presented:
+\subsection{Dynamic-Kinematic equation for Tait-Bryan 321}
+\begin{equation}
+    \begin{aligned}
+        &\mathbf{x}=\begin{bmatrix}
+            \phi\\\theta\\\psi\\\omega_1\\\omega_2\\\omega_3
+        \end{bmatrix}, \quad
+        \mathbf{A(x)}=
+        \left[
+        \begin{array}{c|c}
+            \begin{matrix}
+                0&0&0\\0&0&0\\0&0&0\\
+                \hline
+                0&0&0\\0&0&0\\0&0&0
+            \end{matrix}
+            &
+            \begin{matrix}
+                1&\sin\theta\tan\theta&\cos\phi\tan\theta\\
+                0&\cos\theta&-\sin\theta\\
+                0&\sin\phi/\cos\theta&\cos\phi/\cos\theta\\
+                \hline
+                0&\sigma_1\omega_3&0\\
+                \sigma_2\omega_3&0&0\\
+                \sigma_3\omega_2&0&0
+            \end{matrix} 
+        \end{array}
+        \right]\\\vspace{1cm}
+        &\mathbf{u}=\begin{bmatrix}
+            M_1\\M_2\\M_3
+        \end{bmatrix}, \quad
+        \mathbf{B}=
+            \left[
+                \begin{array}{c}
+                    \begin{matrix}
+                        0&0&0\\0&0&0\\0&0&0\\
+                    \hline
+                        1/J_1&0&0\\0&1/J_2&0\\0&0&1/J_3
+                    \end{matrix}
+                \end{array}
+            \right]
+    \end{aligned}
+\end{equation}
+
+\subsection{Dynamic-Kinematic equations for Tait-Bryan 123}
+\begin{equation}
+    \begin{aligned}
+        &\mathbf{x}=\begin{bmatrix}
+            \phi\\\theta\\\psi\\\omega_1\\\omega_2\\\omega_3
+        \end{bmatrix}, \quad
+        \mathbf{A(x)}=
+        \left[
+        \begin{array}{c|c}
+            \begin{matrix}
+                0&0&0\\0&0&0\\0&0&0\\
+                \hline
+                0&0&0\\0&0&0\\0&0&0
+            \end{matrix}
+            &
+            \begin{matrix}
+                \cos\psi/\cos\theta&-\sin\psi\cos\theta&0\\
+                \sin\psi&\cos\psi&0\\
+                -\tan\theta\cos\psi&\tan\theta\sin\psi&1\\
+                \hline
+                0&\sigma_1\omega_3&0\\
+                \sigma_2\omega_3&0&0\\
+                \sigma_3\omega_2&0&0
+            \end{matrix} 
+        \end{array}
+        \right]\\\vspace{1cm}
+        &\mathbf{u}=\begin{bmatrix}
+            M_1\\M_2\\M_3
+        \end{bmatrix}, \quad
+        \mathbf{B}=
+            \left[
+                \begin{array}{c}
+                    \begin{matrix}
+                        0&0&0\\0&0&0\\0&0&0\\
+                    \hline
+                        1/J_1&0&0\\0&1/J_2&0\\0&0&1/J_3
+                    \end{matrix}
+                \end{array}
+            \right]
+    \end{aligned}
+\end{equation}
+
+\subsection{Dynamic-Kinematic equations for Proper-Euler 313}
+\begin{equation}
+    \begin{aligned}
+        &\mathbf{x}=\begin{bmatrix}
+            \phi\\\theta\\\psi\\\omega_1\\\omega_2\\\omega_3
+        \end{bmatrix}, \quad
+        \mathbf{A(x)}=
+        \left[
+        \begin{array}{c|c}
+            \begin{matrix}
+                0&0&0\\0&0&0\\0&0&0\\
+                \hline
+                0&0&0\\0&0&0\\0&0&0
+            \end{matrix}
+            &
+            \begin{matrix}
+                \sin\psi/\sin\theta&\cos\psi/\sin\theta&0\\
+                \cos\psi&-\sin\psi&0\\
+                -\cot\theta\sin\psi&-\cot\theta\cos\psi&1\\
+                \hline
+                0&\sigma_1\omega_3&0\\
+                \sigma_2\omega_3&0&0\\
+                \sigma_3\omega_2&0&0
+            \end{matrix} 
+        \end{array}
+        \right]\\\vspace{1cm}
+        &\mathbf{u}=\begin{bmatrix}
+            M_1\\M_2\\M_3
+        \end{bmatrix}, \quad
+        \mathbf{B}=
+            \left[
+                \begin{array}{c}
+                    \begin{matrix}
+                        0&0&0\\0&0&0\\0&0&0\\
+                    \hline
+                        1/J_1&0&0\\0&1/J_2&0\\0&0&1/J_3
+                    \end{matrix}
+                \end{array}
+            \right]
+    \end{aligned}
+\end{equation}
+
+\subsection{Dynamic-Kinematic equations for Quaternions}
+\begin{equation}
+    \begin{aligned}
+        &\mathbf{x}=\begin{bmatrix}
+            q_0\\q_1\\q_2\\q_3\\\omega_1\\\omega_2\\\omega_3
+        \end{bmatrix}, \quad
+        \mathbf{A(x)}=\frac{1}{2}
+        \left[
+        \begin{array}{c|c}
+            \begin{matrix}
+                0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0\\
+                \hline
+                0&0&0&0\\0&0&0&0\\0&0&0&0\\
+            \end{matrix}
+            &
+            \begin{matrix}
+                -q_1&-q_2&-q3\\
+                q_0&-q_3&q_2\\
+                q_3&q_0&-q_1\\
+                -q_2&q_1&q_0\\
+                \hline
+                0&2\sigma_1\omega_3&0\\
+                2\sigma_2\omega_3&0&0\\
+                2\sigma_3\omega_2&0&0
+            \end{matrix} 
+        \end{array}
+        \right]\\\vspace{1cm}
+        &\mathbf{u}=\begin{bmatrix}
+            M_1\\M_2\\M_3
+        \end{bmatrix}, \quad
+        \mathbf{B}=
+            \left[
+                \begin{array}{c}
+                    \begin{matrix}
+                        0&0&0\\0&0&0\\0&0&0\\
+                    \hline
+                        1/J_1&0&0\\0&1/J_2&0\\0&0&1/J_3
+                    \end{matrix}
+                \end{array}
+            \right]
+    \end{aligned}
+\end{equation}
 
 
