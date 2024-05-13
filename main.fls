@@ -676,6 +676,11 @@ INPUT ./AerospaceApplications/images/ACS.png
 INPUT ./AerospaceApplications/images/ACS.png
 INPUT ./AerospaceApplications/images/ACS.png
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecsi1200.tfm
+INPUT ./AerospaceApplications/images/ref_gen.png
+INPUT ./AerospaceApplications/images/ref_gen.png
+INPUT ./AerospaceApplications/images/ref_gen.png
+INPUT ./AerospaceApplications/images/ref_gen.png
+INPUT ./AerospaceApplications/images/ref_gen.png
 INPUT main.aux
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb

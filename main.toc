@@ -125,7 +125,11 @@
 \contentsline {section}{\numberline {12.2}Actuators}{76}{}%
 \contentsline {section}{\numberline {12.3}Control system approaches}{76}{}%
 \contentsline {section}{\numberline {12.4}Attitude control: a general setting}{76}{}%
-\contentsline {section}{\numberline {12.5}First problem: Regulation}{77}{}%
-\contentsline {section}{\numberline {12.6}Second problem: Tracking}{77}{}%
-\contentsline {chapter}{\numberline {13}Orbital dynamics}{78}{}%
-\contentsline {chapter}{\numberline {14}Orbital control}{79}{}%
+\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{77}{}%
+\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{78}{}%
+\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{78}{}%
+\contentsline {subsubsection}{Invariance of the surface}{78}{}%
+\contentsline {subsubsection}{Attractiveness of the surface}{79}{}%
+\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{79}{}%
+\contentsline {chapter}{\numberline {13}Orbital dynamics}{80}{}%
+\contentsline {chapter}{\numberline {14}Orbital control}{81}{}%

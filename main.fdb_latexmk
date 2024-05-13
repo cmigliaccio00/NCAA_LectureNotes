@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1715539400.74169 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1715539404.91573 0
+["pdflatex"] 1715622807.74505 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1715622812.06816 0
   "AerospaceApplications/Ch10_IntroAerospace.tex" 1714403351 1837 b4b19511486572ab9b53a88b7cfd66aa ""
   "AerospaceApplications/Ch11_AttitudeDynamics.tex" 1715536138 52286 b37702614346d39d36fa7b3055a9f7ae ""
-  "AerospaceApplications/Ch12_AttitudeControl.tex" 1715539399 4845 d1caae686f8eee776e26857139e72554 ""
+  "AerospaceApplications/Ch12_AttitudeControl.tex" 1715622806 13646 b02723f13cf2f7181502c14bd5e5b5f7 ""
   "AerospaceApplications/images/ACS.png" 1715536816 107496 cc95514725ee0fa64306eb06c135ffca ""
   "AerospaceApplications/images/IF_BF.png" 1715029263 74677 d0eefb43786ae2b4c574521eee642100 ""
   "AerospaceApplications/images/OF_BF.png" 1715013207 50975 fc5b2adaa1d4ab19b033fdc87f705747 ""
@@ -10,6 +10,7 @@
   "AerospaceApplications/images/coord_transf.png" 1714415557 28291 d605a3f45cc80572af5defa6860621af ""
   "AerospaceApplications/images/gimbal_lock.png" 1714423653 52870 588fc11043a82815a8b35e5a2ed0f90b ""
   "AerospaceApplications/images/kin_dyn_series.png" 1715011489 34111 bf3df404addbc52ddbf78461349dfa6c ""
+  "AerospaceApplications/images/ref_gen.png" 1715622783 37873 e6589098a63cb99265632c1ff7eb504c ""
   "AerospaceApplications/images/rotation_transf.png" 1714415628 12377 2c1263427793d74ed6724d1337b17914 ""
   "AerospaceApplications/images/satellite_img.png" 1714402527 839944 0949fd6e4aaab494537941770924b0e2 ""
   "AerospaceApplications/images/square_rot.png" 1714415671 20776 42af6cc065dde0872b409c0b8fa04cb9 ""
@@ -317,9 +318,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1709981979 5513072 c253eaa6343e824d2661325481d57b70 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1709982122 8221404 96a78d3294408dad61821d0b84b8bd19 ""
   "c:/texlive/2023/texmf.cnf" 1709981959 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1715539404 23481 18205f885b919b30aaf01f78e186b338 "pdflatex"
+  "main.aux" 1715622811 24190 c60a278003e8e0cd6810faa229937c25 "pdflatex"
   "main.tex" 1715536266 2063 d4238b8f7e2203a4e6a0f354633b4c51 ""
-  "main.toc" 1715539404 9565 24024c36434516816a75583d6c00aab8 "pdflatex"
+  "main.toc" 1715622811 9923 e511f3b91f748d478f605a6f2ac6b7ae "pdflatex"
   (generated)
   "main.aux"
   "main.log"
