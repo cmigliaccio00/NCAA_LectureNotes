@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  16 MAY 2024 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  16 MAY 2024 18:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1274,12 +1274,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
-[54]) [55] [56
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+[55] [56]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 237.
+ (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
+
+ []
+
+) [57] [58
 
 ]
 Chapter 10.
 (./AerospaceApplications/Ch10_IntroAerospace.tex
-<AerospaceApplications/images/satellite_img.png, id=286, 452.28975pt x 399.29175pt>
+<AerospaceApplications/images/satellite_img.png, id=294, 452.28975pt x 399.29175pt>
 File: AerospaceApplications/images/satellite_img.png Graphic file (type png)
 <use AerospaceApplications/images/satellite_img.png>
 Package pdftex.def Info: AerospaceApplications/images/satellite_img.png  used on input line 5.
@@ -1289,33 +1303,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-[57
+[59
 
- <./AerospaceApplications/images/satellite_img.png>]) [58]
+ <./AerospaceApplications/images/satellite_img.png>]) [60]
 Chapter 11.
 (./AerospaceApplications/Ch11_AttitudeDynamics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<AerospaceApplications/images/RFs.png, id=294, 370.986pt x 308.352pt>
+<AerospaceApplications/images/RFs.png, id=303, 370.986pt x 308.352pt>
 File: AerospaceApplications/images/RFs.png Graphic file (type png)
 <use AerospaceApplications/images/RFs.png>
 Package pdftex.def Info: AerospaceApplications/images/RFs.png  used on input line 45.
 (pdftex.def)             Requested size: 296.78918pt x 246.68193pt.
-[59
+[61
 
-] [60 <./AerospaceApplications/images/RFs.png>]
+] [62 <./AerospaceApplications/images/RFs.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
-<AerospaceApplications/images/coord_transf.png, id=304, 323.40825pt x 248.127pt>
+<AerospaceApplications/images/coord_transf.png, id=312, 323.40825pt x 248.127pt>
 File: AerospaceApplications/images/coord_transf.png Graphic file (type png)
 <use AerospaceApplications/images/coord_transf.png>
 Package pdftex.def Info: AerospaceApplications/images/coord_transf.png  used on input line 152.
 (pdftex.def)             Requested size: 194.04643pt x 148.87733pt.
-<AerospaceApplications/images/rotation_transf.png, id=305, 254.1495pt x 199.947pt>
+<AerospaceApplications/images/rotation_transf.png, id=313, 254.1495pt x 199.947pt>
 File: AerospaceApplications/images/rotation_transf.png Graphic file (type png)
 <use AerospaceApplications/images/rotation_transf.png>
 Package pdftex.def Info: AerospaceApplications/images/rotation_transf.png  used on input line 172.
@@ -1323,13 +1337,13 @@ Package pdftex.def Info: AerospaceApplications/images/rotation_transf.png  used 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61 <./AerospaceApplications/images/coord_transf.png>]
-<AerospaceApplications/images/square_rot.png, id=310, 269.20575pt x 251.7405pt>
+[63 <./AerospaceApplications/images/coord_transf.png>]
+<AerospaceApplications/images/square_rot.png, id=318, 269.20575pt x 251.7405pt>
 File: AerospaceApplications/images/square_rot.png Graphic file (type png)
 <use AerospaceApplications/images/square_rot.png>
 Package pdftex.def Info: AerospaceApplications/images/square_rot.png  used on input line 186.
 (pdftex.def)             Requested size: 269.20508pt x 251.73987pt.
- [62 <./AerospaceApplications/images/rotation_transf.png> <./AerospaceApplications/images/square_rot.png>]
+ [64 <./AerospaceApplications/images/rotation_transf.png> <./AerospaceApplications/images/square_rot.png>]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 226.
 
@@ -1354,8 +1368,8 @@ Overfull \hbox (14.60526pt too wide) detected at line 262
 []
  []
 
-[63]
-<AerospaceApplications/images/gimbal_lock.png, id=320, 177.66376pt x 205.9695pt>
+[65]
+<AerospaceApplications/images/gimbal_lock.png, id=328, 177.66376pt x 205.9695pt>
 File: AerospaceApplications/images/gimbal_lock.png Graphic file (type png)
 <use AerospaceApplications/images/gimbal_lock.png>
 Package pdftex.def Info: AerospaceApplications/images/gimbal_lock.png  used on input line 296.
@@ -1374,59 +1388,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--324
 
  []
 
-[64]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 339--342
 
  []
 
-[65 <./AerospaceApplications/images/gimbal_lock.png>]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 379.
- (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [66]
+[67 <./AerospaceApplications/images/gimbal_lock.png>] [68]
 Underfull \hbox (badness 10000) in paragraph at lines 490--494
 
  []
 
-[67]
-<AerospaceApplications/images/kin_dyn_series.png, id=339, 615.4995pt x 130.086pt>
+[69]
+<AerospaceApplications/images/kin_dyn_series.png, id=346, 615.4995pt x 130.086pt>
 File: AerospaceApplications/images/kin_dyn_series.png Graphic file (type png)
 <use AerospaceApplications/images/kin_dyn_series.png>
 Package pdftex.def Info: AerospaceApplications/images/kin_dyn_series.png  used on input line 545.
 (pdftex.def)             Requested size: 430.84671pt x 91.05956pt.
- [68 <./AerospaceApplications/images/kin_dyn_series.png>]
-<AerospaceApplications/images/OF_BF.png, id=345, 369.17924pt x 320.99925pt>
+ [70 <./AerospaceApplications/images/kin_dyn_series.png>]
+<AerospaceApplications/images/OF_BF.png, id=351, 369.17924pt x 320.99925pt>
 File: AerospaceApplications/images/OF_BF.png Graphic file (type png)
 <use AerospaceApplications/images/OF_BF.png>
 Package pdftex.def Info: AerospaceApplications/images/OF_BF.png  used on input line 582.
 (pdftex.def)             Requested size: 258.4237pt x 224.69794pt.
- [69 <./AerospaceApplications/images/OF_BF.png>] [70] [71]
-<AerospaceApplications/images/IF_BF.png, id=357, 402.303pt x 370.986pt>
+ [71 <./AerospaceApplications/images/OF_BF.png>] [72] [73]
+<AerospaceApplications/images/IF_BF.png, id=364, 402.303pt x 370.986pt>
 File: AerospaceApplications/images/IF_BF.png Graphic file (type png)
 <use AerospaceApplications/images/IF_BF.png>
 Package pdftex.def Info: AerospaceApplications/images/IF_BF.png  used on input line 777.
 (pdftex.def)             Requested size: 201.151pt x 185.49254pt.
- [72 <./AerospaceApplications/images/IF_BF.png>]
+ [74 <./AerospaceApplications/images/IF_BF.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 870--872
 
  []
 
-[73] [74] [75]
+[75] [76] [77]
 Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
 
  []
 
-[76]) [77]
+[78]) [79]
 Chapter 12.
 (./AerospaceApplications/Ch12_AttitudeControl.tex
-<AerospaceApplications/images/ACS.png, id=379, 658.25925pt x 272.81924pt>
+<AerospaceApplications/images/ACS.png, id=386, 658.25925pt x 272.81924pt>
 File: AerospaceApplications/images/ACS.png Graphic file (type png)
 <use AerospaceApplications/images/ACS.png>
 Package pdftex.def Info: AerospaceApplications/images/ACS.png  used on input line 14.
 (pdftex.def)             Requested size: 394.9586pt x 163.6928pt.
- [78
+ [80
 
- <./AerospaceApplications/images/ACS.png>] [79]
+ <./AerospaceApplications/images/ACS.png>] [81]
 Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
@@ -1436,19 +1446,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[80] [81]
-<AerospaceApplications/images/ref_gen.png, id=395, 371.58826pt x 192.72pt>
+[82] [83]
+<AerospaceApplications/images/ref_gen.png, id=401, 371.58826pt x 192.72pt>
 File: AerospaceApplications/images/ref_gen.png Graphic file (type png)
 <use AerospaceApplications/images/ref_gen.png>
 Package pdftex.def Info: AerospaceApplications/images/ref_gen.png  used on input line 204.
 (pdftex.def)             Requested size: 297.271pt x 154.1762pt.
-) [82 <./AerospaceApplications/images/ref_gen.png>]
+) [84 <./AerospaceApplications/images/ref_gen.png>]
 Chapter 13.
-[83
+[85
 
 ]
 Chapter 14.
-[84
+[86
 
 ] (./main.aux)
  ***********
@@ -1461,18 +1471,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22709 strings out of 474116
- 456660 string characters out of 5747718
+ 22713 strings out of 474116
+ 456706 string characters out of 5747718
  1963190 words of memory out of 5000000
- 44560 multiletter control sequences out of 15000+600000
- 606659 words of font info for 161 fonts, out of 8000000 for 9000
+ 44563 multiletter control sequences out of 15000+600000
+ 607367 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,21n,93p,2496b,781s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (85 pages, 3273735 bytes).
+Output written on main.pdf (87 pages, 3287048 bytes).
 PDF statistics:
- 599 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
+ 605 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -91,7 +91,7 @@ After the discussion on these important details, we are ready to present the \te
             \begin{align*}
                 &S_k = H_k P_k^p H_k^{\textsf{T}} + R_d\\
                 &K_k = P_k^p H_k^{\textsf{T}} S_k^{-1}\\
-                &\delta y_k = y_k - H_k y_k^p\\
+                &\delta y_k = y_k - H_k x_k^p\\
                 &\hat{x}_k = x_k^p + K_k \delta y_k\\
                 &P_k = (I-K_k H_k)P_k^p
             \end{align*}
@@ -136,11 +136,158 @@ It can be proven that if the covariance matrices $Q_d, R_d$ of the process noise
 \begin{equation*}
     \lim_{k\to\infty} P_k^p \to \bar{P}
 \end{equation*}
-This implies that also $P_k$, $S_k$, $K_k$ converges to constant values $P, S, K$ as $k\to\infty$. 
+This implies that also $P_k$, $S_k$, $K_k$ converges to constant values $P, S, K$ as $k\to\infty$. Using these information we can derive the asymptotic equations for the following matrices:
+\begin{align*}
+    &\bar{P} = FPF^{\textsf{T}} + Q_d \\
+    &S = H\bar{P}H^{\textsf{T}}+ R_d \\
+    &K = \bar{P}H^{\textsf{T}}S^{-1}\\
+    &P = (I-KH) \bar{P}
+\end{align*}
+By eliminating P and S we can write the following two equations: 
+\begin{align}
+    &\bar{P}  F(\bar{P} - \bar{P}H^{\textsf{T}} (H\bar{P}H^{\textsf{T}}+R_d)^{-1} H \bar{P})F^{\textsf{T}} + Q_d\\
+    &K = \bar{P}H^{\textsf{T}}(H\bar{P}H^{\textsf{T}}+R_d)^{-1}
+\end{align}
+The first of these two equations is called \textit{discrete algebraic Riccati equation}, the second is the filter gain matrix. Then we have the predicted and estimated state equations:
+\begin{align*}
+    &x_k^p = F \hat{x}_{k-1} + G u_{k-1}\\
+    &\hat{x}_k = x_k^p + K (y_k-H x_k^p)
+\end{align*}
+We have to replace the definition of $x_{k-1}$ in the first equation, in this way we will obtain: 
+\begin{align*}
+    x_k^p &= F [x_{k-1}^p + K (y_{k-1} - H x_{k-1}^p)] + G u_{k-1} =\\
+    & F[x_{k-1}^p + K y_{k-1} -KH x_{k-1}^p] + G u_{k-1}=\\
+    & F x_{k-1}^p + FK y_{k-1} - FKH x_{k-1}^p + G u_{k-1}
+    \overset{L \doteq FK }{=}\\
+    & (F-LH) x_{k-1}^p + L y_{k-1} + G u_{k-1}
+\end{align*}
+The equations describing the \textit{prediction} and the \textit{estimation} of the state, at the end of the day are:
+\begin{align}
+    &x_k^p = (F-LH) x_{k-1}^p + L y_{k-1} + G u_{k-1}\\
+    &\hat{x}_k = x_k^p + K (y_k-H x_k^p)
+\end{align}
+\noindent 
+The LTI case is a subcase of LTV, the properties on the error are required also here, the matrix $K$ previously defined ensures the minimum variance of the estimation error. The \texttt{Matlab} function \texttt{kalman} gives $L$ and $K$.
  
-\section{Extended Kalman Filter}
+\section{Extended Kalman Filter (EKF)}
+Here we want to define an algorithm for the estimation for the nonlinear case. For this purpose we define the following \textit{discrete-time nonlinear system}:
+\begin{align*}
+    &x_{k+1} = f(x_k, u_k) + d_k\\
+    &y_k = h(x_k) + d_k^y
+\end{align*} 
+
+The matrices $F_k$ and $H_k$ are obtained by linearizing the nonlinear functions $f$ and $h$ along the estimated trajectory. In particular:
+\begin{itemize}
+    \item $F_k \doteq \frac{\partial f}{\partial x} (\hat{x}_k, u_k)$: which is substancially the Jacobian of $f$ computed at $(\hat{x}_k, u_k)$
+    \item $H_k \doteq \frac{\partial h}{\partial x}(\hat{x}_k)$: which is the Jacobian of $h$ computed at $\hat{x}_k$
+\end{itemize}
+Notation, Definitions, design of $Q_d$ and $R_d$ and initialization are the same than in the linear case, also the algorithm has not big differences.\\
+
+\hspace*{-5mm}
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}     
+    \normalsize{
+        \textsf{\textbf{Extended Kalman Filter algorithm}}
+        \begin{enumerate}
+            \itemsep-0.2em
+            \item \textsf{Prediction}:
+            \begin{align*}
+                &x_k^p =  f(\hat{x}_{k-1}, u_{k-1})\\
+                &P_k^p = F_{k-1}P_{k-1}F_{k-1}^{\textsf{T}}+Q_d
+            \end{align*}
+            \item \textsf{Update}:
+            \begin{align*}
+                &S_k = H_k P_k^p H_k^{\textsf{T}} + R_d\\
+                &K_k = P_k^p H_k^{\textsf{T}} S_k^{-1}\\
+                &\delta y_k = y_k -  h(x_k^p)\\
+                &\hat{x}_k = x_k^p + K_k \delta y_k\\
+                &P_k = (I-K_k H_k)P_k^p
+            \end{align*}
+        \end{enumerate}
+    }
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+There are some \textbf{advantages} in using an EKF. At first the algorithm in a relatively simple way provides a way to estimate the state variables for a nonlinear system and it works well in many real-world applications. There are also \textbf{drawbacks} for instance EKF is not optimal, due to the fact some approximation are used the stability is NOT guaranteed, at the end it is remarkable that there is \textit{high sensibility to the initial conditions}.
+
+\subsection{Discussion}
+\subsubsection{Prediction and correction}
+We have seen in EK and EKF algorithms that two steps are required: (i) the \textbf{prediction} is made by using the model of the system in a preliminar way; (ii) It is then important to \textbf{CORRECTS} the prediction by using the measurement of the output $y_k$, which is very important because increases the accuracy of the overall filter stability providing the possibility to \textbf{filter} measurement noise.
+
+\subsubsection{Current/Delayed versions }
+This is a more technical detail which reguards the implementation of the filter in embedded systems. In particular there are two possible approach: 
+\begin{itemize}
+    \item \textsf{Current version}. It uses all the measurement up to time $k$, the prediction equation is used $$\hat{x}_k = x_k^p + K_k \delta y_k$$ 
+    \item \textsf{Delayed version}. It uses all the measurements (samples) up to time $k-1$, for this reason the estimation equation is used $$x_k^p =  f(\hat{x}_{k-1}, u_{k-1})$$
+\end{itemize}
+The latter is easier to implement because often it is not possible to measure and compute the state at the same time.
 
 \section{Application: Spacecraft attitude determination}
+In the \textit{aerospace field} Kalman filters are very used as a \textbf{virtual sensor}, in many situation there is no possibility to use the sensors because they are expensive or simply there is no space to install them. Then, the \textbf{estimation} acts a crucial role for the exposed reason. One of the application in aerospace field is the \textbf{attitude determination}. \\
+Here the state equations are in the following form: 
+\begin{align*}
+    &\mathbf{\dot{x}} = \mathbf{A(x)x+Bu+Bd}^u\\
+    &y=h(\mathbf{x})+\mathbf{d}^y
+\end{align*}
+
+\begin{equation*}
+    \textbf{x} \doteq \begin{bmatrix}
+        \ \mathfrak{q} \ \\
+        \ \boldsymbol{\omega} \ 
+    \end{bmatrix}, \quad 
+    \mathbf{A(x)} \doteq \begin{bmatrix}
+        0& \frac{1}{2}\mathbf{Q }\\
+        0& -\mathbf{J}^{-1}\boldsymbol{\omega}\times \mathbf{J}
+    \end{bmatrix}, \quad 
+    \mathbf{B} \doteq \begin{bmatrix}
+        0 \\ \mathbf{J}^{-1}
+    \end{bmatrix}.
+\end{equation*}
+
+This is a \textbf{continuous time} system, we use the \textbf{forward Euler method} in order to discretize it by obtaining:
+\begin{align*}
+    &\mathbf{x}_{k+1} = \mathbf{F(x_k)x_k+G u_k + d_k}\\
+    &\mathbf{y}_k = h(\mathbf{x_k})+\mathbf{d}_k^y
+\end{align*}
+Where $\mathbf{F(\hat{x}_k)} \doteq \mathbf{I}+\tau \mathbf{A(x_k)}$, $\mathbf{G}\doteq\tau\mathbf{B}$ and $\mathbf{d}_k = \tau \mathbf{Bd}_k^u$ and $\tau$ is the \textit{sampling time}. 
+The equations are \textbf{quasi-LTV}: the matrix $\mathbf{F(\hat{x}_k)}$ depends on the state. In the standard LTV system the matrix $\mathbf{F_k}$ is known and it is independent on the state. Here $\mathbf{F}$ is not exactly known and depends on the state. At the end of the day the EKF matrices can be taken like this: 
+\begin{align*}
+    &\mathbf{F}_k \doteq F(\hat{x}_k) \quad \text{or} \quad
+     \mathbf{F}_k \doteq \frac{\partial f}{\partial \mathbf{x}}(\hat{x}_k, \mathbf{u}_k)\\
+    &\mathbf{H}_k \doteq \frac{\partial h}{\partial \mathbf{x}}(\hat{\mathbf{x}}_k)
+\end{align*}
+
+\noindent
+In general the two $\mathbf{F}$ matrices are similar but not equal.\\
+
+\hspace*{-5mm}
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}     
+    \normalsize{
+        \textsf{\textbf{EKF algorithm (for attitude determination)}}
+        \begin{enumerate}
+            \itemsep-0.2em
+            \item \textsf{Prediction}:
+            \begin{align*}
+                &x_k^p =  \mathbf{F_{k-1}} \hat{\mathbf{x}}_{k-1} + \mathbf{G} u_{k-1}\\
+                &\mathbf{P}_k^p = \mathbf{F}_{k-1}\mathbf{P}_{k-1}\mathbf{F}_{k-1}^{\textsf{T}}+\mathbf{Q}_d
+            \end{align*}
+            \item \textsf{Update}:
+            \begin{align*}
+                &\mathbf{S}_k = \mathbf{H}_k \mathbf{P}_k^p \mathbf{H}_k^{\textsf{T}} + \mathbf{R}_d\\
+                &\mathbf{K}_k = \mathbf{P}_k^p \mathbf{H}_k^{\textsf{T}} \mathbf{S}_k^{-1}\\
+                &\delta \mathbf{y}_k = \mathbf{y}_k -  h(x_k^p)\\
+                &\hat{\mathbf{x}}_k = \mathbf{x}_k^p + \mathbf{K}_k \delta \mathbf{y}_k\\
+                &P_k = (\mathbf{I}-\mathbf{K}_k \mathbf{H}_k)\mathbf{P}_k^p
+            \end{align*}
+        \end{enumerate}
+    }
+    \end{minipage}
+};
+\end{tikzpicture}%
 
 
 

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1715852537.69022 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1715852542.51219 0
+["pdflatex"] 1715878146.41558 "c:/Users/carlo/Desktop/PoliTO/[LM-32]_Laurea Magistrale/IAnno__2023_2024/2__[01RKXOV]_Non_linear_control_and_Aerospace_Applications/NCAA_LectureNotes/main.tex" "main.pdf" "main" 1715878152.30498 0
   "AerospaceApplications/Ch10_IntroAerospace.tex" 1714403351 1837 b4b19511486572ab9b53a88b7cfd66aa ""
   "AerospaceApplications/Ch11_AttitudeDynamics.tex" 1715669454 52506 9586b842ee1e74e1b3efa9debcde0d3f ""
   "AerospaceApplications/Ch12_AttitudeControl.tex" 1715669689 13647 9622304aa4cf137161760fe022531e67 ""
@@ -23,7 +23,7 @@
   "NonLinearControl/Ch6_FL.tex" 1713553012 13321 72cd734b1257365498d383ea90642456 ""
   "NonLinearControl/Ch7_SMC.tex" 1713553012 13003 4b6364f332b29a28e2e20b79e1736528 ""
   "NonLinearControl/Ch8_NonlinearMPC.tex" 1714204941 22204 a71a50f959d5302b0f79dd07506ace64 ""
-  "NonLinearControl/Ch9_KF.tex" 1715852534 8593 669aeae3885243c5f7fa275b3d559361 ""
+  "NonLinearControl/Ch9_KF.tex" 1715878145 16955 657805d6510baa8f1de344d56cf658bb ""
   "NonLinearControl/images/AsStable.png" 1713553012 53632 6d40389f123a9e128d91d3a6ce0e0325 ""
   "NonLinearControl/images/Chattering.png" 1713553014 9964 796d769b4e388dee30fc434f5c4cf5f8 ""
   "NonLinearControl/images/ControlScheme.png" 1713553014 8767 74f894eab754ad49dc96b9c2bab56e04 ""
@@ -102,6 +102,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm" 1709973702 1508 6e807ff901c35a5f1fde0ca275533df8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm" 1709973702 1528 dab402b9d3774ca98baa037071cee7ae ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1709973702 1040 b84415f97d114011685943ade933dc71 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm" 1709973702 1040 a9d2074f3fa062d4d9046b92e2334d8c ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm" 1709973702 1040 82eb6630b094bff824fccca83ff507f9 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1709973702 916 f87d7c45f9c908e672703b83b72241a3 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1709973702 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -330,9 +331,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1709981979 5513072 c253eaa6343e824d2661325481d57b70 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1709982122 8221404 96a78d3294408dad61821d0b84b8bd19 ""
   "c:/texlive/2023/texmf.cnf" 1709981959 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1715852542 24925 f423491deb74fda34fa8a02bf9963a66 "pdflatex"
+  "main.aux" 1715878151 25247 77f11656f8fae61ab518e40c3d47ba97 "pdflatex"
   "main.tex" 1715841657 2083 6bcdd775c8290f0fd06e0e52cb8bd9f9 ""
-  "main.toc" 1715852542 10232 34d3f14ca6cc727a6b5c88de254cd818 "pdflatex"
+  "main.toc" 1715878151 10431 75d2307099ffb53f262d84e234b4e70c "pdflatex"
   (generated)
   "main.aux"
   "main.log"
