@@ -178,77 +178,83 @@
 \@writefile{toc}{\contentsline {subsubsection}{Convexity}{51}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Nonlinear plant}{51}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Non-Convex contraints}{51}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}(Extended) Kalman Filter (EKF)}{52}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Kalman Filters}{52}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Aerospace applications}{53}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {10}Introduction}{54}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces Rudolf Kalman (1930-2016)}}{52}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Linear Kalman Filter}{53}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.1}Linear Time Invariant case (LTI)}{54}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Extended Kalman Filter}{55}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Application: Spacecraft attitude determination}{55}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Aerospace applications}{56}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}Introduction}{57}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {figure}{\numberline {10.1}{\ignorespaces A satellite on MEO}}{54}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{56}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10.1}{\ignorespaces A satellite on MEO}}{57}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{59}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {11.1}Rotations}{56}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{56}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{57}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11.1}{\ignorespaces 1st interpretation: Coordinate transformation}}{58}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11.2}{\ignorespaces 2nd interpretation: rotation in a fixed frame}}{59}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11.3}{\ignorespaces Rotation of a square}}{59}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.3}Euler angles}{60}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan $\mathbf  {T}_{123}$}{60}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan $\mathbf  {T}_{321}$}{60}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Proper Euler $\mathbf  {T}_{313}$}{60}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{60}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Singularities, Gimbal lock}{61}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{61}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11.4}{\ignorespaces Gimbal lock example}}{62}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.6}Quaternions}{62}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{64}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {11.2}Attitude kinematics}{65}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11.5}{\ignorespaces  \textsf  {Observer and Body frames for a generic rigid body}}}{66}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{66}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{67}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan 321}{67}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan 123}{67}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Proper-Euler 313}{68}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{68}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.4}Discussion}{68}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {11.3}Attitude dynamics}{68}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{69}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{70}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{70}{}\protected@file@percent }
-\newlabel{eq: Euler_eq}{{11.20}{70}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {11.4}Free rotational motion}{71}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.4.1}Free motion of a symmetric body}{71}{}\protected@file@percent }
-\newlabel{eq: first_eq}{{11.22}{71}{}{}{}}
-\newlabel{eq: second_eq}{{11.23}{71}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.4.2}Free motion of an asymmetric body}{72}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {11.5}Dynamic-Kinematic equations}{73}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.1}Dynamic-Kinematic equation for Tait-Bryan 321}{73}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.2}Dynamic-Kinematic equations for Tait-Bryan 123}{73}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.3}Dynamic-Kinematic equations for Proper-Euler 313}{74}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.4}Dynamic-Kinematic equations for Quaternions}{74}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {12}Attitude control}{75}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.1}Rotations}{59}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{59}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{60}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.1}{\ignorespaces 1st interpretation: Coordinate transformation}}{61}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.2}{\ignorespaces 2nd interpretation: rotation in a fixed frame}}{62}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.3}{\ignorespaces Rotation of a square}}{62}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.3}Euler angles}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan $\mathbf  {T}_{123}$}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan $\mathbf  {T}_{321}$}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Proper Euler $\mathbf  {T}_{313}$}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Singularities, Gimbal lock}{64}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{64}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.4}{\ignorespaces Gimbal lock example}}{65}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.6}Quaternions}{65}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{67}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.2}Attitude kinematics}{68}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.5}{\ignorespaces Dynamic-Kinematic system}}{68}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.6}{\ignorespaces  \textsf  {Observer and Body frames for a generic rigid body}}}{69}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{69}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{70}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan 321}{70}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Tait-Bryan 123}{70}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Proper-Euler 313}{71}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{71}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.4}Discussion}{71}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.3}Attitude dynamics}{72}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{72}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{73}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{73}{}\protected@file@percent }
+\newlabel{eq: Euler_eq}{{11.20}{73}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.4}Free rotational motion}{74}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.4.1}Free motion of a symmetric body}{74}{}\protected@file@percent }
+\newlabel{eq: first_eq}{{11.22}{74}{}{}{}}
+\newlabel{eq: second_eq}{{11.23}{74}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.4.2}Free motion of an asymmetric body}{75}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.5}Dynamic-Kinematic equations}{76}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.1}Dynamic-Kinematic equation for Tait-Bryan 321}{76}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.2}Dynamic-Kinematic equations for Tait-Bryan 123}{77}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.3}Dynamic-Kinematic equations for Proper-Euler 313}{77}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.4}Dynamic-Kinematic equations for Quaternions}{77}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {12}Attitude control}{78}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {figure}{\numberline {12.1}{\ignorespaces Attitude Control System}}{75}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12.1}Sensors}{75}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12.2}Actuators}{76}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12.3}Control system approaches}{76}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12.4}Attitude control: a general setting}{76}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{77}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{78}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{78}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Invariance of the surface}{78}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Attractiveness of the surface}{79}{}\protected@file@percent }
-\newlabel{eq: sclaw}{{12.7}{79}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{79}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12.2}{\ignorespaces Simulink scheme for a reference generator}}{79}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {13}Orbital dynamics}{80}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12.1}{\ignorespaces Attitude Control System}}{78}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12.1}Sensors}{78}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12.2}Actuators}{79}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12.3}Control system approaches}{79}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12.4}Attitude control: a general setting}{79}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{80}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{81}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{81}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Invariance of the surface}{81}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Attractiveness of the surface}{82}{}\protected@file@percent }
+\newlabel{eq: sclaw}{{12.7}{82}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{82}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12.2}{\ignorespaces Simulink scheme for a reference generator}}{82}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {13}Orbital dynamics}{83}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {14}Orbital control}{81}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {14}Orbital control}{84}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\gdef \@abspage@last{82}
+\gdef \@abspage@last{85}

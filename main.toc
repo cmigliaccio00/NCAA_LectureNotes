@@ -84,52 +84,56 @@
 \contentsline {subsubsection}{Convexity}{51}{}%
 \contentsline {subsubsection}{Nonlinear plant}{51}{}%
 \contentsline {subsubsection}{Non-Convex contraints}{51}{}%
-\contentsline {chapter}{\numberline {9}(Extended) Kalman Filter (EKF)}{52}{}%
-\contentsline {part}{II\hspace {1em}Aerospace applications}{53}{}%
-\contentsline {chapter}{\numberline {10}Introduction}{54}{}%
-\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{56}{}%
-\contentsline {section}{\numberline {11.1}Rotations}{56}{}%
-\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{56}{}%
-\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{57}{}%
-\contentsline {subsection}{\numberline {11.1.3}Euler angles}{60}{}%
-\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{123}$}{60}{}%
-\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{321}$}{60}{}%
-\contentsline {subsubsection}{Proper Euler $\mathbf {T}_{313}$}{60}{}%
-\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{60}{}%
-\contentsline {subsubsection}{Singularities, Gimbal lock}{61}{}%
-\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{61}{}%
-\contentsline {subsection}{\numberline {11.1.6}Quaternions}{62}{}%
-\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{64}{}%
-\contentsline {section}{\numberline {11.2}Attitude kinematics}{65}{}%
-\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{66}{}%
-\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{67}{}%
-\contentsline {subsubsection}{Tait-Bryan 321}{67}{}%
-\contentsline {subsubsection}{Tait-Bryan 123}{67}{}%
-\contentsline {subsubsection}{Proper-Euler 313}{68}{}%
-\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{68}{}%
-\contentsline {subsection}{\numberline {11.2.4}Discussion}{68}{}%
-\contentsline {section}{\numberline {11.3}Attitude dynamics}{68}{}%
-\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{69}{}%
-\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{70}{}%
-\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{70}{}%
-\contentsline {section}{\numberline {11.4}Free rotational motion}{71}{}%
-\contentsline {subsection}{\numberline {11.4.1}Free motion of a symmetric body}{71}{}%
-\contentsline {subsection}{\numberline {11.4.2}Free motion of an asymmetric body}{72}{}%
-\contentsline {section}{\numberline {11.5}Dynamic-Kinematic equations}{73}{}%
-\contentsline {subsection}{\numberline {11.5.1}Dynamic-Kinematic equation for Tait-Bryan 321}{73}{}%
-\contentsline {subsection}{\numberline {11.5.2}Dynamic-Kinematic equations for Tait-Bryan 123}{73}{}%
-\contentsline {subsection}{\numberline {11.5.3}Dynamic-Kinematic equations for Proper-Euler 313}{74}{}%
-\contentsline {subsection}{\numberline {11.5.4}Dynamic-Kinematic equations for Quaternions}{74}{}%
-\contentsline {chapter}{\numberline {12}Attitude control}{75}{}%
-\contentsline {section}{\numberline {12.1}Sensors}{75}{}%
-\contentsline {section}{\numberline {12.2}Actuators}{76}{}%
-\contentsline {section}{\numberline {12.3}Control system approaches}{76}{}%
-\contentsline {section}{\numberline {12.4}Attitude control: a general setting}{76}{}%
-\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{77}{}%
-\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{78}{}%
-\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{78}{}%
-\contentsline {subsubsection}{Invariance of the surface}{78}{}%
-\contentsline {subsubsection}{Attractiveness of the surface}{79}{}%
-\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{79}{}%
-\contentsline {chapter}{\numberline {13}Orbital dynamics}{80}{}%
-\contentsline {chapter}{\numberline {14}Orbital control}{81}{}%
+\contentsline {chapter}{\numberline {9}Kalman Filters}{52}{}%
+\contentsline {section}{\numberline {9.1}Linear Kalman Filter}{53}{}%
+\contentsline {subsection}{\numberline {9.1.1}Linear Time Invariant case (LTI)}{54}{}%
+\contentsline {section}{\numberline {9.2}Extended Kalman Filter}{55}{}%
+\contentsline {section}{\numberline {9.3}Application: Spacecraft attitude determination}{55}{}%
+\contentsline {part}{II\hspace {1em}Aerospace applications}{56}{}%
+\contentsline {chapter}{\numberline {10}Introduction}{57}{}%
+\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{59}{}%
+\contentsline {section}{\numberline {11.1}Rotations}{59}{}%
+\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{59}{}%
+\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{60}{}%
+\contentsline {subsection}{\numberline {11.1.3}Euler angles}{63}{}%
+\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{123}$}{63}{}%
+\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{321}$}{63}{}%
+\contentsline {subsubsection}{Proper Euler $\mathbf {T}_{313}$}{63}{}%
+\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{63}{}%
+\contentsline {subsubsection}{Singularities, Gimbal lock}{64}{}%
+\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{64}{}%
+\contentsline {subsection}{\numberline {11.1.6}Quaternions}{65}{}%
+\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{67}{}%
+\contentsline {section}{\numberline {11.2}Attitude kinematics}{68}{}%
+\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{69}{}%
+\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{70}{}%
+\contentsline {subsubsection}{Tait-Bryan 321}{70}{}%
+\contentsline {subsubsection}{Tait-Bryan 123}{70}{}%
+\contentsline {subsubsection}{Proper-Euler 313}{71}{}%
+\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{71}{}%
+\contentsline {subsection}{\numberline {11.2.4}Discussion}{71}{}%
+\contentsline {section}{\numberline {11.3}Attitude dynamics}{72}{}%
+\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{72}{}%
+\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{73}{}%
+\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{73}{}%
+\contentsline {section}{\numberline {11.4}Free rotational motion}{74}{}%
+\contentsline {subsection}{\numberline {11.4.1}Free motion of a symmetric body}{74}{}%
+\contentsline {subsection}{\numberline {11.4.2}Free motion of an asymmetric body}{75}{}%
+\contentsline {section}{\numberline {11.5}Dynamic-Kinematic equations}{76}{}%
+\contentsline {subsection}{\numberline {11.5.1}Dynamic-Kinematic equation for Tait-Bryan 321}{76}{}%
+\contentsline {subsection}{\numberline {11.5.2}Dynamic-Kinematic equations for Tait-Bryan 123}{77}{}%
+\contentsline {subsection}{\numberline {11.5.3}Dynamic-Kinematic equations for Proper-Euler 313}{77}{}%
+\contentsline {subsection}{\numberline {11.5.4}Dynamic-Kinematic equations for Quaternions}{77}{}%
+\contentsline {chapter}{\numberline {12}Attitude control}{78}{}%
+\contentsline {section}{\numberline {12.1}Sensors}{78}{}%
+\contentsline {section}{\numberline {12.2}Actuators}{79}{}%
+\contentsline {section}{\numberline {12.3}Control system approaches}{79}{}%
+\contentsline {section}{\numberline {12.4}Attitude control: a general setting}{79}{}%
+\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{80}{}%
+\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{81}{}%
+\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{81}{}%
+\contentsline {subsubsection}{Invariance of the surface}{81}{}%
+\contentsline {subsubsection}{Attractiveness of the surface}{82}{}%
+\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{82}{}%
+\contentsline {chapter}{\numberline {13}Orbital dynamics}{83}{}%
+\contentsline {chapter}{\numberline {14}Orbital control}{84}{}%

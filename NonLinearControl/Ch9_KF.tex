@@ -1,0 +1,147 @@
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{AerospaceApplications/images/Kalman.jpg}
+    \caption{Rudolf Kalman (1930-2016)}  
+\end{figure}
+\noindent
+In many real-world applications not all the state variables are measurable: sometimes either sensors may be expensive or there is no available space. In other situations could be useful having more than one sensor for the same state variable for redundancy, even though a variable is measured relevant \textbf{disturbances} and \textbf{noises} could appear.\\
+
+In all these situations \textbf{Observers and Filters} are employed, they are devices which implement some \textbf{algorithms} in order to estimate the state variables from the measurement of input to the system, and the output from the system. The difference between Observer and Filter is that in the first case no assumptions are available on the disturbance/noise characteristics, in the latter case we call \textit{filter} a device which takes into account also the presence of measurement noise and/or the presence of disturbances. This aspect in real-world situations ought to be taken into account. Widely used observers are:
+\vspace{-0.2cm }
+\begin{enumerate}
+    \itemsep-0.2cm
+    \item \textbf{Linear Kalman Filter}; 
+    \item \textbf{Extended Kalman Filter}.
+\end{enumerate}
+[They were introduced by Kalman starting from the following scientific paper: \textsf{Kalman, R.E., A new approach to linear filtering and prediction problems, in Journal of Basic Engineering, vol. 82, n. 1, 1960}].
+
+\section{Linear Kalman Filter}
+This has been developed even in the continuous time (CT) that in the discrete time (DT). The \textbf{Kalman Filter} description in discrete time is simpler and more suitable for \textit{on-line implementation} where sampled data (in discrete time) are used. Moreover the discrete time description is useful for the implementation of such method on microprocessors. For this aim consider a \textbf{Discrete time Linear Time Varying (LTV)} system described by the equations:
+\begin{equation}
+    \begin{aligned}
+        &x_{k+1} = F_k x_k + G_k u_k + d_k\\
+        &y_k = H_k x_k + d_k^y
+    \end{aligned}
+\end{equation}
+wher $k\in\mathbb{Z}$ is the time index, while $d_k$ and $d_k^y$ are respectively the \textbf{process disturbance} and \textbf{measurement noise}. The state $x_k$ and the disturbances are not known, while the input  $u_k$ and the output $y_k$ are measured.\\
+{\large{
+    \color{red}
+    \begin{quotation}
+        The \textbf{objective} of Kalman's algorithm is to estimate possibly in an accurate way the state $\hat{x}_k$ of $x_k$ from the \textbf{current} and \textbf{past} measurements of the input and the output. 
+    \end{quotation}
+}}
+
+Like also other observer algorithms, the Kalman filter is based on the following two operations:
+\begin{enumerate}
+    \item \textsf{\textbf{Prediction}}. At time $k-1$ a \textbf{prediction} $x_k^p$ is computed by using the \textbf{system model} 
+    \begin{equation}
+        x_k^p  = F_{k-1}\hat{x}_{k-1} + G_{k-1} u_{k-1}
+    \end{equation}
+    \item \textsf{\textbf{Update of the estimate}}. At time $k$, the prediction previously done is \textit{corrected} using the output $y_k$ in order to give a \textit{more accurate} estimate of the state. Technically speaking:
+    \begin{equation}
+        \begin{aligned}
+            &\hat{x}_k = x_k^p + K_k \delta y_k\\
+            &\delta y_k = y_k - y_k^p = y_k - H_k y_k^p
+        \end{aligned}
+    \end{equation} 
+    where $K_k$ is chosen in order to minimize the \textbf{variance} of the \textit{estimation error norm} $\mathbb{E}\big[
+        \Vert x_k-\hat{x}_k \Vert_2^2
+    \big]$ when the variance of the estimation error the error itself becomes small, $y_k^p$ is the \textbf{predicted output}, i.e. the output computed using the system model ($H_k$) and the \textbf{predicted state} $x_k$.
+\end{enumerate}
+In order to introduce the algorithm is useful giving some definitions: 
+\begin{itemize}
+    \itemsep0em
+    \item $x_k^p$: prediction of $x_k$ at time $k-1$
+    \item $\hat{x}_k$ is the \textbf{estimate} of $x_k$ at time $\delta x_k=x_k-x_k^p$ is the \textit{state prediction error}
+    \item $\tilde{x}_k\doteq x_k-\hat{x}_k$  is the \textit{state estimation error}
+    \item $P_k^p\doteq\mathbb{E}[\delta x_k \delta x_k^\textsf{T}]$ is the \textit{covariance matrix of the prediction error}
+    \item $P_k\doteq \mathbb{E}[\tilde{x}_k \tilde{x}_k^{\textsf{T}}]$ is thr \textit{covariance matrix of the estimation error}
+    \item $Q_d \doteq \mathbb{E}[d_k d_k^T]$ is the \textit{covariance matrix of $d_k$}
+    \item $R_d \doteq \mathbb{E}[d_k^y {d_k^y}^{\textsf{T}}]$ is the \textit{covariance matrix of $d_k^y$}
+\end{itemize}
+
+\noindent
+Before starting with the algorithm some \textbf{preliminary operations} have to be done:
+\begin{enumerate}
+    \itemsep-0.2em
+    \item \textsf{\textbf{Design of $\mathsf{R_d}$ and $\mathsf{Q_d}$}} typically based on the probabilistic available information on the noise/disturbance, commonly the are chosen to be diagonal with the variance of $d_k$ and $d_k^y$ on the diagonal. Most of the times they require tuning because not always one have precise information on the noise structure;
+    \item \textsf{ \textbf{Initialization}} by setting:
+    \begin{itemize}
+        \itemsep0em
+        \item $\hat{x}_0=0$, the initial estimated state; 
+        \item $P_0$ the initial covariance matrix of the estimation error (tipically assumed to be the identity $I$).
+    \end{itemize}
+\end{enumerate}
+After the discussion on these important details, we are ready to present the \textsf{Kalman Algorithm}:\\
+
+\hspace*{-5mm}
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}     
+    \normalsize{
+        \textsf{\textbf{Kalman Filter algorithm}}
+        \begin{enumerate}
+            \itemsep-0.2em
+            \item \textsf{Prediction}:
+            \begin{align*}
+                &x_k^p = F_{k-1} \hat{x}_{k-1} + G_{k-1} u_{k-1}\\
+                &P_k^p = F_{k-1}P_{k-1}F_{k-1}^{\textsf{T}}+Q_d
+            \end{align*}
+            \item \textsf{Update}:
+            \begin{align*}
+                &S_k = H_k P_k^p H_k^{\textsf{T}} + R_d\\
+                &K_k = P_k^p H_k^{\textsf{T}} S_k^{-1}\\
+                &\delta y_k = y_k - H_k y_k^p\\
+                &\hat{x}_k = x_k^p + K_k \delta y_k\\
+                &P_k = (I-K_k H_k)P_k^p
+            \end{align*}
+        \end{enumerate}
+    }
+    
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+The presented algorithm uses some assumptions on the stochastic part of the problem that is related to the noise/disturbance. In particular, without entry too much into details, the noises are assumed to be iid (independent and identically distributed), \textit{cross-uncorrelation} of noise and input-noise is required. Finally an important requisite which is always needed when an observer has to be employed is the \textbf{global observability}. \\
+There is the important following theorem of which the proof is omitted, that state:\\
+
+\hspace*{-5mm}
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}     %Larghezza del box
+    \large{
+        \textsf{\textbf{Theorem}}\\
+        The linear Kalman Filter built as presented guarantees an estimation error with \textbf{zero mean} and \textbf{minimum variance}:
+        \begin{equation*}
+            K_k = \text{arg}\min_{\mathcal{K}} \mathbb{E} \big[
+                \Vert x_k-\hat{x}_k \Vert_2^2
+            \big]
+        \end{equation*}
+    }
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+\subsection{Linear Time Invariant case (LTI)}
+Let us consider now the case in which the matrices $F, G, H$ are linear time invariant (LTI), that is they do not depend on the time $k$. The system becomes:
+\begin{equation}
+    \begin{aligned}
+        &x_{k+1} = Fx_k + Gu_k + d_k\\
+        &y_k = H x_k + d_k^y
+    \end{aligned}
+\end{equation}
+where the quantities $d_k$, $d_k^y$ are the noises. 
+
+It can be proven that if the covariance matrices $Q_d, R_d$ of the process noise and measurement noise respectively are \textbf{definite positive}, that is $Q_d, R_d \succ 0$ and $(F, H)$ is observable, then
+\begin{equation*}
+    \lim_{k\to\infty} P_k^p \to \bar{P}
+\end{equation*}
+This implies that also $P_k$, $S_k$, $K_k$ converges to constant values $P, S, K$ as $k\to\infty$. 
+ 
+\section{Extended Kalman Filter}
+
+\section{Application: Spacecraft attitude determination}
+
+
+
+
