@@ -1,142 +1,151 @@
-\contentsline {part}{I\hspace {1em}Non linear modeling and control}{4}{}%
-\contentsline {chapter}{\numberline {1}Introduction}{5}{}%
-\contentsline {section}{\numberline {1.1}Dynamic Systems, Variables, Signals}{5}{}%
-\contentsline {section}{\numberline {1.2}General considerations}{5}{}%
-\contentsline {section}{\numberline {1.3}State equations}{6}{}%
-\contentsline {section}{\numberline {1.4}Classifications of dynamical systems}{6}{}%
-\contentsline {chapter}{\numberline {2}Stability concepts}{8}{}%
-\contentsline {section}{\numberline {2.1}Some definitions}{8}{}%
-\contentsline {subsection}{\numberline {2.1.1}Marginal Stability}{8}{}%
-\contentsline {subsection}{\numberline {2.1.2}Asimptotical Stability}{9}{}%
-\contentsline {subsection}{\numberline {2.1.3}Unstability}{9}{}%
-\contentsline {section}{\numberline {2.2}Equilibrium point of a system}{10}{}%
-\contentsline {subsection}{\numberline {2.2.1}Equilibrium point}{10}{}%
-\contentsline {subsection}{\numberline {2.2.2}Stability of the equilibrium point}{10}{}%
-\contentsline {section}{\numberline {2.3}Particular case: Stability of LTI systems}{12}{}%
-\contentsline {chapter}{\numberline {3}Behaviour of Non Linear systems}{14}{}%
-\contentsline {section}{\numberline {3.1}Phase plane portrait}{14}{}%
-\contentsline {subsection}{\numberline {3.1.1}Singular Points}{15}{}%
-\contentsline {subsubsection}{Some considerations}{15}{}%
-\contentsline {subsection}{\numberline {3.1.2}Methods to draw phase portrait}{16}{}%
-\contentsline {section}{\numberline {3.2}Behaviour of LTI systems}{16}{}%
-\contentsline {section}{\numberline {3.3}Non linear case}{18}{}%
-\contentsline {subsection}{\numberline {3.3.1}Multiple isolated equilibrium points}{18}{}%
-\contentsline {subsection}{\numberline {3.3.2}Limit cycles}{18}{}%
-\contentsline {subsubsection}{Tori}{19}{}%
-\contentsline {subsection}{\numberline {3.3.3}Bifurcations}{20}{}%
-\contentsline {subsection}{\numberline {3.3.4}Finite escape time}{20}{}%
-\contentsline {section}{\numberline {3.4}Chaotic systems}{20}{}%
-\contentsline {chapter}{\numberline {4}Lyapunov methods for non linear systems}{22}{}%
-\contentsline {section}{\numberline {4.1}Linearization method (LM)}{22}{}%
-\contentsline {subsection}{\numberline {4.1.1}Stability of an equilibrium point}{23}{}%
-\contentsline {section}{\numberline {4.2}Lyapunov Direct Method (DM)}{23}{}%
-\contentsline {section}{\numberline {4.3}An Example: The pendulum}{25}{}%
-\contentsline {chapter}{\numberline {5}Introduction to Non Linear Control}{28}{}%
-\contentsline {section}{\numberline {5.1}Non linear Stabilization and Tracking}{28}{}%
-\contentsline {section}{\numberline {5.2}Specifying the desired behaviour}{29}{}%
-\contentsline {section}{\numberline {5.3}A general procedure for Control Design}{29}{}%
-\contentsline {section}{\numberline {5.4}Available methods for nonlinear controllers}{29}{}%
-\contentsline {subsection}{\numberline {5.4.1}Trial and error}{29}{}%
-\contentsline {subsection}{\numberline {5.4.2}Feedback linearization}{29}{}%
-\contentsline {subsection}{\numberline {5.4.3}Robust control}{30}{}%
-\contentsline {subsection}{\numberline {5.4.4}Adaptive control}{30}{}%
-\contentsline {subsection}{\numberline {5.4.5}Gain scheduling}{30}{}%
-\contentsline {chapter}{\numberline {6}Method(1): Feedback linearization}{31}{}%
-\contentsline {section}{\numberline {6.1}Lie derivatives}{31}{}%
-\contentsline {section}{\numberline {6.2}Input-Output linearization}{32}{}%
-\contentsline {subsection}{\numberline {6.2.1}Relative degree}{33}{}%
-\contentsline {subsection}{\numberline {6.2.2}Normal form}{33}{}%
-\contentsline {subsection}{\numberline {6.2.3}Zero dynamics}{34}{}%
-\contentsline {subsection}{\numberline {6.2.4}First control problem: Regulation}{34}{}%
-\contentsline {subsection}{\numberline {6.2.5}Second control problem: Tracking}{34}{}%
-\contentsline {subsection}{\numberline {6.2.6}Control scheme}{35}{}%
-\contentsline {section}{\numberline {6.3}Discussion}{35}{}%
-\contentsline {chapter}{\numberline {7}Method(2): Sliding mode control}{36}{}%
-\contentsline {section}{\numberline {7.1}Behaviour on the sliding surface}{37}{}%
-\contentsline {subsection}{\numberline {7.1.1}Invariance of the Sliding surface}{37}{}%
-\contentsline {subsection}{\numberline {7.1.2}Attractiveness of the Sliding surface}{38}{}%
-\contentsline {subsection}{\numberline {7.1.3}Chattering}{39}{}%
-\contentsline {section}{\numberline {7.2}Comparison with feedback linearization}{40}{}%
-\contentsline {section}{\numberline {7.3}Control Scheme}{40}{}%
-\contentsline {section}{\numberline {7.4}Robustness properties}{40}{}%
-\contentsline {section}{\numberline {7.5}Guidelines for the choice of the SM parameters}{41}{}%
-\contentsline {section}{\numberline {7.6}Discussion}{41}{}%
-\contentsline {chapter}{\numberline {8}Method(4): Non linear Model predictive control (NMPC)}{43}{}%
-\contentsline {section}{\numberline {8.1}Math tools}{43}{}%
-\contentsline {subsection}{\numberline {8.1.1}Vector and signal norms}{43}{}%
-\contentsline {subsubsection}{Vector spaces}{43}{}%
-\contentsline {subsubsection}{Vector spaces}{43}{}%
-\contentsline {subsubsection}{Norm: general definition}{43}{}%
-\contentsline {subsubsection}{Vector norm}{44}{}%
-\contentsline {subsubsection}{Signal norm}{44}{}%
-\contentsline {subsection}{\numberline {8.1.2}Optimization}{45}{}%
-\contentsline {subsubsection}{Basic notions}{45}{}%
-\contentsline {subsubsection}{Minimization}{46}{}%
-\contentsline {section}{\numberline {8.2}Introduction to NMPC}{46}{}%
-\contentsline {section}{\numberline {8.3}First step: Prediction}{47}{}%
-\contentsline {section}{\numberline {8.4}Second step: Optimization}{47}{}%
-\contentsline {section}{\numberline {8.5}Reciding Horizon}{49}{}%
-\contentsline {section}{\numberline {8.6}Closed-loop scheme}{49}{}%
-\contentsline {section}{\numberline {8.7}NMPC design}{50}{}%
-\contentsline {subsection}{\numberline {8.7.1}Choice of the parameters}{50}{}%
-\contentsline {subsection}{\numberline {8.7.2}Choice of the weight matrices}{50}{}%
-\contentsline {section}{\numberline {8.8}Discussion}{50}{}%
-\contentsline {subsubsection}{Convexity}{51}{}%
-\contentsline {subsubsection}{Nonlinear plant}{51}{}%
-\contentsline {subsubsection}{Non-Convex contraints}{51}{}%
-\contentsline {chapter}{\numberline {9}Kalman Filters}{52}{}%
-\contentsline {section}{\numberline {9.1}Linear Kalman Filter}{53}{}%
-\contentsline {subsection}{\numberline {9.1.1}Linear Time Invariant case (LTI)}{54}{}%
-\contentsline {section}{\numberline {9.2}Extended Kalman Filter (EKF)}{55}{}%
-\contentsline {subsection}{\numberline {9.2.1}Discussion}{56}{}%
-\contentsline {subsubsection}{Prediction and correction}{56}{}%
-\contentsline {subsubsection}{Current/Delayed versions }{56}{}%
-\contentsline {section}{\numberline {9.3}Application: Spacecraft attitude determination}{57}{}%
-\contentsline {part}{II\hspace {1em}Aerospace applications}{58}{}%
-\contentsline {chapter}{\numberline {10}Introduction}{59}{}%
-\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{61}{}%
-\contentsline {section}{\numberline {11.1}Rotations}{61}{}%
-\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{61}{}%
-\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{62}{}%
-\contentsline {subsection}{\numberline {11.1.3}Euler angles}{65}{}%
-\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{123}$}{65}{}%
-\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{321}$}{65}{}%
-\contentsline {subsubsection}{Proper Euler $\mathbf {T}_{313}$}{65}{}%
-\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{65}{}%
-\contentsline {subsubsection}{Singularities, Gimbal lock}{66}{}%
-\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{66}{}%
-\contentsline {subsection}{\numberline {11.1.6}Quaternions}{67}{}%
-\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{69}{}%
-\contentsline {section}{\numberline {11.2}Attitude kinematics}{70}{}%
-\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{71}{}%
-\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{72}{}%
-\contentsline {subsubsection}{Tait-Bryan 321}{72}{}%
-\contentsline {subsubsection}{Tait-Bryan 123}{72}{}%
-\contentsline {subsubsection}{Proper-Euler 313}{73}{}%
-\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{73}{}%
-\contentsline {subsection}{\numberline {11.2.4}Discussion}{73}{}%
-\contentsline {section}{\numberline {11.3}Attitude dynamics}{74}{}%
-\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{74}{}%
-\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{75}{}%
-\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{75}{}%
-\contentsline {section}{\numberline {11.4}Free rotational motion}{76}{}%
-\contentsline {subsection}{\numberline {11.4.1}Free motion of a symmetric body}{76}{}%
-\contentsline {subsection}{\numberline {11.4.2}Free motion of an asymmetric body}{77}{}%
-\contentsline {section}{\numberline {11.5}Dynamic-Kinematic equations}{78}{}%
-\contentsline {subsection}{\numberline {11.5.1}Dynamic-Kinematic equation for Tait-Bryan 321}{78}{}%
-\contentsline {subsection}{\numberline {11.5.2}Dynamic-Kinematic equations for Tait-Bryan 123}{79}{}%
-\contentsline {subsection}{\numberline {11.5.3}Dynamic-Kinematic equations for Proper-Euler 313}{79}{}%
-\contentsline {subsection}{\numberline {11.5.4}Dynamic-Kinematic equations for Quaternions}{79}{}%
-\contentsline {chapter}{\numberline {12}Attitude control}{80}{}%
-\contentsline {section}{\numberline {12.1}Sensors}{80}{}%
-\contentsline {section}{\numberline {12.2}Actuators}{81}{}%
-\contentsline {section}{\numberline {12.3}Control system approaches}{81}{}%
-\contentsline {section}{\numberline {12.4}Attitude control: a general setting}{81}{}%
-\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{82}{}%
-\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{83}{}%
-\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{83}{}%
-\contentsline {subsubsection}{Invariance of the surface}{83}{}%
-\contentsline {subsubsection}{Attractiveness of the surface}{84}{}%
-\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{84}{}%
-\contentsline {chapter}{\numberline {13}Orbital dynamics}{85}{}%
-\contentsline {chapter}{\numberline {14}Orbital control}{86}{}%
+\contentsline {part}{I\hspace {1em}Non linear modeling and control}{5}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{6}{}%
+\contentsline {section}{\numberline {1.1}Dynamic Systems, Variables, Signals}{6}{}%
+\contentsline {section}{\numberline {1.2}General considerations}{6}{}%
+\contentsline {section}{\numberline {1.3}State equations}{7}{}%
+\contentsline {section}{\numberline {1.4}Classifications of dynamical systems}{7}{}%
+\contentsline {chapter}{\numberline {2}Stability concepts}{9}{}%
+\contentsline {section}{\numberline {2.1}Some definitions}{9}{}%
+\contentsline {subsection}{\numberline {2.1.1}Marginal Stability}{9}{}%
+\contentsline {subsection}{\numberline {2.1.2}Asimptotical Stability}{10}{}%
+\contentsline {subsection}{\numberline {2.1.3}Unstability}{10}{}%
+\contentsline {section}{\numberline {2.2}Equilibrium point of a system}{11}{}%
+\contentsline {subsection}{\numberline {2.2.1}Equilibrium point}{11}{}%
+\contentsline {subsection}{\numberline {2.2.2}Stability of the equilibrium point}{11}{}%
+\contentsline {section}{\numberline {2.3}Particular case: Stability of LTI systems}{13}{}%
+\contentsline {chapter}{\numberline {3}Behaviour of Non Linear systems}{15}{}%
+\contentsline {section}{\numberline {3.1}Phase plane portrait}{15}{}%
+\contentsline {subsection}{\numberline {3.1.1}Singular Points}{16}{}%
+\contentsline {subsubsection}{Some considerations}{16}{}%
+\contentsline {subsection}{\numberline {3.1.2}Methods to draw phase portrait}{17}{}%
+\contentsline {section}{\numberline {3.2}Behaviour of LTI systems}{17}{}%
+\contentsline {section}{\numberline {3.3}Non linear case}{19}{}%
+\contentsline {subsection}{\numberline {3.3.1}Multiple isolated equilibrium points}{19}{}%
+\contentsline {subsection}{\numberline {3.3.2}Limit cycles}{19}{}%
+\contentsline {subsubsection}{Tori}{20}{}%
+\contentsline {subsection}{\numberline {3.3.3}Bifurcations}{21}{}%
+\contentsline {subsection}{\numberline {3.3.4}Finite escape time}{21}{}%
+\contentsline {section}{\numberline {3.4}Chaotic systems}{21}{}%
+\contentsline {chapter}{\numberline {4}Lyapunov methods for non linear systems}{23}{}%
+\contentsline {section}{\numberline {4.1}Linearization method (LM)}{23}{}%
+\contentsline {subsection}{\numberline {4.1.1}Stability of an equilibrium point}{24}{}%
+\contentsline {section}{\numberline {4.2}Lyapunov Direct Method (DM)}{24}{}%
+\contentsline {section}{\numberline {4.3}An Example: The pendulum}{26}{}%
+\contentsline {chapter}{\numberline {5}Introduction to Non Linear Control}{29}{}%
+\contentsline {section}{\numberline {5.1}Non linear Stabilization and Tracking}{29}{}%
+\contentsline {section}{\numberline {5.2}Specifying the desired behaviour}{30}{}%
+\contentsline {section}{\numberline {5.3}A general procedure for Control Design}{30}{}%
+\contentsline {section}{\numberline {5.4}Available methods for nonlinear controllers}{30}{}%
+\contentsline {subsection}{\numberline {5.4.1}Trial and error}{30}{}%
+\contentsline {subsection}{\numberline {5.4.2}Feedback linearization}{30}{}%
+\contentsline {subsection}{\numberline {5.4.3}Robust control}{31}{}%
+\contentsline {subsection}{\numberline {5.4.4}Adaptive control}{31}{}%
+\contentsline {subsection}{\numberline {5.4.5}Gain scheduling}{31}{}%
+\contentsline {chapter}{\numberline {6}Method(1): Feedback linearization}{32}{}%
+\contentsline {section}{\numberline {6.1}Lie derivatives}{32}{}%
+\contentsline {section}{\numberline {6.2}Input-Output linearization}{33}{}%
+\contentsline {subsection}{\numberline {6.2.1}Relative degree}{34}{}%
+\contentsline {subsection}{\numberline {6.2.2}Normal form}{34}{}%
+\contentsline {subsection}{\numberline {6.2.3}Zero dynamics}{35}{}%
+\contentsline {subsection}{\numberline {6.2.4}First control problem: Regulation}{35}{}%
+\contentsline {subsection}{\numberline {6.2.5}Second control problem: Tracking}{35}{}%
+\contentsline {subsection}{\numberline {6.2.6}Control scheme}{36}{}%
+\contentsline {section}{\numberline {6.3}Discussion}{36}{}%
+\contentsline {chapter}{\numberline {7}Method(2): Sliding mode control}{37}{}%
+\contentsline {section}{\numberline {7.1}Behaviour on the sliding surface}{38}{}%
+\contentsline {subsection}{\numberline {7.1.1}Invariance of the Sliding surface}{38}{}%
+\contentsline {subsection}{\numberline {7.1.2}Attractiveness of the Sliding surface}{39}{}%
+\contentsline {subsection}{\numberline {7.1.3}Chattering}{40}{}%
+\contentsline {section}{\numberline {7.2}Comparison with feedback linearization}{41}{}%
+\contentsline {section}{\numberline {7.3}Control Scheme}{41}{}%
+\contentsline {section}{\numberline {7.4}Robustness properties}{41}{}%
+\contentsline {section}{\numberline {7.5}Guidelines for the choice of the SM parameters}{42}{}%
+\contentsline {section}{\numberline {7.6}Discussion}{42}{}%
+\contentsline {chapter}{\numberline {8}Method(4): Non linear Model predictive control (NMPC)}{44}{}%
+\contentsline {section}{\numberline {8.1}Math tools}{44}{}%
+\contentsline {subsection}{\numberline {8.1.1}Vector and signal norms}{44}{}%
+\contentsline {subsubsection}{Vector spaces}{44}{}%
+\contentsline {subsubsection}{Vector spaces}{44}{}%
+\contentsline {subsubsection}{Norm: general definition}{44}{}%
+\contentsline {subsubsection}{Vector norm}{45}{}%
+\contentsline {subsubsection}{Signal norm}{45}{}%
+\contentsline {subsection}{\numberline {8.1.2}Optimization}{46}{}%
+\contentsline {subsubsection}{Basic notions}{46}{}%
+\contentsline {subsubsection}{Minimization}{47}{}%
+\contentsline {section}{\numberline {8.2}Introduction to NMPC}{47}{}%
+\contentsline {section}{\numberline {8.3}First step: Prediction}{48}{}%
+\contentsline {section}{\numberline {8.4}Second step: Optimization}{48}{}%
+\contentsline {section}{\numberline {8.5}Reciding Horizon}{50}{}%
+\contentsline {section}{\numberline {8.6}Closed-loop scheme}{50}{}%
+\contentsline {section}{\numberline {8.7}NMPC design}{51}{}%
+\contentsline {subsection}{\numberline {8.7.1}Choice of the parameters}{51}{}%
+\contentsline {subsection}{\numberline {8.7.2}Choice of the weight matrices}{51}{}%
+\contentsline {section}{\numberline {8.8}Discussion}{51}{}%
+\contentsline {subsubsection}{Convexity}{52}{}%
+\contentsline {subsubsection}{Nonlinear plant}{52}{}%
+\contentsline {subsubsection}{Non-Convex contraints}{52}{}%
+\contentsline {chapter}{\numberline {9}Kalman Filters}{53}{}%
+\contentsline {section}{\numberline {9.1}Linear Kalman Filter}{54}{}%
+\contentsline {subsection}{\numberline {9.1.1}Linear Time Invariant case (LTI)}{55}{}%
+\contentsline {section}{\numberline {9.2}Extended Kalman Filter (EKF)}{56}{}%
+\contentsline {subsection}{\numberline {9.2.1}Discussion}{57}{}%
+\contentsline {subsubsection}{Prediction and correction}{57}{}%
+\contentsline {subsubsection}{Current/Delayed versions }{57}{}%
+\contentsline {section}{\numberline {9.3}Application: Spacecraft attitude determination}{58}{}%
+\contentsline {part}{II\hspace {1em}Aerospace applications}{59}{}%
+\contentsline {chapter}{\numberline {10}Introduction}{60}{}%
+\contentsline {chapter}{\numberline {11}Attitude kinematics and dynamics}{62}{}%
+\contentsline {section}{\numberline {11.1}Rotations}{62}{}%
+\contentsline {subsection}{\numberline {11.1.1}Reference frames (RF)}{62}{}%
+\contentsline {subsection}{\numberline {11.1.2}Direction cosine matrices (DCM)}{63}{}%
+\contentsline {subsection}{\numberline {11.1.3}Euler angles}{66}{}%
+\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{123}$}{66}{}%
+\contentsline {subsubsection}{Tait-Bryan $\mathbf {T}_{321}$}{66}{}%
+\contentsline {subsubsection}{Proper Euler $\mathbf {T}_{313}$}{66}{}%
+\contentsline {subsection}{\numberline {11.1.4}Rotation matrices general properties}{66}{}%
+\contentsline {subsubsection}{Singularities, Gimbal lock}{67}{}%
+\contentsline {subsection}{\numberline {11.1.5}Euler's rotation theorem}{67}{}%
+\contentsline {subsection}{\numberline {11.1.6}Quaternions}{68}{}%
+\contentsline {subsection}{\numberline {11.1.7}Describe rotations through quaternions}{70}{}%
+\contentsline {section}{\numberline {11.2}Attitude kinematics}{71}{}%
+\contentsline {subsection}{\numberline {11.2.1}Vector derivative}{72}{}%
+\contentsline {subsection}{\numberline {11.2.2}Euler angles kinematic}{73}{}%
+\contentsline {subsubsection}{Tait-Bryan 321}{73}{}%
+\contentsline {subsubsection}{Tait-Bryan 123}{73}{}%
+\contentsline {subsubsection}{Proper-Euler 313}{74}{}%
+\contentsline {subsection}{\numberline {11.2.3}Quaternion kinematic}{74}{}%
+\contentsline {subsection}{\numberline {11.2.4}Discussion}{74}{}%
+\contentsline {section}{\numberline {11.3}Attitude dynamics}{75}{}%
+\contentsline {subsection}{\numberline {11.3.1}Angular momentum}{75}{}%
+\contentsline {subsection}{\numberline {11.3.2}Inertia matrix (o tensor)}{76}{}%
+\contentsline {subsection}{\numberline {11.3.3}Euler momentum equations}{76}{}%
+\contentsline {section}{\numberline {11.4}Free rotational motion}{77}{}%
+\contentsline {subsection}{\numberline {11.4.1}Free motion of a symmetric body}{77}{}%
+\contentsline {subsection}{\numberline {11.4.2}Free motion of an asymmetric body}{78}{}%
+\contentsline {section}{\numberline {11.5}Dynamic-Kinematic equations}{79}{}%
+\contentsline {subsection}{\numberline {11.5.1}Dynamic-Kinematic equation for Tait-Bryan 321}{79}{}%
+\contentsline {subsection}{\numberline {11.5.2}Dynamic-Kinematic equations for Tait-Bryan 123}{80}{}%
+\contentsline {subsection}{\numberline {11.5.3}Dynamic-Kinematic equations for Proper-Euler 313}{80}{}%
+\contentsline {subsection}{\numberline {11.5.4}Dynamic-Kinematic equations for Quaternions}{80}{}%
+\contentsline {chapter}{\numberline {12}Attitude control}{81}{}%
+\contentsline {section}{\numberline {12.1}Sensors}{81}{}%
+\contentsline {section}{\numberline {12.2}Actuators}{82}{}%
+\contentsline {section}{\numberline {12.3}Control system approaches}{82}{}%
+\contentsline {section}{\numberline {12.4}Attitude control: a general setting}{82}{}%
+\contentsline {section}{\numberline {12.5}First problem: Regulation (PD control law)}{83}{}%
+\contentsline {section}{\numberline {12.6}Second problem: Tracking (Sliding mode control)}{84}{}%
+\contentsline {subsection}{\numberline {12.6.1}Sliding mode control for attitude tracking}{84}{}%
+\contentsline {subsubsection}{Invariance of the surface}{84}{}%
+\contentsline {subsubsection}{Attractiveness of the surface}{85}{}%
+\contentsline {subsection}{\numberline {12.6.2}Another sliding mode control law}{85}{}%
+\contentsline {chapter}{\numberline {13}Orbital dynamics}{86}{}%
+\contentsline {section}{\numberline {13.1}Fundamental laws}{86}{}%
+\contentsline {subsection}{\numberline {13.1.1}Kepler's laws}{86}{}%
+\contentsline {subsection}{\numberline {13.1.2}Newton's laws}{87}{}%
+\contentsline {section}{\numberline {13.2}The two-body problem}{87}{}%
+\contentsline {section}{\numberline {13.3}Free motion of the restricted two body problem}{89}{}%
+\contentsline {subsection}{\numberline {13.3.1}Energy conservation}{89}{}%
+\contentsline {subsection}{\numberline {13.3.2}Angular momentum conservation and planar motion}{89}{}%
+\contentsline {subsection}{\numberline {13.3.3}Orbit equation (ORE)}{89}{}%
+\contentsline {section}{\numberline {13.4}Orbit geometry}{90}{}%
+\contentsline {chapter}{\numberline {14}Orbital control}{91}{}%
