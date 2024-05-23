@@ -182,3 +182,107 @@ this is the so-called \textbf{orbit equation}.
 
 
 \section{Orbit geometry}
+The equation (\ref{eq:ORE}) we have just seen is nothing but an equation of a conic section described in polar coordinates. We call \textbf{conic section} the curve obtained by intersect a cone with a plane with different angles of inclination.   \\
+In the (\ref{eq:ORE}) equation the parameter which determines the shape is the \textbf{eccentricity}, in particular we obtain: 
+\begin{itemize}
+    \item An \textbf{ellipse} if $0 \le e < 1$, the ellipse collapses into a \textbf{circle} in the case that $e=0$, this is equivalent to state that a circle is a particular type of ellipse. Ellipses and circles are \textit{closed curves};
+    \item A \textbf{parabola} if $e=1$, obtaining an \textit{open curve}; 
+    \item An \textbf{hyperbola} if $e>1$, which is also an \textit{open curve}.
+\end{itemize}
+In the orbit equation other parameters appear which is the angle $\theta$ measured from the point nearest to the focus; $p$ (the parameter or semilatus rectum) determines the \textit{size} of the curve. \\
+Once provided the general description of the conic sections, we can try to entry more into details of each type of curve.
+
+\subsection{Ellipse}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.6]{AerospaceApplications/images/ellipse.png}
+\end{figure}
+\begin{quotation}
+    \color{red}
+    An \textbf{ellipse} is the locus of the point the sum of whose distances from two fixed points called \textbf{foci} is constant. 
+\end{quotation}
+The extreme point of the orbit are:
+\begin{itemize}
+    \item \textbf{Periapsis}: it is the point corresponding to $\theta=0$, in the case of motion around the Earth it is called \textbf{perigee}, on the other hand if the motion occurs around the Sun, it is called \textbf{perihelion}; the distance from the main focus is $r_p = p/(1+e)$
+    \item \textbf{Apoapsis} it is the point correponding to $\theta=\pi$, it is called \textbf{apogee} or \textbf{aphelion}, if the motion occurs respectively around the Earth and around the Sun; here the distance from the main focus is $r_a = p/(1-e)$
+\end{itemize}
+
+Using the results of the mechanical fundamental law, of the gravitation law and the orbit equation we can derive the \textit{Kepler's law} we introduced in the first part of this  chapter.
+
+\subsubsection{First law}
+The \textbf{first Kepler's law} it is implied by the orbit equation if you put the eccentricity parameter $e$ such that $0 \le e < 1$.
+
+\subsubsection{Second law}
+The orbit area which is swept by the vector $\mathbf{r}$ in a time interval $\Delta t$ is equal to $\Delta A =\frac{1}{2}r (r\Delta \theta)$. Now, let us compute the derivative of $A$
+\begin{equation*}
+    \dot{A} = \lim_{\Delta t \to 0}\frac{\Delta A}{\Delta t} = 
+    \lim_{\Delta t \to 0}\frac{r (r\Delta \theta)}{2\Delta t} = 
+    \frac{r^2\dot{\theta}}{2} = \frac{h}{2} = \text{const}
+\end{equation*}
+Here we used the fact that the angular momentum is constant in presence of the (\ref{eq: FR2B}).
+
+\subsubsection{Third law}
+Let $A_p=\pi a b$ be the total orbital area and $P$ the period of the orbit, then 
+\begin{equation*}
+    P \equiv \frac{A_p}{A_p/P} = \frac{A_p}{\dot{A}}=
+    \frac{2\pi a b}{h} = \frac{2\pi a^2 \sqrt{1-e^2}}{\sqrt{\mu a (1-e^2)}} = 2\pi \sqrt{\frac{a^3}{\mu}}
+\end{equation*}
+Since $\dot{A}$ is constant, then also the ratio $\frac{A_p}{P}$ is constant and equal to derivative itself.\\
+For an elliptical orbit the energy $\mathcal{E}$ is negative.
+
+
+\subsection{Parabola}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.6]{AerospaceApplications/images/parabola.png}
+\end{figure}
+
+\begin{quotation}
+    \color{red}
+    A \textbf{parabola} is the locus of points whose distance from the focus is equal to the distance from a fixed line called the \textit{directrix}.
+\end{quotation}
+For a parabolic orbit the eccentricity is $e=1$, with a resulting null energy, that is $\mathcal{E} \to 0$.
+
+\subsection{Hyperbola}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.6]{AerospaceApplications/images/hyperbola.png}
+\end{figure}
+\begin{quotation}
+    \color{red}
+    An \textbf{hyperbola} is the locus of points the difference of whose from two fixed points called \textit{loci} is constant.
+\end{quotation}
+For an hyperbolic curve the eccentricity is $e>1$ with a resulting positive energy $\mathcal{E}>0$
+
+\section{State equations}
+For the \textit{orbital dynamics} the state equations are simply:
+\begin{align*}
+    &\dot{\mathbf{r}} = \mathbf{v}\\
+    &\dot{\mathbf{v}} = -\frac{\mu}{r^3}\mathbf{r}
+\end{align*}
+Here the state variables are $\mathbf{x}=(\mathbf{r}, \mathbf{v})=(x_1, x_2, x_3, x_4, x_5)$, alternatively the state equations can be expressed in matrix form as: 
+\begin{equation*}
+    \begin{bmatrix}
+        \dot{x_1}\\
+        \dot{x_2}\\
+        \dot{x_3}\\
+        \dot{x_4}\\
+        \dot{x_5}\\
+        \dot{x_6}
+    \end{bmatrix} = \begin{bmatrix}
+        0&0&0&1&0&0\\
+        0&0&0&0&1&0\\
+        0&0&0&0&0&1\\
+        -\frac{\mu}{r^3}&0&0&0&0&0\\
+        0&-\frac{\mu}{r^3}&0&0&0&0\\
+        0&0&-\frac{\mu}{r^3}&0&0&0
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        x_3\\
+        x_4\\
+        x_5\\
+        x_6\\
+    \end{bmatrix}
+\end{equation*}
