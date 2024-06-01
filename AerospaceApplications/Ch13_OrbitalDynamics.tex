@@ -286,3 +286,174 @@ Here the state variables are $\mathbf{x}=(\mathbf{r}, \mathbf{v})=(x_1, x_2, x_3
         x_6\\
     \end{bmatrix}
 \end{equation*}
+
+\section{Reference frames}
+Elliptical and circular orbit are closed, moreover they are the trajectories of interest in the field of aerospace applications (spacecrafts, satellites, cubesats and so on). We can have several \textbf{reference frames} associated to an \textit{elliptic orbit}. In particular we will see:
+\begin{itemize}
+    \itemsep0em
+    \item[\ding{202}] \textsf{\textbf{Local Vertical Local Horizontal frame (LVLH)}} (non inertial)
+    \item[\ding{203}] \textsf{\textbf{Local Orbital Frame (LORF)}} (non inertial)
+    \item[\ding{204}] \textsf{\color{red}\textbf{Perifocal (perigee) frame (PF)}} (inertial)
+    \item[\ding{205}] \textsf{\color{red}\textbf{Geocentric equatorial frame (GF)}}. It is an \textit{inertial frame} associated with the Earth, it is very important especially in aerospace applications. 
+\end{itemize}
+As usual, a reference fram is made up of: (i) an origin, (ii) three unit vectors. For this reason in the next paragraphs the four proposed RF will be analysed specifying, for each one:
+\begin{itemize}
+    \itemsep0em
+    \item Where is the origin;
+    \item How the three unit vectors are defined.
+\end{itemize}
+
+\subsection{\textsf{\textbf{Local Vertical Local Horizontal frame (LVLH)}}}
+\vspace{-0.5em}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{AerospaceApplications/images/LVLH.png}
+    \caption{Local Vertical Local Horizontal}
+\end{figure}
+\vspace{-1em}
+{\Large\color{blue}
+\begin{equation}
+    R_l = \{
+        P_1, \mathbf{l_1, l_2, l_3}
+    \}
+\end{equation}
+}
+The \textbf{origin} is at $P_1$ where the \textbf{smaller body} is located. The unit vectors:
+\begin{enumerate}
+    \item $\mathbf{l_3}$ is in the direction which links $P_1$ to $P_0$ (where the big body is located) this is called the \textbf{local vertical}; 
+    \item Perpendicular to $\mathbf{l_3}$ you can find $\mathbf{l_1}$ which is \textbf{perpendicular} to $\mathbf{l_3}$ and in the orbital plane, the sign is the same with respect to the \textit{orbital velocity}; it is also called the \textbf{local horizontal}
+    \item {\footnote[9]{
+        This approach is used also for the other reference frames, and it is appropriate since the three unit vectors of a RF are \textbf{orthonormal} by definition.
+    }}Having two out of three unit vectors, we can find the remaing one by doing the cross product $\mathbf{l_2} = \mathbf{l_3} \times \mathbf{l_1}$. It is called the \textbf{orbit pole}.
+\end{enumerate} 
+This is a \textbf{non inertial frame} because the origin, which is located in $P_1$ for sure does not have a constant velocity due to the fact its trajectory its a curve and at least the direction of the velocity (always tangent to the curve) \textbf{changes in time}.
+
+\subsection{\textsf{\textbf{Local Orbital Frame (LORF)}}}
+\vspace{-0.5em}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{AerospaceApplications/images/LORF.png}
+    \caption{Local orbital frame}
+\end{figure}
+{\Large\color{blue}
+\begin{equation}
+    R_o = \{
+        P_1, \mathbf{o_1, o_2, o_3}
+    \}
+\end{equation}
+}
+Here the \textbf{origin} is located in $P_1$ too, from this can be obtained that also in this case the reference frame in \textbf{non-inertial}. Reguarding the three unit vectors: 
+\begin{enumerate}
+    \itemsep0em
+    \item $\mathbf{o_1}$ is obtained by the \textbf{instantaneous normalized velocity} and it is \textit{tangent} to the trajectory by construction; 
+    \item $\mathbf{o_2}=\mathbf{l_2}$ is perpendicular to the orbital plane (also here it is called the \textbf{orbit pole}); 
+    \item $\mathbf{o_3} =\mathbf{o_1} \times \mathbf{o_2}$ it is on the orbital plane. 
+\end{enumerate}
+
+\subsection{\textsf{\textbf{Perifocal (perigee) frame (PF)}}}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{AerospaceApplications/images/PF.png}
+    \caption{Perifocal frame}
+\end{figure}
+{\Large\color{blue}
+\begin{equation}
+    R_p = \{
+        P_0, \mathbf{p_1, p_2, p_3}
+    \}
+\end{equation}
+}
+Reguarding the \textbf{perifocal frame origin}, it is located at $P_0$ which is the position of the \textit{big body}. Neclecting its motion around the Sun, we can approximate this origin to be of constant velocity, determining an \textit{approximated} \textbf{inertial frame}. 
+The \textbf{unit vectors} are defined as follows:
+\begin{enumerate}
+    \item $\mathbf{p_1=e}/e$ is the normalized eccentricity vectors which passes \textit{through the periapsis}, on  the orbital plane. 
+    \item $\mathbf{p_3=o_2=l_2}$ is the orbit pole and again it is perpendicular to the orbital plane.
+    \item $\mathbf{p_2 = p_3 \times p_1}$ is located on the orbit plane.
+\end{enumerate}
+
+\subsection{\textsf{\textbf{Geocentric equatorial frame (GF)}}}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{AerospaceApplications/images/GF.png}
+    \caption{Geocentric frame}
+\end{figure}
+\vspace{-0.8em}
+{\Large\color{blue}
+\begin{equation}
+    R_{ge} = \{
+        P_0, \mathbf{\hat{I}, \hat{J}, \hat{K}}
+    \}
+\end{equation}
+}
+This reference frame is used in the design of control systems for satellites, it is referred to the Earth and its definition is a little more complicated with respect to the others.\\
+The \textbf{origin of GF} is at the \textbf{Earth CoM}, while the three unit vectors are defined as follows:
+\begin{enumerate}
+    \item $\mathbf{\hat{I}}$, in the direction \textsf{Earth $\to$ Sun} in the first day of spring (the so-called \textit{vernal equinox}).
+    \item $\mathbf{\hat{J}}$ is obtained by computing the cross product between the others $\to$ $\mathbf{\hat{J} = \hat{K} \times \hat{I}}$
+    \item $\mathbf{\hat{K}}$ is the \textit{polar rotation axis} and is orthogonal to the equatorial plane.
+\end{enumerate}
+It is a reference frame which is independent from the spacecraft orbit.
+
+\section{Orbital elements}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{AerospaceApplications/images/OrbElements.png}
+\end{figure}
+Let us focus our attention on \textbf{elliptic orbits} around the \textbf{Earth}. In this scenario \textbf{two different planes} can be individuated:
+\begin{itemize}
+    \itemsep0em
+    \item The orbital plane
+    \item The equatorial plane
+\end{itemize}
+The intersection between the two planes is called the \textbf{lines of nodes}{\footnote[10]{
+    Remember that the intersection between two planes is a line.
+}}, while the angle between the two planes normal direction is called \textbf{inclination} and is denoted with $i$.\\
+The spacecraft orbit is a curve and its \textbf{intersection} with the equatorial plane is a point called \textbf{ascending node}. Other important angles can be defined:
+\begin{itemize}
+    \item The angle $\Omega$ is the argument of the ascending node on the equatorial plane, and it is the angle from $\mathbf{\hat{I}}$ to the \textit{ascending node}; 
+    \item The angle $\omega$ is the angle from the ascending node to perigee (\textbf{on the orbilal plane});
+    \item The angle $\nu$ o $\theta$ it is the \textbf{true anomaly} and it is the from the perigee to the \textit{spacecraft position}; sometimes instead of $\nu$ the \textit{time of perigee passage} $t_p$ is used, the two quantities are proportional.
+\end{itemize}
+We are ready the group together the \textbf{6 classical orbital elements}{
+    \footnote[11]{
+        \textit{classical} because in general you can define many orbital elements, however these are the most important.
+    }
+}. They are 
+{\large{
+    \begin{equation}
+        (a, e, i, \Omega, \omega, \nu)
+    \end{equation}
+}}
+where $a, e$ have been defined as the \textit{semimajor axis} and \textit{eccentricity} respectively. From the (\ref{eq: FR2B}) we know that the first five elements are constant and are related to the \textbf{orbit and its relative position wrt to the equatorial plane}, while $\nu$ changes in time and describe the position of the spacecraft on the orbit in time.\\
+We have seen in the previous paragraph that we have \textbf{six state variables} related to $\mathbf{r}, \mathbf{v}$, it is possible to obtain starting from these the \textit{classical orbital elements}.\\
+The following \textbf{coordinates transformation} holds:
+{\large
+\begin{itemize}
+    \item \textsf{PF $\to$ GE}: $\mathbf{T}_{313}(\Omega,i,\omega)$; 
+    \item \textsf{GE $\to$ PF}: $\mathbf{T}_{313}(-\omega, -i, -\Omega)$
+\end{itemize}
+
+}
+
+\section{Orbit perturbations}
+The orbital dynamics is based on \textbf{celestial mechanics} which is characterized by the Kepler's and Newton's laws. In order to simplify the discussion we have considered \textbf{(non-perturbed) Keplerian orbits} which are obtained by integration of the (\ref{eq: FR2B}), on the other hand \textbf{real orbits} are \textbf{non-Keplerian} in the sense there a lot of perturbations{\footnote[12]{
+    In the sense that the term $(1/m_1) \mathbf{F}_1$ is not negligible and not null. 
+}}: (i) the gravity potential due to a non-homogeneous distribution of the mass, (ii) interaction with other celestial bodies an so on.
+Especially for \textit{LEO} an aerodynamic force has to be considered: the \textbf{drag force} of the atmosphere which is given by
+\begin{equation}
+    \mathbf{F}_d = -\frac{1}{2} \rho C_D S \vert \mathbf{v_{rel}} \vert \mathbf{v_{rel}}
+\end{equation}
+where:
+\begin{itemize}
+    \itemsep0em
+    \item $\rho$ is the local atmospheric density defined as 
+    \begin{equation*}
+        \rho(r) = \rho_r \exp\biggl(
+            -\frac{r-r_0}{H}
+        \biggr)
+    \end{equation*}
+    with ($\rho_0, r_0$) the reference density and height, $H$ is a scale-height coefficient, while $r$ is the distance from the planet CoM.
+    \item $C_D$ is the drag coefficient 
+    \item $S$ is the area of the spacecraft directed in the direction of motion.
+    \item While $\mathbf{v_{rel}}$ is the relative velocity of the spacecraft with respect to the atmosphere. Usually for simplicity $\mathbf{v}_{rel} \approx \mathbf{v}$ of the spacecraft.
+\end{itemize}

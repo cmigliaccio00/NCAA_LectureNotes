@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  23 MAY 2024 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.9)  1 JUN 2024 13:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -850,7 +850,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.41 ....4.3}Robust control}{31}{subsection.5.4.3}
                                                   % [1
 
-] [2] [3])
+] [2] [3]
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 159.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+))
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -882,7 +886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-<NonLinearControl/images/NominalPerturbed.png, id=737, 461.92575pt x 327.02174pt>
+<NonLinearControl/images/NominalPerturbed.png, id=773, 461.92575pt x 327.02174pt>
 File: NonLinearControl/images/NominalPerturbed.png Graphic file (type png)
 <use NonLinearControl/images/NominalPerturbed.png>
 Package pdftex.def Info: NonLinearControl/images/NominalPerturbed.png  used on input line 19.
@@ -890,7 +894,7 @@ Package pdftex.def Info: NonLinearControl/images/NominalPerturbed.png  used on i
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/Stable.png, id=739, 681.14474pt x 377.0085pt>
+<NonLinearControl/images/Stable.png, id=775, 681.14474pt x 377.0085pt>
 File: NonLinearControl/images/Stable.png Graphic file (type png)
 <use NonLinearControl/images/Stable.png>
 Package pdftex.def Info: NonLinearControl/images/Stable.png  used on input line 39.
@@ -901,7 +905,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [9
 
 ]
-<NonLinearControl/images/AsStable.png, id=744, 581.17125pt x 323.40825pt>
+<NonLinearControl/images/AsStable.png, id=780, 581.17125pt x 323.40825pt>
 File: NonLinearControl/images/AsStable.png Graphic file (type png)
 <use NonLinearControl/images/AsStable.png>
 Package pdftex.def Info: NonLinearControl/images/AsStable.png  used on input line 51.
@@ -910,7 +914,7 @@ Package pdftex.def Info: NonLinearControl/images/AsStable.png  used on input lin
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/Unstable.png, id=745, 669.702pt x 337.86224pt>
+<NonLinearControl/images/Unstable.png, id=781, 669.702pt x 337.86224pt>
 File: NonLinearControl/images/Unstable.png Graphic file (type png)
 <use NonLinearControl/images/Unstable.png>
 Package pdftex.def Info: NonLinearControl/images/Unstable.png  used on input line 62.
@@ -919,7 +923,7 @@ Package pdftex.def Info: NonLinearControl/images/Unstable.png  used on input lin
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10 <./NonLinearControl/images/NominalPerturbed.png> <./NonLinearControl/images/Stable.png>]
-<NonLinearControl/images/EqStable.png, id=755, 471.56175pt x 362.5545pt>
+<NonLinearControl/images/EqStable.png, id=791, 471.56175pt x 362.5545pt>
 File: NonLinearControl/images/EqStable.png Graphic file (type png)
 <use NonLinearControl/images/EqStable.png>
 Package pdftex.def Info: NonLinearControl/images/EqStable.png  used on input line 82.
@@ -934,12 +938,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--90
  []
 
 [11 <./NonLinearControl/images/AsStable.png> <./NonLinearControl/images/Unstable.png>]
-<NonLinearControl/images/EqAsStable.png, id=764, 416.15475pt x 333.04425pt>
+<NonLinearControl/images/EqAsStable.png, id=800, 416.15475pt x 333.04425pt>
 File: NonLinearControl/images/EqAsStable.png Graphic file (type png)
 <use NonLinearControl/images/EqAsStable.png>
 Package pdftex.def Info: NonLinearControl/images/EqAsStable.png  used on input line 99.
 (pdftex.def)             Requested size: 228.88582pt x 183.1749pt.
-<NonLinearControl/images/EqUnstable.png, id=765, 440.24475pt x 419.76825pt>
+<NonLinearControl/images/EqUnstable.png, id=801, 440.24475pt x 419.76825pt>
 File: NonLinearControl/images/EqUnstable.png Graphic file (type png)
 <use NonLinearControl/images/EqUnstable.png>
 Package pdftex.def Info: NonLinearControl/images/EqUnstable.png  used on input line 109.
@@ -965,7 +969,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-<NonLinearControl/images/PhasePort_MSD.png, id=788, 380.622pt x 221.628pt>
+<NonLinearControl/images/PhasePort_MSD.png, id=825, 380.622pt x 221.628pt>
 File: NonLinearControl/images/PhasePort_MSD.png Graphic file (type png)
 <use NonLinearControl/images/PhasePort_MSD.png>
 Package pdftex.def Info: NonLinearControl/images/PhasePort_MSD.png  used on input line 32.
@@ -973,7 +977,7 @@ Package pdftex.def Info: NonLinearControl/images/PhasePort_MSD.png  used on inpu
 [15
 
 ]
-<NonLinearControl/images/SingularPoints.png, id=793, 447.47176pt x 496.85625pt>
+<NonLinearControl/images/SingularPoints.png, id=830, 447.47176pt x 496.85625pt>
 File: NonLinearControl/images/SingularPoints.png Graphic file (type png)
 <use NonLinearControl/images/SingularPoints.png>
 Package pdftex.def Info: NonLinearControl/images/SingularPoints.png  used on input line 50.
@@ -982,7 +986,7 @@ Package pdftex.def Info: NonLinearControl/images/SingularPoints.png  used on inp
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/Slotine1.png, id=795, 595.62524pt x 163.20975pt>
+<NonLinearControl/images/Slotine1.png, id=832, 595.62524pt x 163.20975pt>
 File: NonLinearControl/images/Slotine1.png Graphic file (type png)
 <use NonLinearControl/images/Slotine1.png>
 Package pdftex.def Info: NonLinearControl/images/Slotine1.png  used on input line 62.
@@ -990,7 +994,7 @@ Package pdftex.def Info: NonLinearControl/images/Slotine1.png  used on input lin
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/ExFirstOrder.png, id=796, 590.205pt x 425.79076pt>
+<NonLinearControl/images/ExFirstOrder.png, id=833, 590.205pt x 425.79076pt>
 File: NonLinearControl/images/ExFirstOrder.png Graphic file (type png)
 <use NonLinearControl/images/ExFirstOrder.png>
 Package pdftex.def Info: NonLinearControl/images/ExFirstOrder.png  used on input line 71.
@@ -999,7 +1003,7 @@ Package pdftex.def Info: NonLinearControl/images/ExFirstOrder.png  used on input
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16 <./NonLinearControl/images/PhasePort_MSD.png>] [17 <./NonLinearControl/images/SingularPoints.png> <./NonLinearControl/images/Slotine1.png>]
-<NonLinearControl/images/node.png, id=816, 414.348pt x 278.2395pt>
+<NonLinearControl/images/node.png, id=852, 414.348pt x 278.2395pt>
 File: NonLinearControl/images/node.png Graphic file (type png)
 <use NonLinearControl/images/node.png>
 Package pdftex.def Info: NonLinearControl/images/node.png  used on input line 102.
@@ -1008,7 +1012,7 @@ Package pdftex.def Info: NonLinearControl/images/node.png  used on input line 10
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/saddle.png, id=817, 408.3255pt x 154.77824pt>
+<NonLinearControl/images/saddle.png, id=853, 408.3255pt x 154.77824pt>
 File: NonLinearControl/images/saddle.png Graphic file (type png)
 <use NonLinearControl/images/saddle.png>
 Package pdftex.def Info: NonLinearControl/images/saddle.png  used on input line 112.
@@ -1016,7 +1020,7 @@ Package pdftex.def Info: NonLinearControl/images/saddle.png  used on input line 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/focus.png, id=818, 395.67825pt x 236.68425pt>
+<NonLinearControl/images/focus.png, id=854, 395.67825pt x 236.68425pt>
 File: NonLinearControl/images/focus.png Graphic file (type png)
 <use NonLinearControl/images/focus.png>
 Package pdftex.def Info: NonLinearControl/images/focus.png  used on input line 120.
@@ -1024,7 +1028,7 @@ Package pdftex.def Info: NonLinearControl/images/focus.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/center.png, id=819, 387.24675pt x 118.64325pt>
+<NonLinearControl/images/center.png, id=855, 387.24675pt x 118.64325pt>
 File: NonLinearControl/images/center.png Graphic file (type png)
 <use NonLinearControl/images/center.png>
 Package pdftex.def Info: NonLinearControl/images/center.png  used on input line 130.
@@ -1033,7 +1037,7 @@ Package pdftex.def Info: NonLinearControl/images/center.png  used on input line 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18 <./NonLinearControl/images/ExFirstOrder.png>] [19 <./NonLinearControl/images/node.png> <./NonLinearControl/images/saddle.png>]
-<NonLinearControl/images/limitcycles.png, id=843, 501.072pt x 224.037pt>
+<NonLinearControl/images/limitcycles.png, id=879, 501.072pt x 224.037pt>
 File: NonLinearControl/images/limitcycles.png Graphic file (type png)
 <use NonLinearControl/images/limitcycles.png>
 Package pdftex.def Info: NonLinearControl/images/limitcycles.png  used on input line 159.
@@ -1047,7 +1051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--182
 
  []
 
-<NonLinearControl/images/chuaAttr.jpg, id=855, 863.225pt x 701.62125pt>
+<NonLinearControl/images/chuaAttr.jpg, id=891, 863.225pt x 701.62125pt>
 File: NonLinearControl/images/chuaAttr.jpg Graphic file (type jpg)
 <use NonLinearControl/images/chuaAttr.jpg>
 Package pdftex.def Info: NonLinearControl/images/chuaAttr.jpg  used on input line 187.
@@ -1055,7 +1059,7 @@ Package pdftex.def Info: NonLinearControl/images/chuaAttr.jpg  used on input lin
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<NonLinearControl/images/slk_model.png, id=856, 729.32475pt x 431.81325pt>
+<NonLinearControl/images/slk_model.png, id=892, 729.32475pt x 431.81325pt>
 File: NonLinearControl/images/slk_model.png Graphic file (type png)
 <use NonLinearControl/images/slk_model.png>
 Package pdftex.def Info: NonLinearControl/images/slk_model.png  used on input line 194.
@@ -1087,7 +1091,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
 
-<NonLinearControl/images/PD_Fun.png, id=875, 313.77225pt x 196.3335pt>
+<NonLinearControl/images/PD_Fun.png, id=911, 313.77225pt x 196.3335pt>
 File: NonLinearControl/images/PD_Fun.png Graphic file (type png)
 <use NonLinearControl/images/PD_Fun.png>
 Package pdftex.def Info: NonLinearControl/images/PD_Fun.png  used on input line 102.
@@ -1102,7 +1106,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-<NonLinearControl/images/LyapunovFunction.png, id=886, 338.4645pt x 224.037pt>
+<NonLinearControl/images/LyapunovFunction.png, id=922, 338.4645pt x 224.037pt>
 File: NonLinearControl/images/LyapunovFunction.png Graphic file (type png)
 <use NonLinearControl/images/LyapunovFunction.png>
 Package pdftex.def Info: NonLinearControl/images/LyapunovFunction.png  used on input line 164.
@@ -1120,13 +1124,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
-<NonLinearControl/images/Lyapunov.png, id=895, 598.48593pt x 465.23813pt>
+<NonLinearControl/images/Lyapunov.png, id=931, 598.48593pt x 465.23813pt>
 File: NonLinearControl/images/Lyapunov.png Graphic file (type png)
 <use NonLinearControl/images/Lyapunov.png>
 Package pdftex.def Info: NonLinearControl/images/Lyapunov.png  used on input line 226.
 (pdftex.def)             Requested size: 359.09433pt x 279.14502pt.
 [26 <./NonLinearControl/images/LyapunovFunction.png>]
-<NonLinearControl/images/Lyap_Der.png, id=902, 526.96875pt x 395.22656pt>
+<NonLinearControl/images/Lyap_Der.png, id=938, 526.96875pt x 395.22656pt>
 File: NonLinearControl/images/Lyap_Der.png Graphic file (type png)
 <use NonLinearControl/images/Lyap_Der.png>
 Package pdftex.def Info: NonLinearControl/images/Lyap_Der.png  used on input line 235.
@@ -1142,7 +1146,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-<NonLinearControl/images/ControlScheme.png, id=916, 459.51675pt x 145.7445pt>
+<NonLinearControl/images/ControlScheme.png, id=952, 459.51675pt x 145.7445pt>
 File: NonLinearControl/images/ControlScheme.png Graphic file (type png)
 <use NonLinearControl/images/ControlScheme.png>
 Package pdftex.def Info: NonLinearControl/images/ControlScheme.png  used on input line 5.
@@ -1213,7 +1217,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
-<NonLinearControl/images/FL_ControlScheme .png, id=975, 503.481pt x 208.3785pt>
+<NonLinearControl/images/FL_ControlScheme .png, id=1011, 503.481pt x 208.3785pt>
 File: NonLinearControl/images/FL_ControlScheme .png Graphic file (type png)
 <use NonLinearControl/images/FL_ControlScheme .png>
 Package pdftex.def Info: NonLinearControl/images/FL_ControlScheme .png  used on input line 244.
@@ -1226,7 +1230,7 @@ Overfull \hbox (48.80263pt too wide) in paragraph at lines 252--253
 ) [36 <./NonLinearControl/images/FL_ControlScheme .png>]
 Chapter 7.
 (./NonLinearControl/Ch7_SMC.tex
-<NonLinearControl/images/FL_tracking.png, id=995, 552.26324pt x 230.66174pt>
+<NonLinearControl/images/FL_tracking.png, id=1031, 552.26324pt x 230.66174pt>
 File: NonLinearControl/images/FL_tracking.png Graphic file (type png)
 <use NonLinearControl/images/FL_tracking.png>
 Package pdftex.def Info: NonLinearControl/images/FL_tracking.png  used on input line 13.
@@ -1253,7 +1257,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-<NonLinearControl/images/SMC.png, id=1005, 564.30824pt x 280.04625pt>
+<NonLinearControl/images/SMC.png, id=1041, 564.30824pt x 280.04625pt>
 File: NonLinearControl/images/SMC.png Graphic file (type png)
 <use NonLinearControl/images/SMC.png>
 Package pdftex.def Info: NonLinearControl/images/SMC.png  used on input line 59.
@@ -1272,18 +1276,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
  []
 
 [39 <./NonLinearControl/images/SMC.png>]
-<NonLinearControl/images/Chattering.png, id=1018, 378.41376pt x 340.27126pt>
+<NonLinearControl/images/Chattering.png, id=1054, 378.41376pt x 340.27126pt>
 File: NonLinearControl/images/Chattering.png Graphic file (type png)
 <use NonLinearControl/images/Chattering.png>
 Package pdftex.def Info: NonLinearControl/images/Chattering.png  used on input line 113.
 (pdftex.def)             Requested size: 264.88782pt x 238.18825pt.
-<NonLinearControl/images/sigmoids.png, id=1019, 392.667pt x 213.79875pt>
+<NonLinearControl/images/sigmoids.png, id=1055, 392.667pt x 213.79875pt>
 File: NonLinearControl/images/sigmoids.png Graphic file (type png)
 <use NonLinearControl/images/sigmoids.png>
 Package pdftex.def Info: NonLinearControl/images/sigmoids.png  used on input line 128.
 (pdftex.def)             Requested size: 392.66605pt x 213.79822pt.
  [40 <./NonLinearControl/images/Chattering.png> <./NonLinearControl/images/sigmoids.png>]
-<NonLinearControl/images/SMC_ControlScheme.png, id=1028, 677.53125pt x 251.13824pt>
+<NonLinearControl/images/SMC_ControlScheme.png, id=1065, 677.53125pt x 251.13824pt>
 File: NonLinearControl/images/SMC_ControlScheme.png Graphic file (type png)
 <use NonLinearControl/images/SMC_ControlScheme.png>
 Package pdftex.def Info: NonLinearControl/images/SMC_ControlScheme.png  used on input line 148.
@@ -1299,7 +1303,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--165
  []
 
 [41 <./NonLinearControl/images/SMC_ControlScheme.png>]
-<NonLinearControl/images/SMC_Tracking.png, id=1035, 717.27975pt x 278.84175pt>
+<NonLinearControl/images/SMC_Tracking.png, id=1072, 717.27975pt x 278.84175pt>
 File: NonLinearControl/images/SMC_Tracking.png Graphic file (type png)
 <use NonLinearControl/images/SMC_Tracking.png>
 Package pdftex.def Info: NonLinearControl/images/SMC_Tracking.png  used on input line 170.
@@ -1338,7 +1342,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--191
  []
 
 [48]
-<NonLinearControl/images/NMPC_graph.png, id=1105, 587.796pt x 539.616pt>
+<NonLinearControl/images/NMPC_graph.png, id=1141, 587.796pt x 539.616pt>
 File: NonLinearControl/images/NMPC_graph.png Graphic file (type png)
 <use NonLinearControl/images/NMPC_graph.png>
 Package pdftex.def Info: NonLinearControl/images/NMPC_graph.png  used on input line 228.
@@ -1353,7 +1357,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
-<NonLinearControl/images/NMPC_CtrlScheme.png, id=1115, 506.49225pt x 186.6975pt>
+<NonLinearControl/images/NMPC_CtrlScheme.png, id=1151, 506.49225pt x 186.6975pt>
 File: NonLinearControl/images/NMPC_CtrlScheme.png Graphic file (type png)
 <use NonLinearControl/images/NMPC_CtrlScheme.png>
 Package pdftex.def Info: NonLinearControl/images/NMPC_CtrlScheme.png  used on input line 285.
@@ -1366,7 +1370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
 [51]) [52]
 Chapter 9.
 (./NonLinearControl/Ch9_KF.tex
-<AerospaceApplications/images/Kalman.jpg, id=1143, 241.65282pt x 225.84375pt>
+<AerospaceApplications/images/Kalman.jpg, id=1180, 241.65282pt x 225.84375pt>
 File: AerospaceApplications/images/Kalman.jpg Graphic file (type jpg)
 <use AerospaceApplications/images/Kalman.jpg>
 Package pdftex.def Info: AerospaceApplications/images/Kalman.jpg  used on input line 3.
@@ -1376,10 +1380,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 16.
-(c:/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
-File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [53
+[53
 
  <./AerospaceApplications/images/Kalman.jpg>] [54]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
@@ -1410,7 +1411,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--264
 ]
 Chapter 10.
 (./AerospaceApplications/Ch10_IntroAerospace.tex
-<AerospaceApplications/images/satellite_img.png, id=1208, 452.28975pt x 399.29175pt>
+<AerospaceApplications/images/satellite_img.png, id=1243, 452.28975pt x 399.29175pt>
 File: AerospaceApplications/images/satellite_img.png Graphic file (type png)
 <use AerospaceApplications/images/satellite_img.png>
 Package pdftex.def Info: AerospaceApplications/images/satellite_img.png  used on input line 5.
@@ -1429,7 +1430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<AerospaceApplications/images/RFs.png, id=1222, 370.986pt x 308.352pt>
+<AerospaceApplications/images/RFs.png, id=1257, 370.986pt x 308.352pt>
 File: AerospaceApplications/images/RFs.png Graphic file (type png)
 <use AerospaceApplications/images/RFs.png>
 Package pdftex.def Info: AerospaceApplications/images/RFs.png  used on input line 45.
@@ -1441,12 +1442,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
-<AerospaceApplications/images/coord_transf.png, id=1238, 323.40825pt x 248.127pt>
+<AerospaceApplications/images/coord_transf.png, id=1273, 323.40825pt x 248.127pt>
 File: AerospaceApplications/images/coord_transf.png Graphic file (type png)
 <use AerospaceApplications/images/coord_transf.png>
 Package pdftex.def Info: AerospaceApplications/images/coord_transf.png  used on input line 152.
 (pdftex.def)             Requested size: 194.04643pt x 148.87733pt.
-<AerospaceApplications/images/rotation_transf.png, id=1239, 254.1495pt x 199.947pt>
+<AerospaceApplications/images/rotation_transf.png, id=1274, 254.1495pt x 199.947pt>
 File: AerospaceApplications/images/rotation_transf.png Graphic file (type png)
 <use AerospaceApplications/images/rotation_transf.png>
 Package pdftex.def Info: AerospaceApplications/images/rotation_transf.png  used on input line 172.
@@ -1455,7 +1456,7 @@ Package pdftex.def Info: AerospaceApplications/images/rotation_transf.png  used 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [64 <./AerospaceApplications/images/coord_transf.png>]
-<AerospaceApplications/images/square_rot.png, id=1247, 269.20575pt x 251.7405pt>
+<AerospaceApplications/images/square_rot.png, id=1282, 269.20575pt x 251.7405pt>
 File: AerospaceApplications/images/square_rot.png Graphic file (type png)
 <use AerospaceApplications/images/square_rot.png>
 Package pdftex.def Info: AerospaceApplications/images/square_rot.png  used on input line 186.
@@ -1486,7 +1487,7 @@ Overfull \hbox (14.60526pt too wide) detected at line 262
  []
 
 [66]
-<AerospaceApplications/images/gimbal_lock.png, id=1265, 177.66376pt x 205.9695pt>
+<AerospaceApplications/images/gimbal_lock.png, id=1301, 177.66376pt x 205.9695pt>
 File: AerospaceApplications/images/gimbal_lock.png Graphic file (type png)
 <use AerospaceApplications/images/gimbal_lock.png>
 Package pdftex.def Info: AerospaceApplications/images/gimbal_lock.png  used on input line 296.
@@ -1516,19 +1517,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 490--494
  []
 
 [70]
-<AerospaceApplications/images/kin_dyn_series.png, id=1297, 615.4995pt x 130.086pt>
+<AerospaceApplications/images/kin_dyn_series.png, id=1332, 615.4995pt x 130.086pt>
 File: AerospaceApplications/images/kin_dyn_series.png Graphic file (type png)
 <use AerospaceApplications/images/kin_dyn_series.png>
 Package pdftex.def Info: AerospaceApplications/images/kin_dyn_series.png  used on input line 545.
 (pdftex.def)             Requested size: 430.84671pt x 91.05956pt.
  [71 <./AerospaceApplications/images/kin_dyn_series.png>]
-<AerospaceApplications/images/OF_BF.png, id=1304, 369.17924pt x 320.99925pt>
+<AerospaceApplications/images/OF_BF.png, id=1339, 369.17924pt x 320.99925pt>
 File: AerospaceApplications/images/OF_BF.png Graphic file (type png)
 <use AerospaceApplications/images/OF_BF.png>
 Package pdftex.def Info: AerospaceApplications/images/OF_BF.png  used on input line 582.
 (pdftex.def)             Requested size: 258.4237pt x 224.69794pt.
  [72 <./AerospaceApplications/images/OF_BF.png>] [73] [74]
-<AerospaceApplications/images/IF_BF.png, id=1340, 402.303pt x 370.986pt>
+<AerospaceApplications/images/IF_BF.png, id=1375, 402.303pt x 370.986pt>
 File: AerospaceApplications/images/IF_BF.png Graphic file (type png)
 <use AerospaceApplications/images/IF_BF.png>
 Package pdftex.def Info: AerospaceApplications/images/IF_BF.png  used on input line 777.
@@ -1546,7 +1547,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
 [79]) [80]
 Chapter 12.
 (./AerospaceApplications/Ch12_AttitudeControl.tex
-<AerospaceApplications/images/ACS.png, id=1391, 658.25925pt x 272.81924pt>
+<AerospaceApplications/images/ACS.png, id=1427, 658.25925pt x 272.81924pt>
 File: AerospaceApplications/images/ACS.png Graphic file (type png)
 <use AerospaceApplications/images/ACS.png>
 Package pdftex.def Info: AerospaceApplications/images/ACS.png  used on input line 14.
@@ -1564,7 +1565,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
  []
 
 [83] [84]
-<AerospaceApplications/images/ref_gen.png, id=1431, 371.58826pt x 192.72pt>
+<AerospaceApplications/images/ref_gen.png, id=1466, 371.58826pt x 192.72pt>
 File: AerospaceApplications/images/ref_gen.png Graphic file (type png)
 <use AerospaceApplications/images/ref_gen.png>
 Package pdftex.def Info: AerospaceApplications/images/ref_gen.png  used on input line 204.
@@ -1572,7 +1573,7 @@ Package pdftex.def Info: AerospaceApplications/images/ref_gen.png  used on input
 ) [85 <./AerospaceApplications/images/ref_gen.png>]
 Chapter 13.
 (./AerospaceApplications/Ch13_OrbitalDynamics.tex
-<AerospaceApplications/images/orb_dyn.png, id=1440, 346.33286pt x 234.64285pt>
+<AerospaceApplications/images/orb_dyn.png, id=1475, 346.33286pt x 234.64285pt>
 File: AerospaceApplications/images/orb_dyn.png Graphic file (type png)
 <use AerospaceApplications/images/orb_dyn.png>
 Package pdftex.def Info: AerospaceApplications/images/orb_dyn.png  used on input line 3.
@@ -1605,7 +1606,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.13.3.
                    \relax 
 l.177     \begin{equation}
                            \tag{\textsf{ORE}} \label{eq:ORE}
-<AerospaceApplications/images/ellipse.png, id=1496, 389.0535pt x 221.02576pt>
+<AerospaceApplications/images/ellipse.png, id=1532, 389.0535pt x 221.02576pt>
 File: AerospaceApplications/images/ellipse.png Graphic file (type png)
 <use AerospaceApplications/images/ellipse.png>
 Package pdftex.def Info: AerospaceApplications/images/ellipse.png  used on input line 198.
@@ -1615,7 +1616,7 @@ Package pdftex.def Info: AerospaceApplications/images/ellipse.png  used on input
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [90]
-<AerospaceApplications/images/parabola.png, id=1506, 224.037pt x 233.673pt>
+<AerospaceApplications/images/parabola.png, id=1541, 224.037pt x 233.673pt>
 File: AerospaceApplications/images/parabola.png Graphic file (type png)
 <use AerospaceApplications/images/parabola.png>
 Package pdftex.def Info: AerospaceApplications/images/parabola.png  used on input line 237.
@@ -1624,14 +1625,46 @@ Package pdftex.def Info: AerospaceApplications/images/parabola.png  used on inpu
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<AerospaceApplications/images/hyperbola.png, id=1507, 164.41425pt x 238.491pt>
+<AerospaceApplications/images/hyperbola.png, id=1542, 164.41425pt x 238.491pt>
 File: AerospaceApplications/images/hyperbola.png Graphic file (type png)
 <use AerospaceApplications/images/hyperbola.png>
 Package pdftex.def Info: AerospaceApplications/images/hyperbola.png  used on input line 249.
 (pdftex.def)             Requested size: 98.64929pt x 143.09569pt.
-[91 <./AerospaceApplications/images/ellipse.png>]) [92 <./AerospaceApplications/images/parabola.png> <./AerospaceApplications/images/hyperbola.png>]
+[91 <./AerospaceApplications/images/ellipse.png>] [92 <./AerospaceApplications/images/parabola.png> <./AerospaceApplications/images/hyperbola.png>]
+<AerospaceApplications/images/LVLH.png, id=1557, 364.36125pt x 317.988pt>
+File: AerospaceApplications/images/LVLH.png Graphic file (type png)
+<use AerospaceApplications/images/LVLH.png>
+Package pdftex.def Info: AerospaceApplications/images/LVLH.png  used on input line 310.
+(pdftex.def)             Requested size: 182.18018pt x 158.9936pt.
+<AerospaceApplications/images/LORF.png, id=1559, 308.352pt x 319.1925pt>
+File: AerospaceApplications/images/LORF.png Graphic file (type png)
+<use AerospaceApplications/images/LORF.png>
+Package pdftex.def Info: AerospaceApplications/images/LORF.png  used on input line 335.
+(pdftex.def)             Requested size: 154.17561pt x 159.59586pt.
+ [93 <./AerospaceApplications/images/LVLH.png>]
+<AerospaceApplications/images/PF.png, id=1571, 417.35925pt x 233.673pt>
+File: AerospaceApplications/images/PF.png Graphic file (type png)
+<use AerospaceApplications/images/PF.png>
+Package pdftex.def Info: AerospaceApplications/images/PF.png  used on input line 356.
+(pdftex.def)             Requested size: 208.67911pt x 116.83621pt.
+ [94 <./AerospaceApplications/images/LORF.png> <./AerospaceApplications/images/PF.png>]
+<AerospaceApplications/images/GF.png, id=1586, 420.3705pt x 257.16075pt>
+File: AerospaceApplications/images/GF.png Graphic file (type png)
+<use AerospaceApplications/images/GF.png>
+Package pdftex.def Info: AerospaceApplications/images/GF.png  used on input line 377.
+(pdftex.def)             Requested size: 294.25734pt x 180.01129pt.
+<AerospaceApplications/images/OrbElements.png, id=1587, 522.753pt x 278.2395pt>
+File: AerospaceApplications/images/OrbElements.png Graphic file (type png)
+<use AerospaceApplications/images/OrbElements.png>
+Package pdftex.def Info: AerospaceApplications/images/OrbElements.png  used on input line 400.
+(pdftex.def)             Requested size: 365.9246pt x 194.76631pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[95 <./AerospaceApplications/images/GF.png>] [96 <./AerospaceApplications/images/OrbElements.png>]) [97]
 Chapter 14.
-[93
+[98
 
 ] (./main.aux)
  ***********
@@ -1643,21 +1676,21 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B4764B99F2A061D8C4AF3907723F8831;24396.
+(rerunfilecheck)             Checksum: DC667541F7B2CD4720EF52339275EE65;25826.
  ) 
 Here is how much of TeX's memory you used:
- 29909 strings out of 474116
- 567411 string characters out of 5747718
- 1964190 words of memory out of 5000000
- 51171 multiletter control sequences out of 15000+600000
- 611188 words of font info for 169 fonts, out of 8000000 for 9000
+ 29993 strings out of 474116
+ 569540 string characters out of 5747718
+ 1963190 words of memory out of 5000000
+ 51215 multiletter control sequences out of 15000+600000
+ 612215 words of font info for 171 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,21n,93p,2496b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (94 pages, 3537069 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (99 pages, 4012813 bytes).
 PDF statistics:
- 1854 PDF objects out of 2073 (max. 8388607)
- 1543 compressed objects within 16 object streams
- 488 named destinations out of 1000 (max. 500000)
- 1309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1968 PDF objects out of 2073 (max. 8388607)
+ 1638 compressed objects within 17 object streams
+ 526 named destinations out of 1000 (max. 500000)
+ 1390 words of extra memory for PDF output out of 10000 (max. 10000000)
 
